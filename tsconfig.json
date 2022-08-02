@@ -1,0 +1,32 @@
+//Typescript Configuration Used for Development Purposes By Webpack ts-loader
+{
+    "compilerOptions"  : {
+        "target" : "es2020",
+        "moduleResolution" : "Classic",
+        "sourceMap"  : true,
+        "allowJs": true,
+        "experimentalDecorators" : true,
+        "noImplicitReturns" : true,
+        "noImplicitOverride"  : true,
+        "allowUnusedLabels": false,
+        "strictFunctionTypes": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedParameters":true,
+        "noImplicitAny": true,
+        "noUnusedLocals": false,
+        "strictNullChecks": true,
+        "allowUnreachableCode" : false,
+        "strict" : true,
+        "exactOptionalPropertyTypes": false,
+        "useUnknownInCatchVariables": false,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl" : "./src",
+        "paths" : {
+            "ns/*" : [
+                "./src/ns"
+            ]
+        },
+    },
+    "exclude" : ["./scripts","gulpfile.js","./public","webpack.config.js"]
+}

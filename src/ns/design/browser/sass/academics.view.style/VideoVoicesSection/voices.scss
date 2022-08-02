@@ -1,0 +1,345 @@
+@use "../../common/Variables/Variables.scss" as V;
+
+
+@keyframes rotate {
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes __CommonLabel__ {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100%{ 
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+
+ns-x-voices {
+    display: block;
+}
+
+
+ns-x-voices .xb-voices-component {
+    width: 100%;
+    height: 700px;
+    font-family: V.$ns-common-font;
+    position: relative;
+
+    &:hover {
+        .common-change-controls {
+            .vid-ctrl {
+                opacity: 1;
+            }
+        }
+    }
+
+    .common-change-controls {
+        transition: all .5s;
+
+        .prev-ctrl {
+            transition: all .5s;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            font-size: 40pt;
+            background-color: #dbdbdb;
+            border: 2px solid #dbdbdb;
+
+        }
+
+        .next-ctrl {
+            transition: all .5s;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            font-size: 40pt;
+            background-color: #dbdbdb;
+            border: 2px solid #dbdbdb;
+            color: #000;
+
+        }
+
+        .vid-ctrl:hover {
+            transition: all .5s;
+            cursor: pointer;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .vid-ctrl:active {
+            transform: scale(0.8);
+        }
+
+    }
+
+    .xb-title-area-component {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+
+        .xb-title-area-container {
+            font-size: 30pt;
+        }
+    }
+
+
+    .xb-wrapper {
+        width: 100%;
+        background-color: black;
+        height: 650px;
+
+        .xb-split-view-container {
+            width: inherit;
+
+            .xb-split-view-area {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .str-comp {
+                    height: 600px;
+                }
+
+                .xb-split-component-1 {
+                    width: 100%;
+                    // display: none;
+
+                    .t-content-1 {
+                        transition: all .5s;
+                        margin: 0px 0px 0px 50px;
+
+                        .xb-picture-container {
+                            // display: none;
+                            margin-top: 50px;
+                            margin-left: 40px;
+                            width: 650px;
+                            height: 400px;
+                            margin-bottom: 20px;
+                            background-color: rgb(99, 93, 93);
+                            position: relative;
+
+                            .cl-t-box {
+                                width: inherit;
+                                height: inherit;
+
+                                >div {
+                                    position: absolute;
+                                }
+
+                                .cl-t-pic {
+                                    width: inherit;
+                                    height: inherit;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-image: url('../../../Imgs/volkan-vardar-3db3-qIRKWU-unsplash.jpg');
+                                }
+
+                                .cl-t-text {
+                                    color: #ffffffc4;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 40pt;
+                                    width: inherit;
+                                    height: inherit;
+                                    background-color: rgba(3, 3, 3, 0.795);
+                                }
+                            }
+
+                        }
+
+                        .xb-description-container {
+                            // display: none;
+                            width: 550px;
+                            height: 100px;
+                            margin-left: 33px;
+                            color: #fff;
+                            font-size: 21pt;
+                        }
+
+                    }
+
+                    .t-content-2 {
+                        transition: all .5s;
+                        opacity: 0;
+                        margin: 0px 0px 0px 50px;
+
+                        .xb-picture-container {
+                            margin-top: 50px;
+                            margin-left: 40px;
+                            width: 650px;
+                            height: 400px;
+                            margin-bottom: 20px;
+                            background-color: rgb(99, 93, 93);
+                            position: relative;
+
+                            .cl-t-box {
+                                width: inherit;
+                                height: inherit;
+
+                                >div {
+                                    position: absolute;
+                                }
+
+                                .cl-t-pic {
+                                    width: inherit;
+                                    height: inherit;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-image: url('../../../Imgs/volkan-vardar-3db3-qIRKWU-unsplash.jpg');
+                                }
+
+                                .cl-t-text {
+                                    color: #ffffffc4;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 40pt;
+                                    width: inherit;
+                                    height: inherit;
+                                    background-color: rgba(3, 3, 3, 0.795);
+                                }
+                            }
+
+                        }
+
+                        .xb-description-container {
+                            width: 550px;
+                            height: 100px;
+                            margin-left: 33px;
+                            color: #fff;
+                            font-size: 21pt;
+                        }
+
+                        display: none;
+                    }
+                }
+
+                .xb-split-component-2 {
+                    width: 100%;
+
+                    .split-video-container {
+                        .video-labels {
+                            .vid-label-cl {
+                                border: 1px solid #fff;
+                                width:fit-content;
+                                padding: 10px 8px 0px 8px;
+                                height: 50px;
+                                transform: translateY(-10px);
+                                position: absolute;
+                                z-index: 34;
+                                left: 100px;
+                                top: 26px;
+                                background-color: #0000009f;
+                                color: #fff;
+                                font-size: 14pt;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: all .5s;
+                                opacity: 0;
+
+                            }
+                            .vid-close-cl {
+                                position: absolute;
+                                z-index: 34;
+                                right: 100px;
+                                border: 1px solid #fff;
+                                top: 50px;
+                                color: #fff;
+                                width: 50px;
+                                height: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 30pt;
+                                display: none;
+                                transition: all .5s;
+                                cursor: pointer;
+                                &:hover{
+                                    border-color: #e42929;
+                                    color: #e42929;
+                                }
+                            }
+                        }
+
+                        background-color: #2b2b2b77;
+
+                        backdrop-filter: blur(8px);
+
+                        position: absolute;
+                        right: 150px;
+
+
+
+                        .videx-x-conveyor {
+                            border: 4px solid #fff;
+                            border-top-color: #000;
+                            border-bottom-color: #000;
+                            width: 300px;
+                            height: 650px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            .video-icon-restart {
+                                position: absolute;
+                                z-index: 12;
+                                font-size: 100pt;
+                                // display: none;
+                                cursor: pointer;
+                                display: none;
+                                transition: all .5s;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 6px solid rgb(32, 32, 32);
+                                // border-top-color: V.$ns-layout-color;
+                                width: 100px;
+                                height: 100px;
+                                color: #fff;
+                                font-size: 40pt;
+                                border-radius: 50%;
+                                background-color: #3b8af3;
+                                &:hover {
+                                    color: #3b8af3;
+                                    background-color: #000;
+                                    cursor: pointer;
+                                }
+
+                                &:active {
+                                    transform: scale(2);
+
+                                }
+
+                              
+                            }
+
+                            .sm1 {
+                                display: none;
+                                width: inherit;
+                                height: 600px;
+                                // display: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

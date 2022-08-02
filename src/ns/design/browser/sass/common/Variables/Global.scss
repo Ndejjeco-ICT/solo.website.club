@@ -1,0 +1,66 @@
+/**
+    Common Style In All Should Be Added Globally
+**/
+
+@keyframes NavigationAnimationFade {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes NavigationAnimationFade2 {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+}
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+ns-root {
+    width: 100%;
+
+
+    #main-content {
+        width: inherit;
+        height: inherit;
+
+        #basic-page {
+            transition: all .5s;
+            height: fit-content;
+            [ns-route=active]{
+                display: block;
+                transition: all .5s;
+
+            }
+            [ns-route=inactive]{
+                display: none;
+                transition: all .5s;
+                opacity: 0;
+            }
+            .page-view{
+                width: 100%;
+                transition: all .5s;
+            }
+          
+        }
+    }
+}
