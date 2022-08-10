@@ -32,7 +32,7 @@ export const enum Lifecycle {
     Restored = 3,
 
     /**
-     * On that might suddenly happen in future
+     * One that might suddenly happen in future
      */
     Eventually = 4
 };
