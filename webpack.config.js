@@ -1,3 +1,4 @@
+
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 /**
@@ -5,19 +6,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
  */
 
 const _WebPackConfiguration = {
-    devtool  :"inline-source-map",
+    devtool: "inline-source-map",
     mode: "development",
-    target : "web",
-    entry: path.resolve(__dirname, "./src/ns/workload/workload.main.ts"),
+    entry: {
+        main : path.resolve(__dirname, "src/ns/workload/ns.main.ts")
+    },
     resolve: {
         extensions: [".ts", ".js"],
         alias: {
             ns: path.resolve(__dirname, "src/ns"),
-            "@design_Home" : path.resolve(__dirname,"src/ns/design/browser/sass/home.view.style"),
-            "@design_About" : path.resolve(__dirname,"src/ns/design/browser/sass/aboutus.view.style"),
-            "@design_Common" : path.resolve(__dirname,"src/ns/design/browser/sass/common"),
-            "@design_Blog" : path.resolve(__dirname,"src/ns/design/browser/sass/blog.view.style"),
-            "@design_Academics" : path.resolve(__dirname,"src/ns/design/browser/sass/academics.view.style")
+            "@design_Home": path.resolve(__dirname, "src/ns/assets/sass/home.view.style"),
+            "@design_About": path.resolve(__dirname, "src/ns/assets/sass/aboutus.view.style"),
+            "@design_Common": path.resolve(__dirname, "src/ns/assets/sass/common"),
+            "@design_Blog": path.resolve(__dirname, "src/ns/assets/sass/blog.view.style"),
+            "@design_Academics": path.resolve(__dirname, "src/ns/assets/sass/academics.view.style")
             
         }
     },
@@ -25,7 +27,7 @@ const _WebPackConfiguration = {
         rules: [
             {
                 test: /\.ts/,
-                loader : "ts-loader"
+                loader: "ts-loader"
             },
             {
 
@@ -45,38 +47,45 @@ const _WebPackConfiguration = {
             },
         ],
     },
-    plugins : [
+    plugins: [
         new HtmlWebpackPlugin({
-            filename: 'ns.main.html',
-            templateContent: `
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <!--Font Awesome-->
-                <link rel="stylesheet" type="text/css" href="./resources/icons/font-awesome/css/all.css">
-                <link rel="stylesheet" type="text/css" href="./resources/libraries/videojs/video-js.css">
-            </head>
-            <body>
-                <!--The startup webcomponet to be initially loaded-->
-                <ns-root></ns-root>
-            </body>
-            </html>
-            `
-          })
+            title: "Ndejje Website",
+            filename: "index.html",
+            template: path.resolve(__dirname, "src/ns/bootstrap.template.ejs"),
+            inject: "body",
+            scriptLoading : "defer"
+
+            
+        })
+        // new HtmlWebpackPlugin({
+        //     title: "SandBoxed",
+        //     filename: "index.html",
+        //     publicPath: path.resolve(__dirname, "public"),
+        //     showErrors: true,
+        //     inject: "body",
+        //     template: path.resolve(__dirname, "src/ns/bootstrap.template.ejs")
+            
+        // })
     ],
-    output : {
-        path : path.resolve(__dirname,"./public"),
+    output: {
+        filename : "ns.[contenthash].js",
+        path: path.resolve(__dirname, "public"),
+        publicPath: "auto"
     },
     devServer: {
-        port : 9000,
-        compress : true,
-        static : {
-            directory : path.resolve(__dirname,"./public"),
+        port : 5001,
+        open : true,
+        hot: true,
+        magicHtml: true,
+        liveReload : true,
+        static: {
+            directory: path.join(__dirname, 'public'),
+            publicPath : "/",
+        },
+        client: {
+            progress : true
         }
     },
-    clean : true
 }
 
 module.exports = _WebPackConfiguration;

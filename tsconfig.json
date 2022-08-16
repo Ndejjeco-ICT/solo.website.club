@@ -1,4 +1,5 @@
 //Typescript Configuration Used for Development Purposes By Webpack ts-loader
+
 {
     "compilerOptions"  : {
         "target" : "es2020",
@@ -28,5 +29,5 @@
             ]
         },
     },
-    "exclude" : ["./scripts","gulpfile.js","./public","webpack.config.js"]
+    "exclude" : ["./scripts","gulpfile.js","./public","webpack.config.js","./src/ns/*.js"]
 }

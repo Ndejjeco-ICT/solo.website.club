@@ -10,7 +10,8 @@
     "webpack-server": "webpack-dev-server",
     "webpack-main-bundle": "webpack --config webpack.config.js",
     "compile-typescript-files": "tsc -p ./src/tsconfig.base.json",
-    "serve": "webpack serve --config webpack.config.js"
+    "dev" : "webpack serve",
+    "build-loaders" : "gulp __nsLoadersBuild"
   },
   "devDependencies": {
     "@types/animejs": "^3.1.4",

@@ -3,10 +3,10 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "webpack-main-bundle",
+			"script": "dev",
 			"problemMatcher": [],
-			"label": "Bundle ::WEBPACK-FILES::",
-			"detail": "webpack --config webpack.config.js"
+			"label": "Serve ::WEBPACK-FILES::",
+			"detail": "webpack serve"
 		},
 		{
 			"type": "npm",
