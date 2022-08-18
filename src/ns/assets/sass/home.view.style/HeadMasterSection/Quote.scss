@@ -30,7 +30,8 @@ ns-x-quote .ponaco-splitview-6 {
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
-         
+        background-image: url("../../../site_images/home_view/cr_quote/quote.jpg");
+
         @include V.center();
 
         .main-content-holder {

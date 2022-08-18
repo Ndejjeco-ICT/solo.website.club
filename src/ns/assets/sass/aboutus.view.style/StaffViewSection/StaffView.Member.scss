@@ -14,23 +14,25 @@ ns-x-member .xb-cl-memeber {
         border: 2px solid #fff;
         box-shadow: rgb(0 0 0 / 36%) 0px 0px 8px 2px;
         transition: all .5s;
-        &:active{
-            transform:perspective(40deg);
+
+        &:active {
+            transform: perspective(40deg);
         }
-        &:hover{
+
+        &:hover {
             border-color: #0051ff;
         }
+
         .xb-picture-container {
             width: 100%;
             height: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
+
             .xb-picture-container-wrapper {
                 background-size: cover;
                 background-repeat: no-repeat;
-            //    background-image: url("../../../Imgs/new/staffview/staffmembers/DSCN0861.JPG");
-                
                 border-radius: 50%;
                 width: 120px;
                 height: 120px;
@@ -39,20 +41,41 @@ ns-x-member .xb-cl-memeber {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-color: grey;
+
+                picture {
+                    border-radius: 50%;
+                    width: inherit;
+                    height: inherit;
+
+                    img {
+                        border-radius: 50%;
+                        
+                        border: 1px solid #0051ff ;
+                        display: block;
+                        width: inherit;
+                        height: inherit;
+                    }
+                }
             }
         }
+
         .xb-content {
             height: 130px;
-            .xb-content-wrapper{
+
+            .xb-content-wrapper {
                 margin-top: 17px;
-                .xb-text{
+
+                .xb-text {
                     margin-left: 20px;
                 }
+
                 .xb-ct-1 {
                     margin-top: 10px;
                     font-size: 14pt;
                     font-weight: bold;
                 }
+
                 .xb-ct-2 {
                     margin-top: 10px;
                     font-weight: 600;
@@ -60,19 +83,21 @@ ns-x-member .xb-cl-memeber {
                     color: #0000009a;
                     font-size: 13pt;
                 }
+
                 .xb-ct-3 {
                     color: #0051ffc4;
                     margin-top: 3px;
                     font-size: 11pt;
                     font-weight: bold;
-                    &:hover{
+
+                    &:hover {
                         cursor: pointer;
                     }
                 }
 
             }
-            
-      
+
+
         }
     }
 }

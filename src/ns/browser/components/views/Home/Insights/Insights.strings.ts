@@ -1,106 +1,109 @@
+//insghts main page images
 
+// @ts-ignore
+import prefectorialBody from "ns/assets/site_images/home_view/cr_insights/becky.jpg";
+// @ts-ignore
+import clubforum from "ns/assets/site_images/home_view/cr_insights/clubforum100.jpg";
+// @ts-ignore
+import interactclub from "ns/assets/site_images/home_view/cr_insights/interactclub.jpg";
+// @ts-ignore
+import juniorarchiever from "ns/assets/site_images/home_view/cr_insights/juniorachiver.jpg";
+// @ts-ignore
+import studentscouncil from "ns/assets/site_images/home_view/cr_insights/studentscouncil.jpg";
+// @ts-ignore
+import writers from "ns/assets/site_images/home_view/cr_insights/redcross.jpg";
+// @ts-ignore
+
+
+
+const ImageSocketBreaker = [studentscouncil,prefectorialBody,interactclub,writers,juniorarchiever,clubforum]
 
 export interface IInsightsString {
     title: string,
-    key : string,
-    componentPictureSrc: string,
-    mainDescription : string
+    key: string,
+    mainDescription: string
     shortDescription: string,
-    onClickCallback: () => void;
+    query: string,
 }
 
 
 
-export const InsightsStrings:IInsightsString[] = [
-    
+export const InsightsStrings: IInsightsString[] = [
+
 
     {
-        title: "The Student's Council",
-        componentPictureSrc: "./img/Home/insights/Clubs/council.jpg",
-        mainDescription : "To prepare and produce disciplined, patriotic and self reliant citizens for National Development.",
-        shortDescription : "The struggle for liberation",
-        onClickCallback: () => {
-            
-        },
-        key : "cg-3"
+        title: "The Student's Council 2021-2022",
+        mainDescription: "To prepare and produce disciplined, patriotic and self reliant citizens for National Development.",
+        shortDescription: "The struggle for liberation",
+        query: "students-council",
+        key: "cg-3"
     },
     {
-        title: "The Prefectorial Body",
-        componentPictureSrc: "./img/Home/insights/Clubs/becky.jpg",
-        mainDescription : "Refined by fire and only those built on Christ as foundation will stand",
-        shortDescription : "Refine for Excellence",
-        onClickCallback: () => {
-            
-        },
-        key : "cg-6"
+        title: "The Prefectorial Body 2021-2022",
+        mainDescription: "Refined by fire and only those built on Christ as foundation will stand",
+        shortDescription: "Refine for Excellence",
+        query: "prefectorial-body",
+        key: "cg-6"
     },
     {
-        title: "Interact Club",
-        componentPictureSrc: "./img/Home/insights/Clubs/Interact_Club.jpg",
-        mainDescription : "Serving others beyond self, from an idea introduced during a fellowship, ideas exchanged and ideas turned to reality",
-        shortDescription : "Service above self.",
-        onClickCallback: () => {
-        },
-        key : "cg-1"
+        title: "Interact Club 2021-2022",
+        mainDescription: "Serving others beyond self, from an idea introduced during a fellowship, ideas exchanged and ideas turned to reality",
+        shortDescription: "Service above self.",
+        query: "intercat-club",
+        key: "cg-1"
     },
     {
-        title: "Genuine Writers",
-        mainDescription : "Bringing information and all you need to know close to you.",
-        componentPictureSrc: "./img/Home/insights/Clubs/writers1.jpg",
-        shortDescription : "From Ink Came Power",
-        onClickCallback: () => {
-            
-        },
-        key : "cg-4"
+        title: "Genuine Writers 2021-2022",
+        mainDescription: "Bringing information and all you need to know close to you.",
+        shortDescription: "From Ink Came Power",
+        query: "writers-club",
+        key: "cg-4"
     },
     {
-        title: "Junior Achievement Club",
-        mainDescription : "Developing business skills in young people. and strengthening the existing and coming generation.",
-        componentPictureSrc: "./img/Home/insights/Clubs/Junior_AchievemenT1.JPG",
-        shortDescription : "Business and Skills. ",
-        onClickCallback: () => {
-            
-        },
-        key : "cg-2"
+        title: "Junior Achievement Club 2021-2022",
+        mainDescription: "Developing business skills in young people. and strengthening the existing and coming generation.",
+        shortDescription: "Business and Skills. ",
+        query: "junior-achievement",
+        key: "cg-2"
 
     },
-   
-    {
-        title  : "Clubs Forum",
-        mainDescription : "",
-        shortDescription : "With Great Power Comes Great Responsiblity.",
-        componentPictureSrc : "./img/Home/insights/Clubs/Clubs_forum.jpg",
-        onClickCallback : ()=>{
 
-        },
-        key : "cg-5"
+    {
+        title: "Clubs Forum 2021-2022",
+        mainDescription: "",
+        shortDescription: "With Great Power Comes Great Responsiblity.",
+        query: "clubs-forum",
+        key: "cg-5"
     }
 ]
 
 
-export class InsightsLoader  { 
+export class InsightsLoader {
 
-    private _insightsContainer:HTMLDivElement;
+    private _insightsContainer: HTMLDivElement;
 
-    constructor(element:HTMLDivElement){ 
-        this._insightsContainer = element; 
+    constructor(element: HTMLDivElement) {
+        this._insightsContainer = element;
         this._initInsights(InsightsStrings)
     };
 
-
-    private _initInsights(insightsDatabase:IInsightsString[]){
-        insightsDatabase.forEach((_data)=>{
-            this._createTemplateBasis(_data)
+    private _initInsights(insightsDatabase: IInsightsString[]) {
+        insightsDatabase.forEach((_data,index) => {
+            this._createTemplateBasis(_data,ImageSocketBreaker[index])
         });
-        
+
     }
 
-    private _createTemplateBasis(__element:IInsightsString){
+    private _createTemplateBasis(__element: IInsightsString,imageSource:string) {
         const _srTemplate = `
         <div class="card-x-component ${__element.key}">
         <div class="card-content">
             <div class="card-content-wrapper">
-                <div class="card-content-image  "></div>
+                <div class="card-content-image">
+                    <picture class="pcturie-image-container">
+                        <img loading="lazy" src= "${imageSource}"/>
+                    </picture>
+                </div>
                 <div class="card-content-info">
                     <div class="x-title-1 ctrinfo">
                         <div class="wrapper">
@@ -113,10 +116,12 @@ export class InsightsLoader  {
                         </div>
                     </div>
                     <div class="x-title-btn">
-                        <div class="x-btn-wrapper ctrinfo">
-                            <div class="sl-button">&RightArrow;</div>
-                            <div class="sl-text">Read More From ${__element.title}.</div>
-                        </div>
+                        <ns-link href= "./insights=query?=${__element.query}">
+                            <div class="x-btn-wrapper ctrinfo">
+                                    <div class="sl-button">&RightArrow;</div>
+                                    <div class="sl-text">Read More From ${__element.title}.</div>
+                            </div>
+                        </ns-link>
                     </div>
                 </div>
             </div>
@@ -125,25 +130,8 @@ export class InsightsLoader  {
         `;
 
         //attach main element
-        this._insightsContainer.insertAdjacentHTML("afterbegin",_srTemplate);
-
-
-        const __holdingElement = document.querySelector<HTMLDivElement>(`.${__element.key}`)!;
-        const __hostInfoElement = __holdingElement.querySelector<HTMLDivElement>(".card-content-info")
-        const __hostImageElment = __holdingElement.querySelector<HTMLDivElement>(".card-content-image")
-        __hostInfoElement!.addEventListener("click",()=>{
-            __element.onClickCallback();
-        })
-        __hostImageElment!.style.backgroundImage = `linear-gradient(
-            to top,
-            #000,
-            #00000056,
-            #80808000,
-            #80808000
-          ),url(${__element.componentPictureSrc})`
+        this._insightsContainer.insertAdjacentHTML("afterbegin", _srTemplate);
 
     }
-
-
 
 }

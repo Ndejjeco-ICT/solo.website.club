@@ -29,6 +29,21 @@ ns-x-community .xb-community-component {
             font-size: 80pt;
             color: #fff;
             font-weight: bold;
+             > div {
+                position: absolute;
+             }
+             .image-container-wrapper {
+                width: inherit;
+                height: inherit;
+                background-color: grey;
+                picture {
+                    img {
+                        display: block;
+                        width: inherit;
+                        height: inherit;
+                    }
+                }
+             }
             .wrapper {
                 
                 width: 500px;
@@ -36,11 +51,11 @@ ns-x-community .xb-community-component {
         }
 
        .xb-sash-container {
-            height: 600px;
-            width: 600px;
-            margin-left: 100px;
-            background-color: rgba(0, 0, 0, 0.322);
-            backdrop-filter: blur(8px);
+        height: 600px;
+        width: 600px;
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(8px);
+        z-index: 90;
 
             .xb-content-text-3 {
                 width: 100%;

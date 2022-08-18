@@ -26,8 +26,16 @@
         "paths" : {
             "ns/*" : [
                 "./src/ns"
-            ]
+            ],
+            "@site-images/*" : [
+                "./src/ns/assets/site_images"
+            ],
+            "@site-media/*" : [
+                "./src/ns/assets/media"
+            ],
         },
+        
+       
     },
     "exclude" : ["./scripts","gulpfile.js","./public","webpack.config.js","./src/ns/*.js"]
 }

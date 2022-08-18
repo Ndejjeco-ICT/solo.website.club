@@ -22,12 +22,14 @@ export class dialogHost implements IIDialogHost{
     private isVisible:boolean = false;
     private _subscribers:IIDialogSubscribers[];
     private _subscribersMap:Map<string,HTMLDivElement> = new Map();
-    private _dialogHostElement:HTMLDivElement;
+    private _dialogHostElement: HTMLDivElement;
+    private _dialogHostLoader: HTMLDivElement;
     private _currentVisibleElement:HTMLDivElement|null=  null;
 
 
     constructor(options:IIDialogHostOptions){
         this._dialogHostElement = document.querySelector(".dialog-host")!
+        this._dialogHostLoader = document.querySelector(".dialog-host .staff-dialog-wrapper .loader")!
         this._subscribers = options.subscribers;
     };
     initializeDialogHost(): void {

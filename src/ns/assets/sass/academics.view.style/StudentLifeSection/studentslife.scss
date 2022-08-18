@@ -65,23 +65,19 @@ ns-x-life .xb-component-wrapper {
                     align-items: center;
                     justify-content: center;
                     background-repeat: no-repeat;
+                    background-color: #808080;
+                    transition: all .5s;
 
+                    .image-container {
+                        width: inherit;
+                        picture {
+                            width: inherit;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
-
-                .xl-q {
-                    background-size: contain;
-                    // background-image: url('../../../Imgs/new/cloq.JPG');
-                }
-
-                .xl-p {
-                    background-size: cover;
-                    // background-image: url('../../../Imgs/new/cloq1.JPG');
-                }
-
-
-
-
-
 
                 .xb-content {
                     font-weight: bold;

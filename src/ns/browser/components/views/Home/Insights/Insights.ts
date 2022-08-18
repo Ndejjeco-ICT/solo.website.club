@@ -2,6 +2,13 @@ import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/platform/positionRenderer/view_linker";
 import { InsightsLoader } from "ns/browser/components/views/Home/Insights/Insights.strings";
 
+//Image Sources for the initial Page Insights;
+
+
+
+
+
+
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="ponaco-splitview-5">
@@ -61,8 +68,10 @@ export class InsightsComponent extends HTMLElement implements IWebComponents {
     }
     _createComponentAttachments() {
         this._cardElementHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component");
-
     };
+
+
+
 
     _createAnimationFacilityFunction() {
     if (this._cardElementHandlers) {

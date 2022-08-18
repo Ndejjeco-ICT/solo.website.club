@@ -91,8 +91,9 @@ ns-x-insights .ponaco-splitview-5 {
                 position: relative;
                 width: 600px;
                 height: 480px;
+               
 
-                > div {
+                >div {
                   position: absolute;
                 }
 
@@ -103,17 +104,36 @@ ns-x-insights .ponaco-splitview-5 {
                   font-size: 30pt;
                   display: flex;
                   align-items: center;
-                  justify-content: center;
-                  background-size: contain;
-                 background-position: 100%;
-                  background-repeat: no-repeat;
+                  background-color: #808080;
                   animation: __pictureInsightsLoaderAnimation__ 0.9s linear;
+                  
 
-                
+                  picture {
+                    transition: all .5s;
+
+                    width: inherit;
+                    height: inherit;
+
+                    img {
+                      transition: all .5s;
+                      display: block;
+                      width: 100%;
+                      height: 100%;
+                    }
+                   
+                  }
                 }
 
                 .card-content-info {
+                  background-image: linear-gradient(
+                    to top,
+                    #000,
+                    #00000056,
+                    #80808000,
+                    #80808000
+                  );
                   bottom: 0px;
+                  width: 100%;
 
                   .ctrinfo {
                     width: 600px;
@@ -140,6 +160,7 @@ ns-x-insights .ponaco-splitview-5 {
                     font-weight: 300;
                     margin-bottom: 10px;
                     font-size: 15pt;
+
                     .wrapper {
                       transition: all 0.5s;
                     }
@@ -152,35 +173,45 @@ ns-x-insights .ponaco-splitview-5 {
                   .x-title-btn {
                     margin-bottom: 10px;
 
-                    .x-btn-wrapper {
-                      margin: 0px 20px 0px 20px;
-                      display: grid;
-                      grid-template-columns: 50px auto;
+                    ns-link {
+                      div {
+                        a {
+                          text-decoration: none;
 
-                      .sl-button {
-                        background-color: unset;
-                        font-size: 18pt;
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 40px;
-                        height: 40px;
-                        transition: all 0.5s;
-                        border: 1px solid #fff;
-                        color: #fff;
-                      }
+                          .x-btn-wrapper {
+                            margin: 0px 20px 0px 20px;
+                            display: grid;
+                            grid-template-columns: 50px auto;
 
-                      .sl-text {
-                        transition: all 0.5s;
+                            .sl-button {
+                              background-color: unset;
+                              font-size: 18pt;
+                              border-radius: 50%;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              width: 40px;
+                              height: 40px;
+                              transition: all 0.5s;
+                              border: 1px solid #fff;
+                              color: #fff;
+                            }
 
-                        color: #fff;
-                        font-weight: 300;
-                        height: 45px;
-                        display: flex;
-                        align-items: center;
+                            .sl-text {
+                              transition: all 0.5s;
+
+                              color: #fff;
+                              font-weight: 300;
+                              height: 45px;
+                              display: flex;
+                              align-items: center;
+                            }
+                          }
+                        }
                       }
                     }
+
+
                   }
                 }
               }
@@ -196,28 +227,49 @@ ns-x-insights {
   .card-content-info {
     &:hover {
       cursor: pointer;
+
       .x-title-2 {
         height: 50px !important;
         opacity: 1 !important;
       }
+
       .x-title-btn {
-        .x-btn-wrapper {
-          .sl-button {
-            background-color: #3b8af3 !important;
-            color: #000 !important;
+        ns-link {
+          div {
+            a {
+              .x-btn-wrapper {
+                .sl-button {
+                  background-color: #3b8af3 !important;
+                  color: #000 !important;
+                }
+              }
+            }
           }
+
         }
+
       }
+
     }
+
+
     &:active {
       .x-title-btn {
-        .x-btn-wrapper {
-          .sl-button {
-            background-color: #3b8af3 !important;
-            color: #000 !important;
-            transform: scale(0.8);
+        ns-link {
+          div {
+            a {
+              .x-btn-wrapper {
+                .sl-button {
+                  background-color: #3b8af3 !important;
+                  color: #000 !important;
+                  transform: scale(0.8);
+                }
+              }
+            }
           }
+
         }
+
       }
     }
   }

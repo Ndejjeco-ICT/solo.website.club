@@ -12,6 +12,11 @@ Template_.innerHTML = `
             <div class="xb-split-view-wrapper">
                 <div class="xb-split-view-1 split-component">
                     <div class="xb-split-component xb-picture-container xl-q">
+                        <div class="image-container">
+                            <picture class="image-host">
+                                <img src="" loading="lazy">
+                            </picture>
+                        </div>
                     </div>
                     <div class="xb-split-component xb-content">
                         <div class="cr-line"></div>
@@ -28,6 +33,11 @@ Template_.innerHTML = `
                         </div>
                     </div>
                     <div class="xb-split-component xb-picture-container xl-p">
+                        <div class="image-container">
+                            <picture class="image-host">
+                                <img src="" loading="lazy">
+                            </picture>
+                        </div>
                     </div>
                 </div>
 

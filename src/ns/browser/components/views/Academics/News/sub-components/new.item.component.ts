@@ -4,6 +4,11 @@ const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="xb-news-item-component">
     <div class="xb-holder-wrapper">
+        <div class="image-holder">
+            <picture>
+                <img loading="lazy" src/>
+            </picture>
+        </div>
         <div class="xb-content-holder">
             <div class="xb-title">
                 <div class="xb-title-wrapper"></div>
@@ -19,7 +24,7 @@ Template_.innerHTML = `
 
 
 export class NewsItem extends HTMLElement implements IWebComponents {
-    private _pictureManager:HTMLDivElement|null = null;
+    private _pictureManager:HTMLImageElement|null = null;
     private _contentTitle:HTMLDivElement|null = null;
     private _contentDataHost:HTMLDivElement|null = null;
 
@@ -81,7 +86,7 @@ export class NewsItem extends HTMLElement implements IWebComponents {
         if(this._contentTitle && this._contentDataHost && this._pictureManager){
             this._contentTitle.innerHTML = this._providedTitle;
             this._contentDataHost.innerHTML = this._providedData;
-            this._pictureManager.style.backgroundImage = `linear-gradient(to bottom, rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.73)), url('${this._providerPictureSrc}')`
+            this._pictureManager.src = ""
         }
     }
 

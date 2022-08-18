@@ -6,6 +6,7 @@
     .main-review-container {
         width: 100%;
         background-color: #000;
+
         .split-layout-containers {
             padding-top: 30px;
             padding-bottom: 30px;
@@ -28,6 +29,18 @@
                     background-position: 100% 100%;
                     width: 550px;
                     height: 560px;
+                    transition: all .5s;
+
+                    picture {
+                        width: inherit;
+                        height: inherit;
+
+                        img {
+                            display: block;
+                            width: inherit;
+                            height: inherit;
+                        }
+                    }
                 }
             }
 

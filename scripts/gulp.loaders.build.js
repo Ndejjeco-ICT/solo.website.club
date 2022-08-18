@@ -3,6 +3,7 @@ const gulp = require("gulp");
 function WebpackStandardBuild() {
     
     return gulp.src([
+        "./src/ns/bootstrap.fork.js",
         "./src/ns/bootstrap.js",
         "./src/ns/polyfill.loader.js",
         "./src/ns/polyfill.webcomponents.js"

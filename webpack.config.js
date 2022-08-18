@@ -15,6 +15,7 @@ const _WebPackConfiguration = {
         extensions: [".ts", ".js"],
         alias: {
             ns: path.resolve(__dirname, "src/ns"),
+            "@image" : path.resolve(__dirname, "src/ns/assets/site_images"),
             "@design_Home": path.resolve(__dirname, "src/ns/assets/sass/home.view.style"),
             "@design_About": path.resolve(__dirname, "src/ns/assets/sass/aboutus.view.style"),
             "@design_Common": path.resolve(__dirname, "src/ns/assets/sass/common"),
@@ -45,6 +46,10 @@ const _WebPackConfiguration = {
                     "css-loader"
                 ],
             },
+            {
+                test: /\.(svg|ico|png|jpg|gif|jpeg)/,
+                type : "asset/resource"
+            }
         ],
     },
     plugins: [
@@ -74,7 +79,6 @@ const _WebPackConfiguration = {
     },
     devServer: {
         port : 5001,
-        open : true,
         hot: true,
         magicHtml: true,
         liveReload : true,

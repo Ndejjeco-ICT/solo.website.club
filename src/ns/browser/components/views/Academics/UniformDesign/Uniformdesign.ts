@@ -26,7 +26,11 @@ Template_.innerHTML = `
                         <div class="xb-split-view">
                             <div class="xb-split-view-1 view-area level-a">
                                 <div class="xb-content-1 xb-pic xbr-content">
-                                    <div class="xb-picture-container"></div>
+                                    <div class="xb-picture-container">
+                                        <picture>
+                                            <img loading="lazy" src/>
+                                        </picture>
+                                    </div>
                                 </div>
                                 <div class="xb-content-2 xbr-content xtr-info">
                                     <div class="wrapper">
@@ -53,7 +57,11 @@ Template_.innerHTML = `
                                     </div>
                                 </div>
                                 <div class="xb-content-2 xb-pic xbr-content">
-                                    <div class="xb-picture-container"></div>
+                                    <div class="xb-picture-container">
+                                        <picture>
+                                            <img loading="lazy" src/>
+                                        </picture>
+                                    </div>
 
                                 </div>
                             </div>

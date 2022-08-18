@@ -9,11 +9,12 @@ ns-x-newsitem {
         opacity: 0;
         color: rgba(0, 0, 0, 0);
     }
-    100%{
+
+    100% {
         color: #fff;
         opacity: 1;
     }
-    
+
 }
 
 ns-x-newsitem .xb-news-item-component {
@@ -23,9 +24,26 @@ ns-x-newsitem .xb-news-item-component {
     .xb-holder-wrapper {
         width: inherit;
         height: inherit;
-        position: relative;
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
+        >div {
+            position: absolute;
+        }
+
+        .image-holder {
+            width: inherit;
+            height: inherit;
+            background-color: #dcdcdc;
+
+            picture {
+                img {
+                    display: block;
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+        }
 
         .xb-content-holder {
             position: absolute;
@@ -53,8 +71,9 @@ ns-x-newsitem .xb-news-item-component {
                 color: #fff;
                 display: none;
                 opacity: 0;
+
                 .xb-content-host-wrapper {
-                transition: all .5s;
+                    transition: all .5s;
                     margin-left: 15px;
                     font-size: 14.5pt;
                 }

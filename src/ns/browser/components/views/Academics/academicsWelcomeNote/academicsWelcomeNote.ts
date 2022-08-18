@@ -1,14 +1,29 @@
 import  {IWebComponents}  from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/platform/positionRenderer/view_linker";
-
+// @ts-ignore
+import academicsBannerImage from "ns/assets/site_images/academics_view/cr_banner/discuss.jpg"
 
 const Template_ = document.createElement("template");
-Template_.innerHTML  = `
+Template_.innerHTML = `
 <div class="xb-academics-component">
-    <div class="xb-wrapper">
-        <div class="tl-x-o-text">The beautiful thing about learning is that no one can take it away from you.</div>
-        <div class="xl-sub-content">...Our Academics...</div>
+    <div class="control-wrapper">
+        <div class="xb-wrapper-2">
+            <div class="banner-wrapper">
+                <picture>
+                    <img loading="lazy" src="${academicsBannerImage}" />
+                </picture>
+            </div>
+        </div>
+        <div class="xb-wrapper">
+          <div class="tl-x-o-text">The beautiful thing about learning is that no one can take it away from you.</div>
+          <div class="xl-sub-content">...Our Academics...</div>
     </div>
+    </div>
+</div>
+<div class="xb-academics-component">
+
+
+ 
 </div>
 `
 

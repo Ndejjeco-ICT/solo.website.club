@@ -24,7 +24,7 @@ Template_.innerHTML = `
                     <ns-blog-view></ns-blog-view>
                 </ns-route>
                 <ns-route key="academics" path="/academics">
-                    <ns-academics-view></ns-academics-view>
+                    <ns-academics-views></ns-academics-view>
                 </ns-route>
                 <ns-route key="insights" path="/insights">
                     <ns-insights-view></ns-insights-view>
@@ -33,7 +33,14 @@ Template_.innerHTML = `
         </div>
         <ns-footer></ns-footer>
     </div>
-    <div class="ns-sub-wrapper" is="inactive"></div>
+    <div class="ns-sub-wrapper" is="inactive">
+        <div class="dialog-host">
+            <div class="staff-dialog-wrapper">
+            <ns-enroll></ns-enroll>
+
+            </div>
+        </div>
+    </div>
 </div>
 `
 interface IViewManager {

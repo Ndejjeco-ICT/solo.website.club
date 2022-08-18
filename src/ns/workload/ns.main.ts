@@ -86,11 +86,12 @@ import "ns/browser/components/views/Blog/view.blog";
 
 import  "ns/browser/components/views/Insights/view.insights"
 
-
+import "ns/browser/components/enroll-dialog/ns-enroll";
 
 /**
  * Provider comes last
  */
+
 import "ns/browser/components/root/root"
 
 import "ns/browser/static.main"

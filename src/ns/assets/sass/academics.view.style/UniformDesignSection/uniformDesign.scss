@@ -65,6 +65,13 @@ ns-x-uniformdesign .xb-uniform-design-component {
                                     width: 500px;
                                     height: 500px;
                                     background-image: linear-gradient(to top, #303030, #808080, #808080);
+                                    picture {
+                                        img {
+                                            display: block;
+                                            width: inherit;
+                                            height: inherit;
+                                        }
+                                    }
                                 }
     
                                 .xtr-info {

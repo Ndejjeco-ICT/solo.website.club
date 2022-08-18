@@ -17,7 +17,13 @@
       "paths" : {
           "ns/*" : [
               "./ns"
-          ]
+          ],
+          "@site-images" : [
+            "./ns/assets/site_images"
+          ],
+          "@site-media" : [
+            "./ns/assets/media"
+          ],
       },
       "lib": [
         "ES2016",

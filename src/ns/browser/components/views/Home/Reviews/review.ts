@@ -1,7 +1,8 @@
 import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/platform/positionRenderer/view_linker";
 import { ReviewsData } from "./reviews.data";
-
+// @ts-ignore
+import ThoughtsImage from "ns/assets/site_images/home_view/cr_reviews/thoughts.jpg"
 export class ReviewSection extends HTMLElement implements IWebComponents {
 
     private  _studentReviewsQuotecc:HTMLDivElement|null = null;
@@ -33,7 +34,11 @@ export class ReviewSection extends HTMLElement implements IWebComponents {
                     </div>
                 </div>
                 <div class="split-container-1">
-                    <div class="split-image-container"></div>
+                    <div class="split-image-container">
+                        <picture class="cn-picture-container">
+                            <img loading="lazy" src="${ThoughtsImage}" />
+                        </picture>
+                    </div>
                 </div>
             </div>
         </div>

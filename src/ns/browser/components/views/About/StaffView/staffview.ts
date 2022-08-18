@@ -14,7 +14,7 @@ Template_.innerHTML = `
                 <div class="tr-view-1">
                     <div class="tr-view-1-wrapper">
                         <div class="cl-view-1">
-                            <div class="cl-picture-container">_image_</div>
+                            <div class="cl-picture-container"></div>
                         </div>
                         <div class="cl-view-2">
                             <div class="cl-content-text-holder">
@@ -71,7 +71,7 @@ class StaffView extends HTMLElement implements IWebComponents {
         this._applyGeneralEventListeners()
     }
     private _createComponentAttachment(){
-        this._xrt1 = this.querySelector(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-1");
+        this._xrt1 = this.querySelector(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-1 .cl-view-2");
         this._xrt2 = this.querySelectorAll(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-2 .tr-view-2-wrapper .tr-content .tr-members-wrapper ns-x-member");
         this._xrtControlBtn = this.querySelector(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-2 .tr-view-2-wrapper .tr-content-2  .selective-btn")
     };

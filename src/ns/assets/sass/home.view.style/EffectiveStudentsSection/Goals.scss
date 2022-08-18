@@ -78,17 +78,28 @@ ns-x-benefits .ponaco-splitview-3 {
                                 }
 
                                 .cn-picture-container {
-                                    
+                                    transition : all .5s;
                                     width: 100%;
                                     height: 300px;
-                                    background-repeat: no-repeat;
-                                    background-size: 100%;
-                                    background-position: 100% 100%;
+                                    background-color: #0808086c;
+                                    border: 1px solid #00000018;
                                     z-index: 1;
                                     font-size: 30pt;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
+                                    picture {
+                                        transition: all .5s;
+                                        width: inherit;
+                                        height: inherit;
+                                        img {
+                                            transition: all .5s;
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                            opacity: 0;
+                                        }
+                                    }
                                 }
                                
 
@@ -111,7 +122,6 @@ ns-x-benefits .ponaco-splitview-3 {
                                     width: 100%;
                                     bottom: 0px;
                                     z-index: 2;
-                                    cursor: pointer;
                                     display: flex;
                                     align-items: flex-end;
 
@@ -169,6 +179,17 @@ ns-x-benefits .ponaco-splitview-3 {
                                 }
 
                                 .cr-xmore {
+                                    ns-link {
+                                        div {
+                                            a {
+                                                margin: 0px;
+                                                padding: 0px;
+                                                text-decoration: none;
+                                            }
+                                        }
+                                       
+                                    }
+
                                     margin-top: 20px;
                                     cursor: pointer;
                                     border: 2px solid V.$ns-layout-color;

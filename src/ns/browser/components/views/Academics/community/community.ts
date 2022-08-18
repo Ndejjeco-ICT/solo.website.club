@@ -15,6 +15,11 @@ Template_.innerHTML = `
             </div>
         </div>
         <div class="xb-content-text-1">
+            <div class="image-container-wrapper">
+                <picture>
+                    <img loading="lazy" src/>
+                </picture>
+            </div>
             <div class="wrapper">
                 Join The Community!
             </div>

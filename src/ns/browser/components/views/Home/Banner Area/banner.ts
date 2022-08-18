@@ -1,6 +1,7 @@
 import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/platform/positionRenderer/view_linker";
-
+//@ts-ignore
+import bannerImageElement from "@image/home_view/cr_banner/banner001.jpg";
 
 const template_ = document.createElement("template");
 
@@ -9,7 +10,7 @@ template_.innerHTML = `
     <div class="ponaco-control-wrapper">
         <div class="banner-image-container">
             <picture draggable="false" class="cn-picture-container">
-                <img src="./resources/site-images/home-view/cr-banner/banner001.jpg" alt="" loading="lazy">
+                <img class="banner-image-host" alt="" loading="lazy">
             </picture>
         </div>
         <div class="wx-component-user-section">
@@ -27,6 +28,9 @@ template_.innerHTML = `
 export class BannerAreaComponent extends HTMLElement implements IWebComponents {
 
     private _commonWelcomeComponentSection: HTMLDivElement | null;
+    private bannerImageHost: HTMLImageElement | null = null;
+    private bannerControlWrapper: HTMLDivElement | null = null;
+    private mainSplitView: HTMLDivElement | null = null;
 
     constructor() {
         super();
@@ -41,12 +45,39 @@ export class BannerAreaComponent extends HTMLElement implements IWebComponents {
         return "ns-x-banner"
     }
 
+    async removeImageMask() {
+        if (this.mainSplitView && this.bannerControlWrapper) {
+            // this.mainSplitView.style.backgroundColor = "unset";
+            this.bannerControlWrapper.style.opacity = "1";
+        }
+    }
+
+    async loadBannerImageForMainComponent() {
+        return new Promise<void>((c) => {
+            if (this.bannerImageHost) {
+                this.bannerImageHost.src = bannerImageElement;
+                setTimeout(() => {
+                    c()
+                },1500)
+            }
+        })
+      
+    }
+
     //Intialize component
     initializeComponent() {
         this.__createComponentAttachment();
+        this.loadBannerImageForMainComponent().then(() => {
+            this.removeImageMask();
+            this.__createAnimationFacilityFunction();
+        });
+
 
     }
     __createComponentAttachment() {
+        this.mainSplitView = this.querySelector(".ponaco-splitview-1");
+        this.bannerControlWrapper = this.querySelector(".ponaco-control-wrapper")
+        this.bannerImageHost = this.querySelector(".banner-image-host")
         this._commonWelcomeComponentSection = this.querySelector(".welcome-note-section");
     };
     /**

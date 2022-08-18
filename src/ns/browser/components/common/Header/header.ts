@@ -2,7 +2,8 @@ import { IWebComponents } from "ns/typings/schw";
 import { addDisposableEventListener } from "ns/browser/common/domListener";
 import { LinksManagerSystem } from "ns/platform/subTabOpener/linksManager";
 import { NavigationInitialRouteEventManager,NAVIGATION_ROUTE_EVENTS } from "ns/platform/ns-router/ns_router";
-
+// @ts-ignore
+import Logo from "ns/assets/site_images/home_view/logo.png";
 
 
 const Template_ = document.createElement('template');
@@ -11,8 +12,12 @@ Template_.innerHTML = `
 <div class="wx-component-header-section">
     <div class="wx-header-component-area">
         <div class="wx-badge-wrapper">
-            <div id="badge-icon"></div>
-            <div class="badge-title"></div>
+            <div id="badge-icon">
+                <picture>
+                    <img loading="lazy" src="${Logo}"/>
+                </picture>
+            </div>
+            <div class="badge-title">Ndejje Senior Secondary School</div>
         </div>
         <div class="wx-navigation-bar-half-area">
             <div class="navigation-bar-wrapper">

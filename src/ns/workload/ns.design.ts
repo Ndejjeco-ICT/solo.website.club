@@ -12,7 +12,8 @@ import "@design_Common/Footer/Footer.scss";
 import "@design_Common/Enrollbtn/Enrollbtn.scss";
 import "@design_Common/screen/Animations.scss";
 import "@design_Common/dialogHost/dialogHost.scss";
-import "@design_Common/insights/view.insights.scss"
+import "@design_Common/insights/view.insights.scss";
+import "@design_Common/enrollDialog/enrollDialog.scss";
 
 
 //Home View Components
