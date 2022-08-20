@@ -1,28 +1,67 @@
 <div class="ns-main-container" nature="static-preloading">
     <div class="ns-main-wrapper">
+        <div class="ns-main-dependencies">
+            <div class="ns-insights-dependencies" static="dependencies">
+                <dom-module key="interact">
+                    <template></template>
+                </dom-module>
+                <dom-module key="junior-achievement">
+                    <template></template>
+                </dom-module>
+                <dom-module key="students-council">
+                    <template></template>
+                </dom-module>
+                <dom-module key="prefectorial-body">
+                    <template></template>
+                </dom-module>
+                <dom-module key="clubs-forum">
+                    <template></template>
+                </dom-module>
+                <dom-module key="writers">
+                    <template></template>
+                </dom-module>
+                <dom-module key="ict">
+                    <template></template>
+                </dom-module>
+            </div>
+
+        </div>
         <ns-header></ns-header>
         <div class="ns-page-container">
             <ns-router>
-                <ns-root key="home-view" path="./home">
+                <ns-route key="home" path="/home">
                     <ns-home-view></ns-home-view>
-                </ns-root>
-                <ns-root key="about-view" path="./aboutus">
+                </ns-route>
+                <ns-route key="aboutus" path="/aboutus">
                     <ns-about-view></ns-about-view>
-                </ns-root>
-                <ns-root key="blog-view" path="./blog">
-                    <ns-academics-view></ns-academics-view>
-                </ns-root>
-                <ns-root key="academics-view" path="./academics">
-                    <ns-academics-view></ns-academics-view>
-                </ns-root>
-                <ns-root key="insights-view" path="./insights">
+                </ns-route>
+                <ns-route key="blog" path="/blog">
+                    <ns-blog-view></ns-blog-view>
+                </ns-route>
+                <ns-route key="academics" path="/academics">
+                    <ns-academics-views>
+                        </ns-academics-view>
+                </ns-route>
+                <ns-route key="insights" path="/insights">
                     <ns-insights-view></ns-insights-view>
-                </ns-root>
+                </ns-route>
             </ns-router>
         </div>
         <ns-footer></ns-footer>
     </div>
-    <div class="ns-sub-wrapper" is="inactive"></div>
+    <div class="ns-sub-wrapper" is="inactive">
+        <div class="dialog-host">
+            <div class="staff-dialog-wrapper">
+                <ns-enroll style="display: none;"></ns-enroll>
+                <div class="loader">
+                    <div class="title">Just A Moment!</div>
+                    <div class="linear-loader">
+                        <div class="ld1 ldr-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="ponaco-splitview-1">
@@ -328,7 +367,8 @@
                     <div class="xb-split-component xb-content">
                         <div class="cr-line"></div>
                         <div class="split-wrapper">
-                            The discipline of the students continues to improve. It has been observed that most of the indiscipline cases have a link with home related challenges spilling over to the school
+                            The discipline of the students continues to improve. It has been observed that most of the
+                            indiscipline cases have a link with home related challenges spilling over to the school
                         </div>
                     </div>
                 </div>
@@ -336,7 +376,8 @@
                     <div class="xb-split-component xb-content">
                         <div class="cr-line"></div>
                         <div class="split-wrapper">
-                            At breakfast, students are served with milk tea along with eats on Tuesday (Doughnuts), Thursday (chapattis), and Saturday (Buns) Sunday (chapattis/Eggs/Maize
+                            At breakfast, students are served with milk tea along with eats on Tuesday (Doughnuts),
+                            Thursday (chapattis), and Saturday (Buns) Sunday (chapattis/Eggs/Maize
                         </div>
                     </div>
                     <div class="xb-split-component xb-picture-container xl-p">
@@ -358,105 +399,150 @@
 <!--enroll dialog template-->
 
 <div class="enroll-dialog-main-wrapper">
-    <div class="section-wrapper">
-        <div class="sl-secton-1">
-            <div class="banner-image-area">
-                <picture>
-                    <img src="" loading="lazy"/>
-                </picture>
-            </div>
+    <div class="enroll-sections-wrapper">
+        <div class="control-component">
+            <div class="close-manager">&times;</div>
         </div>
-        <div class="sl-secton-2">
-            <div class="form-section-wrapper">
-                <div class="sl-1">
-                    <div class="wrapper">
-                        <div class="main-title">Which Level Would You Like to Join?.</div>
-                        <div class="cl-wrapper">
-                            <div class="cl-f5-wrapper">
-                                <div class="io-wrapper">A-level 2023.</div>
-                            </div>
-                            <div class="cl-f6-wrapper">
-                                <div class="io-wrapper">O-level 2023.</div>
+        <div class="section-wrapper" style="display: none;">
+            <div class="sl-section-1">
+                <div class="banner-image-area">
+                    <picture>
+                        <img src="" loading="lazy" />
+                    </picture>
+                </div>
+            </div>
+            <div class="sl-section-2">
+                <div class="form-section-wrapper">
+                    <div class="sl-1">
+                        <div class="wrapper">
+                            <div class="main-title">Which Level Would You Like to Join?.</div>
+                            <div class="cl-wrapper">
+                                <div class="cl-f5-wrapper">
+                                    <div class="io-wrapper">A-level 2023.</div>
+                                </div>
+                                <div class="cl-f5-wrapper">
+                                    <div class="io-wrapper">O-level 2023.</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="sl-2">
-                    <div class="wrapper">
-                        <div class="main-title-component">
-                            <div class="tr-1">A-level Enrollment</div>
-                            <div class="tr-2">Enrolling as student in Form 5 2023.</div>
-                        </div>
-                        <div class="main-form-component">
-                            <div class="jl-title-1">Enter The Information Carefully.</div>
-                            <div class="jl-main">
-                                <form action="post" id="cr-form">
-                                    <div class="main-name-entry-container">
-                                        <div class="sl-label">Name</div>
-                                        <input type="text" name="text-area" id="er-name" required="required">
-                                    </div>
-                                    <div class="main-school-entry-container">
-                                        <div class="sl-label">Former School</div>
-                                        <input type="text" name="text-area" id="er-school" required="required">
-                                    </div>
-                                    <div class="main-sex-entry-container">
-                                        <div class="sl-label">Sex</div>
-                                        <select name="" id="er-select" required="required">
-                                            <option value="Male"></option>
-                                            <option value="Female"></option>
-                                        </select>
-                                    </div>
-                                    <div class="main-name-2-entry-container">
-                                        <div class="sl-label">Parent's Name</div>
-                                        <input type="text" name="text" id="er-name-2" required="required">
-                                    </div>
-                                    <div class="main-number-entry">
-                                        <div class="sl-label">Parent's Phone</div>
-                                        <input type="number" required="required" id="er-number-2">
-                                    </div>
-                                    <div class="main-description-container">
-                                        <div class="sl-label">Why Ndejje</div>
-                                        <textarea name="" id="cr-ndejje" cols="30" rows="10" required="required" placeholder="Why Did you really think Ndejje is school of your Choice"></textarea>
-                                    </div>
-                                    <div class="main-data-container">
-                                        <div class="sl-label">Please Attach A copy of Your Results. (.pdf or .docx)</div>
-                                        <input type="file" name="" id="cr-name">
-                                    </div>
-                                </form>
+                    <div class="sl-2">
+                        <div class="wrapper">
+                            <div class="main-title-component">
+                                <div class="tr-1">A-level Enrollment</div>
+                                <div class="tr-2">Enrolling as student in Form 5 2023.</div>
+                            </div>
+                            <div class="main-form-component">
+                                <div class="jl-main">
+                                    <form action="post" id="cr-form">
+                                        <div class="main-name-entry-container">
+                                            <div class="sl-label">Name</div>
+                                            <input type="text" name="text-area" id="er-name" required="required">
+                                        </div>
+                                        <div class="main-school-entry-container">
+                                            <div class="sl-label">Former School</div>
+                                            <input type="text" name="text-area" id="er-school" required="required">
+                                        </div>
+                                        <div class="main-sex-entry-container">
+                                            <div class="sl-label">Sex</div>
+                                            <select name="" id="er-select" required="required">
+                                                <option value="Male"></option>
+                                                <option value="Female"></option>
+                                            </select>
+                                        </div>
+                                        <div class="main-name-2-entry-container">
+                                            <div class="sl-label">Parent's Name</div>
+                                            <input type="text" name="text" id="er-name-2" required="required">
+                                        </div>
+                                        <div class="main-number-entry">
+                                            <div class="sl-label">Parent's Phone</div>
+                                            <input type="number" required="required" id="er-number-2">
+                                        </div>
+                                        <div class="main-description-container">
+                                            <div class="sl-label">Why Ndejje</div>
+                                            <textarea name="" id="cr-ndejje" cols="30" rows="10"
+                                                required="required"></textarea>
+                                        </div>
+                                        <div class="main-data-container">
+                                            <div class="sl-label">Please Attach A copy of Your Results. (.pdf or .docx)
+                                            </div>
+                                            <input type="file" name="" id="cr-name">
+                                        </div>
+                                    </form>
                                     <div class="main-data-continutit">
                                         <div class="sl-label">Continue</div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sl-3">
+                        <div class="wrapper">
+                            <div class="main-title">Almost Done!</div>
+                            <div class="wrapper">
+                                <div class="ql-email">
+                                    <div class="sl-label">Response Email.</div>
+                                    <div class="sl-label-2">We Will Get Back to you at this Email.</div>
+                                    <input type="email" name="" id="rp-email">
+                                </div>
+                                <div class="loader-area">
+                                    <div class="loader-component"></div>
+                                    <div class="loader-sucess"></div>
+                                    <div class="loader-failed"></div>
+                                </div>
+                            </div>
+                            <div class="button-submit">
+                                <div class="sl-label">Submit</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sl-3">
-                    <div class="wrapper">
-                        <div class="main-title">Almost Done!</div>
-                        <div class="wrapper">
-                            <div class="ql-email">
-                                <div class="sl-label">Response Email.</div>
-                                <div class="sl-label-2">We Will Get Back to you at this Email.</div>
-                                <input type="email" name="" id="rp-email">
-                            </div>
-                            <div class="loader-area">
-                                <div class="loader-component"></div>
-                                <div class="loader-sucess"></div>
-                                <div class="loader-failed"></div>
-                            </div>
-                        </div>
-                        <div class="button-submit">
-                            <div class="sl-label">Submit</div>
+                <div class="u-l-section-wrapper">
+                    <div class="sl-wrapper">
+                        <div class="tr-container">
+                            <div class="tr-title">Sorry!</div>
+                            <div class="tr-title-2">No Applications Available for O-level & A-level</div>
+                            <div class="tr-title-3">Try Later!</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="u-l-section-wrapper">
-                <div class="sl-wrapper">
-                    <div class="tr-container">
-                        <div class="tr-title">Sorry!</div>
-                        <div class="tr-title-2">No Applications Available for O-level & A-level</div>
-                        <div class="tr-title-3">Try Later!</div>
+        </div>
+        <div class="section-wrapper-2">
+            <div class="main-wrapper">
+                <div class="cl-title">Sorry!.</div>
+                <div class="cl-title-2">Service Ability is Still in Progress...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="insights-control-template">
+    <div class="wrapper">
+        <div class="controls-container">
+            <div class="back">
+                <i class="fa fa-back"></i>
+            </div>
+        </div>
+        <div class="main-wrapper">
+            <div class="control-title-area">
+                <div class="image-banner-component">
+                    <picture>
+                        <img loading="lazy" src="">
+                    </picture>
+                </div>
+                <div class="cr-title">#Insights</div>
+            </div>
+            <div class="control-components-wrapper">
+                <div class="cr-component">
+                    <div class="wrapper">
+                        <div class="image-container">
+                            <picture>
+                                <img loading="lazy" src="" alt="">
+                            </picture>
+                        </div>
+                        <div class="centrum-title">Interact Club</div>
                     </div>
                 </div>
             </div>

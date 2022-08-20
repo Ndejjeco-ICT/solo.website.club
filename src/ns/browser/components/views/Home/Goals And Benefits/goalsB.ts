@@ -74,7 +74,7 @@ Template_.innerHTML = `
                                     change in the professions and passions they pursue.
                                 </div>
                                 <div class="cr-xmore" title="Read More Ndejje">
-                                    <ns-link href="./aboutus" classname="cr-rd">Read More</ns-link>
+                                    <ns-link href="./insights" classname="cr-rd">Read More</ns-link>
                                 </div>
                             </div>
                         </div>

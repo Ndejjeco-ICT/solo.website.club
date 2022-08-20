@@ -57,7 +57,8 @@ export class PrideComponent extends HTMLElement implements IWebComponents {
     }
     _createEventListenerForContentButton(){
         if(this._contentAboutButton){
-            this._contentAboutButton.addEventListener("click",()=>{
+            this._contentAboutButton.addEventListener("click", () => {
+                document.location.href = "/blog"
             })
         }
     }

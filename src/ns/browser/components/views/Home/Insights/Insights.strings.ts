@@ -49,7 +49,7 @@ export const InsightsStrings: IInsightsString[] = [
         title: "Interact Club 2021-2022",
         mainDescription: "Serving others beyond self, from an idea introduced during a fellowship, ideas exchanged and ideas turned to reality",
         shortDescription: "Service above self.",
-        query: "intercat-club",
+        query: "interact-club",
         key: "cg-1"
     },
     {
@@ -116,7 +116,7 @@ export class InsightsLoader {
                         </div>
                     </div>
                     <div class="x-title-btn">
-                        <ns-link href= "./insights=query?=${__element.query}">
+                        <ns-link href= "./insights/search?q=${__element.query}">
                             <div class="x-btn-wrapper ctrinfo">
                                     <div class="sl-button">&RightArrow;</div>
                                     <div class="sl-text">Read More From ${__element.title}.</div>

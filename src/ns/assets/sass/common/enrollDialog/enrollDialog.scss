@@ -6,221 +6,285 @@ ns-enroll {
     height: inherit;
 
     .enroll-dialog-main-wrapper {
+
         width: 100%;
         height: inherit;
 
-        .section-wrapper {
-            width: 100%;
+        .enroll-sections-wrapper {
+            position: relative;
             height: inherit;
+            .control-component {
+                padding: 0px;
+                margin: 0px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 17pt;
+                color: #fff;
+                transition: all .5s;
+                background-color: #4786ff;
+                border-radius: 0% 0% 50% 50%;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #e71834;
+                }
+                &:active {
 
-            //the two divisions
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+                    transform: scale(0.8);
+                background: #6398fa;
 
-            .sl-section-1 {
-                width: 100%;
-                background-color: #752becc5;
-
-                .banner-image-area {
-                    width: inherit;
-
-                    picture {
-                        width: inherit;
-
-                        img {
-                            transition: all .5s;
-                            display: block;
-                            width: 100%;
-                        }
-                    }
                 }
             }
 
-            .sl-section-2 {
-                height: inherit;
+
+            .section-wrapper {
                 width: 100%;
+                height: inherit;
 
-                .form-section-wrapper {
-                    .sl-1 {
+                //the two divisions
+                display: grid;
+                grid-template-columns: 1fr 1fr;
 
-                        .wrapper {
-                            width: 100%;
+                .sl-section-1 {
+                    width: 100%;
+                    background-color: #752becc5;
 
-                            .main-title {
-                                margin: 40px 10px 0px 30px;
-                                font-size: 27pt;
-                                font-weight: 350;
-                                color: #00000096;
-                            }
+                    .banner-image-area {
+                        width: inherit;
 
-                            .cl-wrapper {
-                                margin: 50px 0px 0px 30px;
+                        picture {
+                            width: inherit;
 
-                                .cl-f5-wrapper {
-                                    transition: all .5s;
-                                    color: #fff;
-                                    font-weight: 350;
-                                    font-size: 14pt;
-                                    background-color: #752becc5;
-                                    margin: 20px 0px 20px 0px;
-                                    width: 90%;
-                                    height: 80px;
-                                    display: flex;
-                                    align-items: center;
-                                    padding: 5px 5px 5px 5px;
-
-                                    &:active {
-                                        transform: scale(0.8);
-                                    }
-
-                                    &:hover {
-                                        border-color: #000000c9;
-                                        cursor: pointer;
-                                        background-color: #1439df98;
-                                    }
-
-                                    .io-wrapper {
-                                        margin-left: 30px;
-                                    }
-
-                                    border: 2px solid #fff;
-                                }
-
+                            img {
+                                transition: all .5s;
+                                display: block;
+                                width: 100%;
                             }
                         }
                     }
+                }
 
-                    .sl-2 {
+                .sl-section-2 {
+                    height: inherit;
+                    width: 100%;
 
-                        display: none;
-                        
-                        .wrapper {
-                            width: 100%;
+                    .form-section-wrapper {
+                        .sl-1 {
 
-                            .main-title-component {
-                                height: 100px;
-                                background-color: #000;
+                            .wrapper {
+                                width: 100%;
 
-                                .tr-1 {
-                                    margin: 0px 10px 0px 60px;
-                                    font-size: 28pt;
+                                .main-title {
+                                    margin: 40px 10px 0px 30px;
+                                    font-size: 27pt;
                                     font-weight: 350;
-                                    color: #f5f4f4c9;
+                                    color: #00000096;
                                 }
 
-                                .tr-2 {
-                                    margin: 5px 10px 0px 60px;
-                                    font-size: 11pt;
-                                    font-weight: 355;
-                                    color: #f5f5f5a8;
-                                }
-                            }
+                                .cl-wrapper {
+                                    margin: 50px 0px 0px 30px;
 
-                            .main-form-component {
-                                margin-top: 16px;
-
-
-                                .jl-main {
-                                    position: relative;
-                                    form#cr-form {
-                                        margin-left: 60px;
-                                        height: 519px;
-                                        overflow-y: scroll;
-
-                                        >div {
-                                            margin: 15px 0px 15px 0px;
-
-                                            .sl-label {
-                                                text-transform: uppercase;
-                                                font-size: 10.5pt;
-                                                font-weight: 400;
-                                                color: #504f4f;
-                                                margin-bottom: 5px;
-                                            }
-
-                                            input,
-                                            textarea {
-                                                
-                                                margin-bottom: 5px;
-                                            }
-                                            input[type="number"]{
-                                                resize: none;
-                                            }
-
-                                            input[type='text'] {
-                                                background-color: #fdfdfd;
-                                                outline: none;
-                                                border-top: unset;
-                                                border-left: unset;
-                                                border-right: unset;
-                                                width: 90%;
-                                                height: 25px;
-                                                border-bottom: 1px solid #000;
-
-                                                &:focus {
-                                                    border-color: #1439df98;
-                                                    ;
-                                                }
-                                            }
-
-                                            textarea {
-                                                resize: none;
-                                                outline: none;
-                                                width: 90%;
-                                                height: 100px;
-                                                border-radius: unset;
-                                                border: 1px solid gray;
-                                                &:focus {
-                                                    border-color: #1439df98;
-                                                    ;
-                                                }
-                                            }
-
-                                        }
-                                    }
-                                    .main-data-continutit{
-                                        width: 100%;
+                                    .cl-f5-wrapper {
+                                        transition: all .5s;
+                                        color: #fff;
+                                        font-weight: 350;
+                                        font-size: 14pt;
+                                        background-color: #752becc5;
+                                        margin: 20px 0px 20px 0px;
+                                        width: 90%;
                                         height: 80px;
-                                        position: absolute;
-                                        bottom: 0px;
                                         display: flex;
                                         align-items: center;
-                                        justify-content: center;
-                                        left: 0px;
-                                        .sl-label {
-                                            &:hover {
-                                                border-color: #000000c9;
-                                                cursor: pointer;
-                                                background-color: #1439df98;
-                                            }
-        
-                                            .io-wrapper {
-                                                margin-left: 30px;
-                                            }
-        
-                                            border: 2px solid #fff;
+                                        padding: 5px 5px 5px 5px;
 
-                                            background-color:#1439df98 ;
+                                        &:active {
+                                            transform: scale(0.8);
+                                        }
+
+                                        &:hover {
+                                            border-color: #000000c9;
+                                            cursor: pointer;
+                                            background-color: #1439df98;
+                                        }
+
+                                        .io-wrapper {
+                                            margin-left: 30px;
+                                        }
+
+                                        border: 2px solid #fff;
+                                    }
+
+                                }
+                            }
+                        }
+
+                        .sl-2 {
+
+                            display: none;
+
+                            .wrapper {
+                                width: 100%;
+
+                                .main-title-component {
+                                    height: 100px;
+                                    background-color: #000;
+
+                                    .tr-1 {
+                                        margin: 0px 10px 0px 60px;
+                                        font-size: 28pt;
+                                        font-weight: 350;
+                                        color: #f5f4f4c9;
+                                    }
+
+                                    .tr-2 {
+                                        margin: 5px 10px 0px 60px;
+                                        font-size: 11pt;
+                                        font-weight: 355;
+                                        color: #f5f5f5a8;
+                                    }
+                                }
+
+                                .main-form-component {
+                                    margin-top: 16px;
+
+
+                                    .jl-main {
+                                        position: relative;
+
+                                        form#cr-form {
+                                            margin-left: 60px;
+                                            height: 519px;
+                                            overflow-y: scroll;
+
+                                            >div {
+                                                margin: 15px 0px 15px 0px;
+
+                                                .sl-label {
+                                                    text-transform: uppercase;
+                                                    font-size: 10.5pt;
+                                                    font-weight: 400;
+                                                    color: #504f4f;
+                                                    margin-bottom: 5px;
+                                                }
+
+                                                input,
+                                                textarea {
+
+                                                    margin-bottom: 5px;
+                                                }
+
+                                                input[type="number"] {
+                                                    resize: none;
+                                                }
+
+                                                input[type='text'] {
+                                                    background-color: #fdfdfd;
+                                                    outline: none;
+                                                    border-top: unset;
+                                                    border-left: unset;
+                                                    border-right: unset;
+                                                    width: 90%;
+                                                    height: 25px;
+                                                    border-bottom: 1px solid #000;
+
+                                                    &:focus {
+                                                        border-color: #1439df98;
+                                                        ;
+                                                    }
+                                                }
+
+                                                textarea {
+                                                    resize: none;
+                                                    outline: none;
+                                                    width: 90%;
+                                                    height: 100px;
+                                                    border-radius: unset;
+                                                    border: 1px solid gray;
+
+                                                    &:focus {
+                                                        border-color: #1439df98;
+                                                        ;
+                                                    }
+                                                }
+
+                                            }
+                                        }
+
+                                        .main-data-continutit {
+                                            width: 100%;
+                                            height: 80px;
+                                            position: absolute;
+                                            bottom: 0px;
                                             display: flex;
                                             align-items: center;
                                             justify-content: center;
-                                            border: 1px solid red;
-                                            width: 100px;
-                                            height: 40px;
+                                            left: 0px;
+
+                                            .sl-label {
+                                                &:hover {
+                                                    border-color: #000000c9;
+                                                    cursor: pointer;
+                                                    background-color: #1439df98;
+                                                }
+
+                                                .io-wrapper {
+                                                    margin-left: 30px;
+                                                }
+
+                                                border: 2px solid #fff;
+
+                                                background-color:#1439df98;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                border: 1px solid red;
+                                                width: 100px;
+                                                height: 40px;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
+
+                        .sl-3 {
+                            display: none;
+                        }
+
+                    }
+                }
+            }
+
+            .section-wrapper-2 {
+                width: 100%;
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .main-wrapper {
+                    .cl-title {
+                        text-align: center;
+                        margin-bottom: 5px;
+                        font-size: 48pt;
+                        font-weight: 350;
+                        color: rgba(0, 0, 0, 0.651);
                     }
 
-                    .sl-3 {
-                        display: none;
+                    .cl-title-2 {
+                        font-size: 25pt;
+                        font-weight: 350;
+                        color: #4786ff;
                     }
-
                 }
             }
         }
+
 
         .u-l-section-wrapper {
             display: none;

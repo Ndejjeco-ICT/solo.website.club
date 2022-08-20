@@ -1,5 +1,6 @@
 import { IWebComponents } from "ns/typings/schw"; 
 import { addDisposableEventListener } from "ns/browser/common/domListener";
+import { dialogHostEventManager } from "ns/dialogHostManager";
 
 export class EnrollButtonComponent extends HTMLElement implements IWebComponents {
 
@@ -27,6 +28,7 @@ export class EnrollButtonComponent extends HTMLElement implements IWebComponents
 
     invokeEnrollDialog() {
         //invoke dialog;
+        dialogHostEventManager.emit("invoke-dialog","enroll")
     }
 
 };

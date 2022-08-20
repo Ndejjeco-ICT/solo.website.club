@@ -123,6 +123,9 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
         
         return locatedElement
     }
+    screenControlReset() {
+        window.scrollTo({ behavior: "auto", top: 0 });
+    }
 
     /**
      * Smooth fade In Animation For Entering Element 
@@ -130,6 +133,7 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
      */
 
     fadeInEntranceForElement(element: HTMLDivElement) {
+        this.screenControlReset()
         if (element) {
             element.style.display = "block";
             element.style.animation = "NavigationAnimationFade 1.5s forwards";
