@@ -66,3 +66,4 @@ import "@design_Blog/carosell slider/carosellslider.scss";
 import "@design_Blog/blogSections/blogsection2.scss";
 
 
+import "@design_Common/screen/mediaqueries.scss";

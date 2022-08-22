@@ -8,7 +8,7 @@ ns-header {
     --ns-header-font-size: 10pt;
     --ns-text-color : #fff;
     --ns-navigation-color : #6a95f3;
-
+    height:70px;
     .wx-component-header-section {
         font-family: V.$ns-common-font;
         width: 100%;
@@ -62,6 +62,7 @@ ns-header {
                     display: flex;
                     align-items: center;
                     width: 100%;
+                    font-size: 10pt;
                     transition: all .5s;
                 }
             }
@@ -131,9 +132,6 @@ ns-header {
                      >:nth-child(3){
                         color: #1DA1F2;
                      }
-                     >:nth-child(4){
-                        color: #fff;
-                     }
 
                     >div {
                         display: flex;
@@ -166,10 +164,11 @@ ns-header {
 
         .wx-bars {
             position: absolute;
-            top: 20px;
+            top: 10px;
             right: 30px;
             width: 50px;
             height: 50px;
+            border: 1px solid #fff;
             display: none;
             align-items: center;
             justify-content: center;

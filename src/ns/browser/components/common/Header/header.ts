@@ -61,12 +61,10 @@ Template_.innerHTML = `
                 <div class="twitter-link" title="Follow us on Twitter">
                     <i class="fa-brands fa-twitter"></i>
                 </div>
-                <div class="theme-manager" title="Change theme">
-                    <i class="fa-solid fa-lightbulb"></i>
-                </div>
             </div>
         </div>
     </div>
+    <div class="wx-bars"></div>
 </div>
 
 `

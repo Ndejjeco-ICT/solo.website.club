@@ -26,4 +26,6 @@ import "ns/platform/ns-router/ns_link";
 import "ns/platform/ns-router/ns_router";
 import "ns/platform/positionRenderer/view_linker"
 import "ns/platform/subTabOpener/linksManager"
-import "ns/platform/webTitleSynchronisis/webTitleSynchronisis"
+import "ns/platform/webTitleSynchronisis/webTitleSynchronisis";
+import "ns/browser/components/views/Home/dom-modules/dom-modules"
+import "ns/browser/components/views/Home/dom-modules/preloadModules"

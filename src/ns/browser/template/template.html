@@ -1,3 +1,161 @@
+<div class="wx-component-header-section">
+    <div class="wx-header-component-area">
+        <div class="wx-badge-wrapper">
+            <div id="badge-icon">
+                <picture>
+                    <img loading="lazy" src="${Logo}"/>
+                </picture>
+            </div>
+            <div class="badge-title">Ndejje Senior Secondary School</div>
+        </div>
+        <div class="wx-navigation-bar-half-area">
+            <div class="navigation-bar-wrapper">
+                <div class="main-navigation-bar">
+                    <ul class="navigation-items">
+                        <li id="Home-nav-control">
+                            <ns-link className="active-link" href="./home">
+                                Home
+                            </ns-link>
+                        </li>
+
+                        <li id="about-nav-control">
+                            <ns-link href="./aboutus" className="inactive-link">
+                                About us
+                            </ns-link>
+                        </li>
+                        <li id="blog-nav-control">
+                            <ns-link href="./blog" className="inactive-link">
+                                Blog
+                            </ns-link>
+                        </li>
+                        <li id="academics-nav-control">
+                            <ns-link href="./academics" className="inactive-link">
+                                Academics
+                            </ns-link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accord-options">
+            <div class="control-options">
+                <div class="facebook-link" title="Join us On Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+
+                <div class="instagram-link" title="Follow us on Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div class="twitter-link" title="Follow us on Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wx-bars"></div>
+</div>
+
+
+<!--comment-->
+
+<style>
+    ns-comment-section {
+        display: block;
+        width: 100%;
+        height: inherit;
+    }
+
+    ns-comment-section .comment-section-component {
+        width: 100%;
+        height: inherit;
+    }
+
+    ns-comment-section .comment-section-component .control-component {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17pt;
+        color: #fff;
+        transition: all .5s;
+        background-color: #4786ff;
+        border-radius: 0% 0% 50% 50%;
+    }
+
+    ns-comment-section .comment-section-component .control-component:hover {
+        cursor: pointer;
+        background-color: #e71834;
+    }
+
+    ns-comment-section .comment-section-component .control-component:active {
+        transform: scale(0.8);
+        background: #6398fa;
+    }
+    ns-comment-section .comment-section-component .main-wrapper {
+        width: 100%;
+        height: inherit;
+    }
+    ns-comment-section .comment-section-component .main-wrapper  > div {
+        width: 100%;
+        
+    } 
+</style>
+
+
+<div class="comment-section-component">
+    <div class="control-component">
+        <div class="close-manager">&times;</div>
+    </div>
+    <div class="main-wrapper">
+        <div class="title-component">
+            <div class="cl-title">What Do you think About This Website?</div>
+        </div>
+        <div class="title-2">
+            <div class="cl-subtitle">We Would like to know what you think about this new design.</div>
+        </div>
+        <div class="text-area-component">
+            <textarea required="required" name="" id="" cols="30" rows="10" spellcheck="true" class="comment-textarea">
+
+            </textarea>
+            <div class="character-counter">
+                <div class="cl-characters"></div>
+                <div class="cl-hash-word">characters</div>
+            </div>
+        </div>
+        <div class="submit-component">
+            <div class="cl-submit">Submit</div>
+        </div>
+        <div class="rights">End to End Encrypted.</div>
+    </div>
+</div>
+
+
+<!--splash-->
+<div class="ns-cl-wrapper">
+    <div class="splash-image-resizable" style="margin-bottom:40px;">
+        <picture class="image-content-control">
+            <img src="./splash/splash.png" preload="true">
+        </picture>
+    </div>
+    <div class="splash-image-minner-loader" style="display: flex;align-items: center;justify-content: center;">
+        <div class="cl-loader"
+            style="width: 40px;height:40px; border-radius: 50%; border: 3px solid transparent; border-top-color: #2b63fd; animation: partsTransfomLoader .5s linear infinite;">
+        </div>
+    </div>
+    <div class="cl-statement"
+        style="position: absolute; left: 0px; bottom: 0px; color: #808080; width: 100%;height: 80px;display: flex;align-items: center;justify-content: center;">
+        No Pain No Gains</div>
+</div>
+
+
+
 <div class="ns-main-container" nature="static-preloading">
     <div class="ns-main-wrapper">
         <div class="ns-main-dependencies">

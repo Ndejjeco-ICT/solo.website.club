@@ -52,7 +52,7 @@ Template_.innerHTML = `
                     <ns-blog-view></ns-blog-view>
                 </ns-route>
                 <ns-route key="academics" path="/academics">
-                    <ns-academics-views>
+                    <ns-academics-view>
                         </ns-academics-view>
                 </ns-route>
                 <ns-route key="insights" path="/insights">
