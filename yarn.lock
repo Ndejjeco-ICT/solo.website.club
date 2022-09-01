@@ -6497,6 +6497,11 @@ vinyl@^2.0.0, vinyl@^2.1.0, vinyl@^2.2.0:
     remove-trailing-separator "^1.0.1"
     replace-ext "^1.0.0"
 
+vscode-loader@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vscode-loader/-/vscode-loader-1.0.2.tgz#bbd369b0b03b85f3b2f028237d4503fdc525ef03"
+  integrity sha512-jkQ1bm2WhWy1ntRLUeJAtOkg8dw9qieajiCdvouQWKV87WNT5gTekHrfLWxTPi7i1BfaqsDFK4HnH4gswDyj6w==
+
 watchpack@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-2.3.1.tgz#4200d9447b401156eeca7767ee610f8809bc9d25"
