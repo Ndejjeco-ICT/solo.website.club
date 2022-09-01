@@ -83,6 +83,15 @@ ns-x-glance .xb-glance-component {
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-color: #c5c2c2;
+                        picture{
+                            width: inherit;
+                            height: inherit;
+                            img{
+                                display: block;
+                                width: 100%;
+                                height: inherit;
+                            }
+                        }
                     }
                 }
             }

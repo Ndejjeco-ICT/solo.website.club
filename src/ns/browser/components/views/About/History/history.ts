@@ -46,7 +46,6 @@ export class HistorySectionComponent extends HTMLElement implements IWebComponen
                     </div>
                 </div>
             </div>
-            <div class="xr-button">Read More</div>
         </div>
         </div>
     

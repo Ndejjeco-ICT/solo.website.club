@@ -12,26 +12,6 @@
   background-repeat: no-repeat;
   .main-historysection-container {
     position: relative;
-    .xr-button{
-      position: absolute;
-      top: 0px;
-      right: 30px;
-      height: 50px;
-      width: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid #fff;
-      color: #fff;
-      transition: all .5s;
-      &:hover{
-        background-color: #000;
-        cursor: pointer;
-      }
-      &:active{
-        transform: scale(0.8);
-      }
-    }
     .split-layout-divider {
       display: grid;
       grid-template-columns: 1fr 1fr;

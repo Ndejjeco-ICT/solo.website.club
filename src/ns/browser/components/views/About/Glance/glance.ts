@@ -1,7 +1,8 @@
 import { IWebComponents } from "ns/typings/schw";
 import anime from "animejs";
 import { createViewLinkerManger } from "ns/platform/positionRenderer/view_linker";
-
+//@ts-ignore
+import glanceBannerImage from "ns/assets/site_images/aboutsus_view/cr_banner_flow/reflection.jpg"
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
@@ -46,12 +47,15 @@ Template_.innerHTML = `
             <div class="tr-view-2">
                 <div class="tr-view-2-wrapper">
                     <div class="cl-title-area">Ndejje At A Glance</div>
-                    <div class="cl-picture-container"></div>
+                    <div class="cl-picture-container">
+                        <picture>
+                            <img src="${glanceBannerImage}" loading="lazy">
+                        </picture>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 `;
 
 class Glance extends HTMLElement implements IWebComponents {

@@ -1,5 +1,10 @@
 import { createViewLinkerManger } from "ns/platform/positionRenderer/view_linker";
 import { IWebComponents } from "ns/typings/schw";
+//@ts-ignore
+import cl_imge1 from "ns/assets/site_images/academics_view/cr_life/sociallity.jpg";
+//@ts-ignore
+import cl_imge2 from "ns/assets/site_images/academics_view/cr_life/democracy.jpg";
+
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
@@ -14,28 +19,27 @@ Template_.innerHTML = `
                     <div class="xb-split-component xb-picture-container xl-q">
                         <div class="image-container">
                             <picture class="image-host">
-                                <img src="" loading="lazy">
+                                <img src="${cl_imge2}" loading="lazy">
                             </picture>
                         </div>
                     </div>
                     <div class="xb-split-component xb-content">
                         <div class="cr-line"></div>
                         <div class="split-wrapper">
-                            The discipline of the students continues to improve. It has been observed that most of the indiscipline cases have a link with home related challenges spilling over to the school
-                        </div>
+                            The discipline and democracy of the Students continues to improve making Ndejje A Better Place.                        </div>
                     </div>
                 </div>
                 <div class="xb-split-view-2 split-component">
                     <div class="xb-split-component xb-content">
                         <div class="cr-line"></div>
                         <div class="split-wrapper">
-                            At breakfast, students are served with milk tea along with eats on Tuesday (Doughnuts), Thursday (chapattis), and Saturday (Buns) Sunday (chapattis/Eggs/Maize
+                            Improving the confidence and social aspect of Students to make the better citizens in the future.
                         </div>
                     </div>
                     <div class="xb-split-component xb-picture-container xl-p">
                         <div class="image-container">
                             <picture class="image-host">
-                                <img src="" loading="lazy">
+                                <img src="${cl_imge1}" loading="lazy">
                             </picture>
                         </div>
                     </div>

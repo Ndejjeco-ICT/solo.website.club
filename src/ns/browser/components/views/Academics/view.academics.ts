@@ -4,7 +4,6 @@ const Template_ = document.createElement("template");
 Template_.innerHTML = `
     <ns-x-acdmw></ns-x-acdmw>
     <ns-x-life></ns-x-life>
-    <ns-x-culture></ns-x-culture>
     <ns-x-community></ns-x-community>
     <ns-x-awards></ns-x-awards>
     <ns-x-voices></ns-x-voices>

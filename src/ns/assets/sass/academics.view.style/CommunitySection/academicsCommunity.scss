@@ -19,7 +19,7 @@ ns-x-community .xb-community-component {
         width: 100%;
         display: flex;
         flex-direction: row;
-
+        background-color: #2179ec;
         .xb-content-text-1 {
             height: 600px;
             width: 100%;
@@ -27,33 +27,21 @@ ns-x-community .xb-community-component {
             align-items: center;
             justify-content: center;
             font-size: 80pt;
-            color: #fff;
+            background-size: contain;
+            background-repeat: no-repeat;
+            color:#2179ec;
             font-weight: bold;
-             > div {
-                position: absolute;
-             }
-             .image-container-wrapper {
-                width: inherit;
-                height: inherit;
-                background-color: grey;
-                picture {
-                    img {
-                        display: block;
-                        width: inherit;
-                        height: inherit;
-                    }
-                }
-             }
+            background-image: url('../../../site_images/academics_view/cr_community/community.jpg');
             .wrapper {
                 
-                width: 500px;
+                width: 100%;
             }
         }
 
        .xb-sash-container {
         height: 600px;
         width: 600px;
-        background-color: rgba(0, 0, 0, 0.95);
+        background-color: rgba(0, 0, 0, 0.836);
         backdrop-filter: blur(8px);
         z-index: 90;
 
@@ -71,11 +59,13 @@ ns-x-community .xb-community-component {
                     align-items: center;
                     justify-content: center;
                     border: 2px solid #fff;
-                    color: #fff;
+                    color: #131313;
                     transition: all .5s;
+                    background-color: #f1f11e;
 
                     &:hover {
-                        background-color: #3b8af3;
+                    color: #fff;
+                        background-color: #2179ec;
                         cursor: pointer;
                     }
 

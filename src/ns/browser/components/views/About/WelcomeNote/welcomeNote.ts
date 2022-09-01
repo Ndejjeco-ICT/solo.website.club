@@ -2,7 +2,7 @@ import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/platform/positionRenderer/view_linker";
 
 //@ts-ignore
-import aboutBannerImage from "ns/assets/site_images/aboutsus_view/cr_banner_flow/crac02.jpg"
+import aboutBannerImage from "ns/assets/site_images/aboutsus_view/cr_banner_flow/motion1.jpg"
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
