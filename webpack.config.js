@@ -84,7 +84,7 @@ const _WebPackConfiguration = {
         liveReload : true,
         static: {
             directory: path.join(__dirname, 'public'),
-            publicPath : "/",
+            publicPath : "/public",
         },
         client: {
             progress : true
