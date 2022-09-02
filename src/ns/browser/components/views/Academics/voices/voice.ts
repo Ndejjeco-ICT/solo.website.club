@@ -53,7 +53,7 @@ Template_.innerHTML = `
                             </div>
 
                             <video src="" id="my-hr-player" class="video-js sm1" controls>
-                                <source src="./videos/hm_interview.mp4" type="video/mp4">
+                                <source src="https://drive.google.com/file/d/1RU8kDDawIdbwvyEZVJPqAU1ApEcKU3ma/view?usp=sharing" type="video/mp4">
                                 </source>
                             </video>
                         </div>
@@ -131,8 +131,8 @@ class Voice extends HTMLElement implements IWebComponents {
     private videoHostManager: HTMLDivElement | null = null;
 
     private _videoSourcesManager: IVideoSources = {
-        frameVideoDHM: "./videos/gitta_interview.mp4",
-        frameVideoHM: "./videos/hm_interview.mp4"
+        frameVideoDHM: "https://drive.google.com/file/d/1vO_VMVdYyn5-joErtbD9vg4P4i0Sf_KG/view?usp=sharing",
+        frameVideoHM: "https://drive.google.com/file/d/1RU8kDDawIdbwvyEZVJPqAU1ApEcKU3ma/view?usp=sharing"
     };
 
 

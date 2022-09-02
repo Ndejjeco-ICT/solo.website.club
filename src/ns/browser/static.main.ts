@@ -15,6 +15,7 @@ class STATIC_WEB_OVERALL_LOADER {
         });
     }
     private defineCommonRootElement() {
+        console.log("Will Start Main Startup");
         //@ts-ignore
         window.NsBootstrap.__CREATEINITIALROOT__()
     }

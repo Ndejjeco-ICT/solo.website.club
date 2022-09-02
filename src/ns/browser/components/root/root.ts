@@ -15,7 +15,7 @@ Template_.innerHTML = `
     <div class="ns-main-wrapper">
         <div class="ns-main-dependencies">
             <div class="ns-insights-dependencies" static="dependencies">
-                <dom-module key="interact">
+                <dom-module key="interact-club">
                     <template></template>
                 </dom-module>
                 <dom-module key="junior-achievement">

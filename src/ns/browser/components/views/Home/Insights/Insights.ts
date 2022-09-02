@@ -25,7 +25,6 @@ Template_.innerHTML = `
             <div class="cards-container">
                 <div class="card-wrapper-1">
                     <div class="card-wrapper-2">
-                       
                     </div>
                 </div>
             </div>

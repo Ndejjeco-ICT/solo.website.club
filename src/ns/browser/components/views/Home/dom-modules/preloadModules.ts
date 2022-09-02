@@ -13,7 +13,7 @@ class preloadModulesLoader {
     }
 
     private getTemplate(key: string):HTMLTemplateElement {
-        const _ = document.querySelector(`[dom-module key="${key}"] template`)! as HTMLTemplateElement;
+        const _ = document.querySelector(`dom-module[key="${key}"] template`)! as HTMLTemplateElement;
         return _;
     }
 
