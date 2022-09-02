@@ -47,7 +47,7 @@ const _WebPackConfiguration = {
                 ],
             },
             {
-                test: /\.(svg|ico|png|jpg|gif|jpeg)/,
+                test: /\.(svg|ico|png|jpg|gif|jpeg|woff|tff)/,
                 type : "asset/resource"
             }
         ],

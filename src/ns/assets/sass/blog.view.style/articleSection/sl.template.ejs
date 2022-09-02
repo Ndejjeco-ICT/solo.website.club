@@ -1,7 +1,3 @@
-import {IWebComponents} from "ns/typings/schw";
-
-const Template_ = document.createElement("template");
-Template_.innerHTML = `
 <div class="article-topics-section">
     <div class="topics-main-container">
         <div class="topic-header-title">TOPICS - <span>A range of high class articles</span></div>
@@ -17,7 +13,7 @@ Template_.innerHTML = `
                 <h2 id="trending">TRENDING</h2>
                 <div class="content-card-layouts">
                     <div class="card-main">
-                        <div class="card card-1">
+                        <div class="card-1">
                             <div class="image-container"></div>
                             <div class="info-nav-control"><img src="#" class="img-card" alt="">03/02/2020</div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
@@ -27,7 +23,7 @@ Template_.innerHTML = `
                             <div class="nav-reader">Read article</div>
                         </div>
 
-                        <div class="card card-2">
+                        <div class="card-2">
                             <div class="image-container"></div>
                             <div class="info-nav-control">03/02/2020</div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
@@ -187,35 +183,3 @@ Template_.innerHTML = `
     </div>
 </div>
 `;
-
-export class ArticleSection extends HTMLElement implements IWebComponents {
-    constructor() {
-        super();
-        this.appendChild(Template_.content.cloneNode(true))
-    }
-
-    connectedCallback() {
-
-    }
-};
-
-
-customElements.define("ns-x-articlesection",ArticleSection)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
