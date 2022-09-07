@@ -20,7 +20,7 @@ Template_.innerHTML = `
 </div>
 `;
 
-export class BlogSection3 extends HTMLElement implements IWebComponents {
+export class PrimeArticle extends HTMLElement implements IWebComponents {
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
@@ -32,4 +32,4 @@ export class BlogSection3 extends HTMLElement implements IWebComponents {
 };
 
 
-customElements.define("ns-x-blogsection3",BlogSection3)
+customElements.define("ns-x-primearticle",PrimeArticle)

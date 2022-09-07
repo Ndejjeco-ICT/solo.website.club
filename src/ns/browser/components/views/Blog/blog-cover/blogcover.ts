@@ -13,7 +13,7 @@ Template_.innerHTML = `
 </div>
 `
 
-export class Titleholder extends HTMLElement implements IWebComponents {
+export class BlogCover extends HTMLElement implements IWebComponents {
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
@@ -25,4 +25,4 @@ export class Titleholder extends HTMLElement implements IWebComponents {
 };
 
 
-customElements.define("ns-x-titleholder",Titleholder)
+customElements.define("ns-x-blogcover",BlogCover)

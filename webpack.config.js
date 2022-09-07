@@ -58,19 +58,11 @@ const _WebPackConfiguration = {
             filename: "index.html",
             template: path.resolve(__dirname, "src/ns/bootstrap.template.ejs"),
             inject: "body",
-            scriptLoading : "defer"
+            scriptLoading : "defer",
+            favicon : path.resolve(__dirname,"./public/dependencies/screen/favicon.png")
 
             
         })
-        // new HtmlWebpackPlugin({
-        //     title: "SandBoxed",
-        //     filename: "index.html",
-        //     publicPath: path.resolve(__dirname, "public"),
-        //     showErrors: true,
-        //     inject: "body",
-        //     template: path.resolve(__dirname, "src/ns/bootstrap.template.ejs")
-            
-        // })
     ],
     output: {
         filename : "ns.[contenthash].js",
@@ -84,7 +76,7 @@ const _WebPackConfiguration = {
         liveReload : true,
         static: {
             directory: path.join(__dirname, 'public'),
-            publicPath : "/public",
+            publicPath : "/",
         },
         client: {
             progress : true

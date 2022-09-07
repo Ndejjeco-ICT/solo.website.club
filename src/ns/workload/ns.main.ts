@@ -70,13 +70,13 @@ import "ns/browser/components/views/Academics/voices/voice";
 import "ns/browser/components/views/Academics/view.academics";
 
 // Blog view
-import "ns/browser/components/views/Blog/title-holder/titleholder";
+import "ns/browser/components/views/Blog/blog-cover/blogcover";
 import "ns/browser/components/views/Blog/blog-trends/blogtrends";
-import "ns/browser/components/views/Blog/article-section/articlesection";
-import "ns/browser/components/views/Blog/blog-section3/blogsection3"
-import "ns/browser/components/views/Blog/topic-container/articletopics";
+import "ns/browser/components/views/Blog/articles/articlesection";
+import "ns/browser/components/views/Blog/Prime-article/primearticle"
+import "ns/browser/components/views/Blog/article-container/articletopics";
 import "ns/browser/components/views/Blog/carosel-slider/caroselslider";
-import "ns/browser/components/views/Blog/blog-section2/blogsection2";
+import "ns/browser/components/views/Blog/blog-motto/motto";
 import "ns/browser/components/views/Blog/view.blog";
 
 

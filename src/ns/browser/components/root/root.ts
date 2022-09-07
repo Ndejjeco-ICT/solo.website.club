@@ -13,32 +13,6 @@ const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="ns-main-container" nature="static-preloading">
     <div class="ns-main-wrapper">
-        <div class="ns-main-dependencies">
-            <div class="ns-insights-dependencies" static="dependencies">
-                <dom-module key="interact-club">
-                    <template></template>
-                </dom-module>
-                <dom-module key="junior-achievement">
-                    <template></template>
-                </dom-module>
-                <dom-module key="students-council">
-                    <template></template>
-                </dom-module>
-                <dom-module key="prefectorial-body">
-                    <template></template>
-                </dom-module>
-                <dom-module key="clubs-forum">
-                    <template></template>
-                </dom-module>
-                <dom-module key="writers">
-                    <template></template>
-                </dom-module>
-                <dom-module key="ict">
-                    <template></template>
-                </dom-module>
-            </div>
-
-        </div>
         <ns-header></ns-header>
         <div class="ns-page-container">
             <ns-router>
@@ -52,7 +26,7 @@ Template_.innerHTML = `
                     <ns-blog-view></ns-blog-view>
                 </ns-route>
                 <ns-route key="academics" path="/academics">
-                    <ns-academics-view>
+                    <ns-academics-views>
                         </ns-academics-view>
                 </ns-route>
                 <ns-route key="insights" path="/insights">

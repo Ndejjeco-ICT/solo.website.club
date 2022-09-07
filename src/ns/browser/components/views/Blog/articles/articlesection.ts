@@ -200,7 +200,7 @@ export class ArticleSection extends HTMLElement implements IWebComponents {
 };
 
 
-customElements.define("ns-x-articlesection",ArticleSection)
+customElements.define("ns-x-articles",ArticleSection)
 
 
 

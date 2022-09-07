@@ -8,7 +8,7 @@ Template_.innerHTML = `
 </div>
 `;
 
-export class BlogSection2 extends HTMLElement implements IWebComponents {
+export class Motto extends HTMLElement implements IWebComponents {
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
@@ -20,4 +20,4 @@ export class BlogSection2 extends HTMLElement implements IWebComponents {
 };
 
 
-customElements.define("ns-x-blogsection2",BlogSection2)
+customElements.define("ns-x-motto",Motto)
