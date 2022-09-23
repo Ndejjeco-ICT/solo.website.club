@@ -6,9 +6,10 @@ ns-header {
     z-index: 1000000;
     top: 0px;
     --ns-header-font-size: 10pt;
-    --ns-text-color : #fff;
-    --ns-navigation-color : #6a95f3;
-    height:70px;
+    --ns-text-color: #fff;
+    --ns-navigation-color: #6a95f3;
+    height: 70px;
+
     .wx-component-header-section {
         font-family: V.$ns-common-font;
         width: 100%;
@@ -27,11 +28,13 @@ ns-header {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             background-color: #000;
+
             .wx-badge-wrapper {
                 height: 70px;
                 width: 100px;
                 display: grid;
                 grid-template-columns: 100px 400px;
+
                 #badge-icon {
                     margin-top: 10px;
                     margin-left: 20px;
@@ -44,8 +47,10 @@ ns-header {
                     background-size: contain;
                     background-repeat: no-repeat;
                     filter: brightness(-3);
+
                     picture {
                         width: inherit;
+
                         img {
                             display: block;
                             width: inherit;
@@ -55,6 +60,7 @@ ns-header {
                 }
 
                 .badge-title {
+                    font-family: V.$ns-common-font;
                     color: var(--ns-text-color);
                     text-transform: uppercase;
                     height: 70px;
@@ -68,14 +74,16 @@ ns-header {
             }
 
             //navigation-component-section
-        
+
             .wx-navigation-bar-half-area {
                 width: 550px;
                 height: 70px;
-                .navigation-bar-wrapper{
+
+                .navigation-bar-wrapper {
                     height: inherit;
                     width: inherit;
-                    .main-navigation-bar{
+
+                    .main-navigation-bar {
                         transition: all .5s;
                         width: inherit;
                         height: inherit;
@@ -83,55 +91,69 @@ ns-header {
                         flex-direction: row;
                         align-items: center;
                         justify-content: center;
+
                         ul.navigation-items {
                             width: fit-content;
                             margin: 0px;
                             padding: 0px;
                             display: flex;
-                            li{
+
+                            li {
+                                font-family: V.$ns-common-font;
+
                                 cursor: pointer;
                                 font-size: 11pt;
                                 margin: 20px 25px 20px 25px;
                                 list-style-type: none;
+
                                 ns-link {
                                     div {
                                         a.active-link {
                                             color: var(--ns-navigation-color);
-                                            border-bottom-color:var(--ns-navigation-color);
+                                            border-bottom-color: var(--ns-navigation-color);
                                         }
-                                        a{
+
+                                        a {
+                                            font-family: V.$ns-common-font;
+
                                             color: var(--ns-text-color);
                                             font-weight: 450;
                                             border-bottom: 1.5px solid transparent;
                                             transition: all .5s;
                                             text-decoration: none;
-                                            &:hover{
-                                              border-bottom: 1.5px solid var(--ns-navigation-color);
+
+                                            &:hover {
+                                                border-bottom: 1.5px solid var(--ns-navigation-color);
                                             }
                                         }
                                     }
                                 }
-                               
+
                             }
                         }
                     }
                 }
             }
+
             .accord-options {
                 display: flex;
-                        align-items: center;
-                        justify-content: center;
+                align-items: center;
+                justify-content: center;
+
                 .control-options {
                     display: flex;
-                      >:nth-child(1) {
-                         color: 	#fff;
-                     }
-                     >:nth-child(2){
-                         color: #fff;
-                     }
-                     >:nth-child(3){
+
+                    >:nth-child(1) {
+                        color: #fff;
+                    }
+
+                    >:nth-child(2) {
+                        color: #fff;
+                    }
+
+                    >:nth-child(3) {
                         color: #1DA1F2;
-                     }
+                    }
 
                     >div {
                         display: flex;
@@ -142,19 +164,23 @@ ns-header {
                         height: 50px;
                         cursor: pointer;
                         transition: all .5s;
-                        &:hover{
+
+                        &:hover {
                             color: V.$ns-layout-color;
                         }
                     }
+
                     .theme-manager {
                         margin-left: 20px;
+
                         &:hover {
                             color: #000000;
                         }
 
                     }
                 }
-                .control-bars{
+
+                .control-bars {
                     display: none;
 
                 }

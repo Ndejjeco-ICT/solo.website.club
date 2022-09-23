@@ -144,6 +144,8 @@ ns-x-insights .ponaco-splitview-5 {
                   }
 
                   .x-title-1 {
+        font-family: V.$ns-common-font;
+
                     margin-bottom: 8px;
                     font-weight: 450;
                     color: #fff;
@@ -160,6 +162,8 @@ ns-x-insights .ponaco-splitview-5 {
                     font-weight: 300;
                     margin-bottom: 10px;
                     font-size: 15pt;
+        font-family: V.$ns-common-font;
+
 
                     .wrapper {
                       transition: all 0.5s;

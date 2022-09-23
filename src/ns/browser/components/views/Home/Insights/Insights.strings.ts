@@ -116,7 +116,7 @@ export class InsightsLoader {
                         </div>
                     </div>
                     <div class="x-title-btn">
-                        <ns-link href= "./insights/search?q=${__element.query}">
+                        <ns-link href= "./insights?query=${__element.query}">
                             <div class="x-btn-wrapper ctrinfo">
                                     <div class="sl-button">&RightArrow;</div>
                                     <div class="sl-text">Read More From ${__element.title}.</div>

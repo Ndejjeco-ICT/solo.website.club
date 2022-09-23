@@ -84,8 +84,11 @@ import "ns/browser/components/views/Blog/view.blog";
  * Insights view
  */
 
+import "ns/browser/components/views/Insights/card_maindata"
+import "ns/browser/components/views/Insights/data-manager"
+import "ns/browser/components/views/Insights/data-provider"
 import  "ns/browser/components/views/Insights/view.insights"
-
+import "ns/browser/components/views/Insights/insights.navigation"
 import "ns/browser/components/enroll-dialog/ns-enroll";
 
 /**

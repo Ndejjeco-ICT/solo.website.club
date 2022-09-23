@@ -69,6 +69,9 @@ ns-x-banner .ponaco-splitview-1 {
                 transform: translateX(-50px);
 
                 .note-1 {
+
+        font-family: V.$ns-common-font;
+
                     color: #e6e6e6;
                     // font-family: 'Times New Roman', Times, serif;
                     word-wrap: break-word;
@@ -79,6 +82,8 @@ ns-x-banner .ponaco-splitview-1 {
                 }
 
                 .note-2 {
+        font-family: V.$ns-common-font;
+
                     //  font-family: 'handlee'cursive;
                     color: #ffffffd7;
                     text-transform: capitalize;

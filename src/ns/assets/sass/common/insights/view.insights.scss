@@ -5,297 +5,397 @@ ns-insights-view {
 
 }
 
-ns-insights-view  .insights-control-template {
+ns-insights-view .insights-view-container {
     width: 100%;
+    height: 100%;
 
-    .wrapper {
-        width: inherit;
+    .common-wrapper {
+        width: 100%;
+        height: inherit;
 
-        .controls-container {
-            width: 100%;
-            height: 100px;
+        .split-view-area {
+            width: inherit;
+            height: inherit;
+            display: grid;
+            grid-template-columns: 100% 100%;
 
-            .back {
-                height: 100px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-
-        .main-wrapper {
-            .control-title-area {
+            .view-split {
                 width: 100%;
-                height: 700px;
-                position: relative;
+                height: 100%;
+            }
 
-                >div {
-                    position: absolute;
+            .split-view-1 {
+                transition: all .5s;
+                display: none;
+                opacity: 0;
 
-                    .image-banner-component {
-                        width: inherit;
-                        background-color: grey;
+                .control-header-component {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 100px;
 
-                        picture {
-                            width: inherit;
+                    .title-wrapper {
 
-                            img {
-                                display: block;
-                                width: inherit;
+                        .common-control-title-wrapper {
+
+                            margin: 20px 0px 0px 45px;
+
+                            >div {
+                                span {
+                                    font-family: V.$ns-common-font;
+                                    font-weight: bolder;
+                                    font-size: 50pt;
+                                }
+
+                                .tr-title {
+                                    font-family: V.$ns-common-font;
+                                    color: #000000c9;
+                                    font-size: 15pt;
+                                }
                             }
                         }
+
                     }
 
-                    .cr-title {
-                        width: 100%;
-                        height: inherit;
+                    .date-wrapper {
+                        margin: 20px 20px 0px 0px;
+
+                        span.date-updater {
+                            font-family: V.$ns-common-font;
+                            color: #0000007a;
+                        }
+                    }
+                }
+
+                .insight-card-area {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+
+                    .card-wrapper {
+                        margin: auto;
                         display: flex;
                         align-items: center;
                         justify-content: center;
 
-                        font-size: 50pt;
-                        font-weight: 350;
+                        .split-card-view {
+                            margin: 50px 0px 50px 0px;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: auto;
+                            row-gap: 40px;
+                            column-gap: 40px;
 
-                    }
-                }
-            }
+                            .card-component {
+                                border: 1px solid black;
+                                width: 600px;
+                                height: 490px;
+                                position: relative;
 
-            .control-components-wrapper {
-                display: grid;
-                grid-template-columns: 600px 600px;
-                grid-template-rows: 480px 480px;
-                grid-gap: 50px;
-                margin: auto;
-
-                .cr-component {
-                    position: relative;
-                    .wrapper {
-                        width: 600px;
-                        height: 480px;
-
-                         > div {
-                            position: absolute;
-                            .image-container {
-                                picture {
+                                .card-wrapper {
                                     width: inherit;
-    
-                                    img {
-                                        display: block;
+                                    height: inherit;
+
+                                    >div {
+                                        position: absolute;
+                                    }
+
+                                    .cover-mask-container {
                                         width: inherit;
-                                    }
-                                }
-                            }
-                            .centrum-title{
-                                width: 100%;
-                                height: inherit;
-                                
-                            }
-                         }
-                    }
-                }
-
-            }
-
-            .insights-view-container {
-                width: 100%;
-                display: block;
-                height: fit-content;
-        
-                font-family: V.$ns-common-font;
-        
-                .cl-wrapper {
-                    position: relative;
-                    top: 70px;
-                    width: 100%;
-        
-                    .cl-control-header-section {
-                        border: 2px solid green;
-                        height: fit-content;
-                        width: 100%;
-        
-                        .cl-page-controls {
-                            background-color: #eeecec;
-                            height: 50px;
-                            box-shadow: rgb(0 0 0 / 36%) 0px 0px 8px 2px;
-        
-        
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-        
-                            .cl-close-ctrl {
-                                transition: all .5s;
-                                height: 50px;
-                                width: 50px;
-                                font-size: 30pt;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                cursor: pointer;
-        
-                                &:hover {
-                                    color: #f32a2a;
-                                }
-                            }
-        
-                            .cl-title {
-                                transition: all .5s;
-                                height: 50px;
-                                width: fit-content;
-                                font-size: 13pt;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                font-weight: 450;
-                                margin-right: 40px;
-                            }
-                        }
-        
-                        .cl-common-content-image {
-                            width: 100%;
-                            height: 300px;
-        
-                            .cl-cl-wrapper {
-                                text-align: right;
-                                font-size: 80pt;
-                                width: 100%;
-                                font-weight: bold;
-                                padding-right: 60px;
-                                margin: 70px 0px 0px 0px;
-                            }
-        
-                            .cl-boundary-container {
-                                width: 100%;
-                                height: 90px;
-                                margin-top: 50px;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-        
-                                .cl-half-boundary-image {
-                                    height: 80px;
-                                    width: 80px;
-                                    border-radius: 50%;
-                                    border: 2px solid #000;
-                                }
-                            }
-        
-                        }
-        
-        
-        
-        
-                    }
-        
-                    .cl-main-content {
-                        width: 100%;
-                        margin-top: 50px;
-        
-                        .cl-main-content-wrapper {
-                            margin: auto;
-                            color: black;
-                            width: 80%;
-        
-                            .cl-header-content-manager {
-                                width: 100%;
-                                height: 100px;
-                                display: flex;
-                                justify-content: space-between;
-        
-                                .cl-half-1 {
-                                    height: 100px;
-                                    width: fit-content;
-                                    display: flex;
-                                    align-items: center;
-        
-                                    .cl-i {
-                                        border: 1px solid red;
-                                        height: 50px;
-                                        width: 50px;
-                                        border-radius: 50px;
-                                        margin: 0px 8px 0px 8px;
-                                    }
-        
-                                    .cl-i-2 {
-                                        color: #000000c9;
-                                        font-size: 13pt;
-                                        font-weight: bold;
-                                    }
-                                }
-        
-                                .cl-half-2 {
-        
-                                    .cl-common-link {
-                                        height: 100px;
-                                        width: 70px;
-                                        font-size: 20pt;
+                                        height: inherit;
+                                        background-color: #00000028;
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
-        
-                                        .cl-icon-wrapper {
-                                            color: #1a55f8;
+                                        transition: all .5s;
+
+                                        .content-wrapper {
+                                            transition: all .5s;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            color: #fff;
+                                            font-family: V.$ns-common-font;
+                                            font-size: 35pt;
+                                            background-color: rgba(0, 0, 0, 0.452);
                                             width: fit-content;
-                                            height: fit-content;
+                                            height: 80px;
+
+                                            border: 2px solid #000;
+                                            border-top-right-radius: 20px;
+                                            border-bottom-right-radius: 10px;
+                                            border-radius: 20px 10px 10px 20px;
+                                        }
+
+                                        &:hover {
+                                            background-color: #00000071;
+                                            cursor: pointer;
+
+                                            .content-wrapper {
+                                                width: fit-content;
+                                                border-color: #fff;
+                                                background-color: #00000085;
+                                            }
+                                        }
+                                    }
+
+                                    .picture-container-wrapper {
+                                        top: 0px;
+                                        width: inherit;
+                                        height: inherit;
+                                        transition: all .5s;
+                                        display: flex;
+                                        align-items: center;
+
+                                        picture {
+                                            transition: all .5s;
+
+                                            width: inherit;
+                                            height: inherit;
+
+                                            img {
+                                                transition: all .5s;
+                                                display: block;
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+
                                         }
                                     }
                                 }
                             }
-        
-                            .cl-content-image-1 {
-                                border: 1px solid red;
-                                width: 100%;
-                                height: 500px;
-                            }
-        
-                            .cl-content-1 {
-                                margin-top: 30px;
-                                height: 300px;
-        
-                                .clp {
-                                    font-size: 25pt;
-                                    color: #000000af;
-                                    line-height: 50px;
-                                }
-                            }
-        
-                            .cl-content-section-2 {
-                                margin-top: 50px;
-                                width: 100%;
-                                height: 500px;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                font-weight: bold;
-                                font-size: 70pt;
-                                color: goldenrod;
-                            }
-        
-                            .cl-content-section-2-image {
-                                border: 1px solid red;
-                                width: 100%;
-                                height: 500px;
-                            }
-        
-                            .cl-content-2 {
-                                margin-top: 30px;
-                                height: 600px;
-                                padding: 30px 0px 30px 0px;
-        
-                                .clp-2 {
-                                    font-size: 25pt;
-                                    color: #000000af;
-                                    line-height: 50px;
-                                }
-                            }
-        
                         }
                     }
-        
                 }
             }
 
+            .split-view-2 {
+                transition: all .5s;
+
+                width: 100%;
+
+                .main-area-wrapper {
+                    width: 100%;
+                    height: inherit;
+                    font-family: V.$ns-common-font;
+
+                    .content-wrapper {
+                        width: 100%;
+
+                        .navigaton-area {
+                            background-color: #c9c9c9;
+                            height: 50px;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+
+
+                            .back-navigation-btn {
+                                width: 50px;
+                                height: 50px;
+                                border: 1px solid #000;
+                                margin-left: 10px;
+                            }
+
+                            .title-area {
+                                margin-right: 20px;
+                                height: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 20pt;
+                            }
+
+                        }
+
+                        .main-content-section {
+                            width: 100%;
+                            .cover-mask-content-area {
+                                height: 700px;
+                                width: 100%;
+                              
+                                background-color: rgb(0 0 0 / 58%);
+                                >div {
+                                    position: absolute;
+                                }
+
+                                .picture-container {
+                                    width: inherit;
+                                    height: inherit;
+
+                                    display: flex;
+                                    flex-direction: row;
+
+                                    figure {
+                                        transition: all .5s;
+                                        filter: brightness(47%);
+                                        width: inherit;
+                                        height: inherit;
+
+                                        img {
+                                            transition: all .5s;
+                                            display: block;
+                                            
+                                            height: 100%;
+                                        }
+
+                                    }
+                                    .designer-ders {
+                                        height: inherit;
+                                        display: flex;
+                                        .der-1 {
+                                            width: 300px;
+                                             
+                                        }
+                                        .bm {
+                                            height: 950px;
+                                            background-color: #146bee;
+                                            z-index: -1;
+
+                                        }
+                                        .cm {
+                                            height: 850px;
+                                            background-color: #000000;
+
+                                        }
+                                    }
+                                    
+                                }
+
+                                .key-insight-tr {
+                                    font-family: V.$ns-common-font;
+                                    width: fit-content;
+                                    border: 5px solid #fff;
+                                    height: fit-content;
+                                    font-size: 80pt;
+                                    top: 60%;
+                                    left: 10%;
+                                    background-color: rgba(0, 0, 0, 0.541);
+                                    backdrop-filter: blur(8px);
+                                    color: #fff;
+                                }
+                            }
+
+                            .sub-section-content-area {
+                                width: 100%;
+
+                                .text-main-wrapper {
+                                    margin: auto;
+                                    width: 80%;
+
+                                    .porb-question-area {
+                                        font-family: V.$ns-common-font;
+                                        font-size: 61pt;
+                                        font-weight: bold;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        height: 200px;
+                                        margin: 20px 0px 20px 0px;
+                                    }
+
+                                    .prob-header-area {
+                                        .prop-header-wrapper {
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            height: 70px;
+
+                                            .cp-picture-content-area {
+                                                height: 70px;
+                                                display: flex;
+                                                align-items: center;
+
+                                                .picture-wrapper {
+                                                    border: 1px solid green;
+                                                    width: 60px;
+                                                    height: 60px;
+                                                    border-radius: 50%;
+
+                                                    picture {
+                                                        transition: all .5s;
+                                                        border-radius: 50%;
+
+                                                        width: inherit;
+                                                        height: inherit;
+
+                                                        img {
+                                                            border-radius: 50%;
+
+                                                            transition: all .5s;
+                                                            display: block;
+                                                            width: 100%;
+                                                            height: 100%;
+                                                        }
+
+                                                    }
+                                                }
+
+                                                .writter-content-holder {
+                                                    margin-left: 8px;
+                                                    font-family: V.$ns-common-font;
+                                                    font-size: 15pt;
+                                                }
+                                            }
+
+                                            .cp-info-area {
+                                                height: 70px;
+                                                display: flex;
+                                                align-items: center;
+
+                                                ._info_areas {
+                                                    height: fit-content;
+
+                                                    a {
+                                                        transition: all .5s;
+                                                        margin: 0px 5px 0px 5px;
+                                                        text-decoration: none;
+                                                        color: hwb(0 0% 100% / 0.747);
+
+                                                        &:hover {
+                                                            color: #0099ff;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+                                    .central-content {
+                                        margin-top: 30px;
+
+                                        .content {
+                                            font-family: "Segoe UI";
+                                            font-size: 25pt;
+                                            margin: 30px 0px 30px 0px;
+
+                                        }
+                                        .cl1 {
+                                            font-size: 25pt;
+                                            margin: 20px 0px 20px 0px;
+                                        }
+                                    }
+
+                                    .header-hub {
+                                        font-family: V.$ns-common-font;
+                                        width: 100%;
+                                        height: 50px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        color: #e2e2e2be;
+                                        background-color: #0b0d0f;
+                                        margin: 30px 0px 30px 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
         }
     }
 }
-

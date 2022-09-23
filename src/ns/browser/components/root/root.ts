@@ -5,7 +5,7 @@ import { AcademicsView } from "ns/browser/components/views/Academics/view.academ
 import { BlogView } from "ns/browser/components/views/Blog/view.blog";
 import {NavigationInitialRouteEventManager} from "ns/platform/ns-router/ns_router"
 import { dialogHost ,IIDialogHost} from "ns/dialogHostManager";
-import { InsightsView } from "ns/browser/components/views/Insights/view.insights";
+import { InsightViewContolComponent } from "ns/browser/components/views/Insights/view.insights";
 
 type Views = "aboutus" | "academics" | "home" | "blog" | "insights"
 
@@ -26,7 +26,7 @@ Template_.innerHTML = `
                     <ns-blog-view></ns-blog-view>
                 </ns-route>
                 <ns-route key="academics" path="/academics">
-                    <ns-academics-views>
+                    <ns-academics-view>
                         </ns-academics-view>
                 </ns-route>
                 <ns-route key="insights" path="/insights">
@@ -129,9 +129,9 @@ export class DefaultRootControl extends HTMLElement implements IWebComponents {
             }
         }
         if (view == "insights") {
-            if (VIEWS_MANAGER["INSIGHTS-VIEW"] == "OFFLINE") {
-                customElements.define(this._insightsViewKey, InsightsView);
-                VIEWS_MANAGER["INSIGHTS-VIEW"] = "ONLINE"
+            if (VIEWS_MANAGER["INSIGHTS_VIEW"] == "OFFLINE") {
+                customElements.define(this._insightsViewKey, InsightViewContolComponent);
+                VIEWS_MANAGER["INSIGHTS_VIEW"] = "ONLINE"
             }
         }
     }

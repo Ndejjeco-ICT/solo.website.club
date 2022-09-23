@@ -22,6 +22,8 @@ class NavigationLink extends HTMLElement implements IWebComponents {
 
             event.preventDefault();
             window.history.pushState({}, "", this.___currentHref);
+            const navEvent = new PopStateEvent('popstate');
+            window.dispatchEvent(navEvent);
         })
     }
     intializeLinkElement() {

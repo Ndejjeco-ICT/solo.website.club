@@ -70,6 +70,8 @@ export class InsightsComponent extends HTMLElement implements IWebComponents {
     };
 
 
+    
+
 
 
     _createAnimationFacilityFunction() {

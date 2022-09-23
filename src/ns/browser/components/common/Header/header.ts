@@ -34,6 +34,7 @@ Template_.innerHTML = `
                                 About us
                             </ns-link>
                         </li>
+                       
                         <li id="blog-nav-control">
                             <ns-link href="./blog" className="inactive-link">
                                 Blog
@@ -43,6 +44,11 @@ Template_.innerHTML = `
                             <ns-link href="./academics" className="inactive-link">
                                 Academics
                             </ns-link>
+                            <li id="about-nav-control">
+                                <ns-link href="./insights" className="inactive-link">
+                                    Insights
+                                </ns-link>
+                            </li>
                         </li>
                     </ul>
                 </div>
@@ -64,9 +70,10 @@ Template_.innerHTML = `
             </div>
         </div>
     </div>
-    <div class="wx-bars"></div>
+    <div class="wx-bars">
+        <i class="fa fa-bars"></i>
+    </div>
 </div>
-
 `
 
 

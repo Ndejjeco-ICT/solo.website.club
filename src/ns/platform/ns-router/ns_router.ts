@@ -181,7 +181,7 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
 
                 this.activeKeyElement = __dueElement;
                 this.activePath = this.initialEnteredLocation;
-            NavigationInitialRouteEventManager.emit("didFindInitialRoute",routeKey)
+                NavigationInitialRouteEventManager.emit("didFindInitialRoute",routeKey)
 
             } else  if (this.presentedRoutes.has(this.initialEnteredLocation)) {
                 let routeKey = this.presentedRoutes.get(this.initialEnteredLocation)!;
@@ -192,7 +192,7 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
 
                 this.activeKeyElement = __dueElement;
                 this.activePath = this.initialEnteredLocation;
-            NavigationInitialRouteEventManager.emit("didFindInitialRoute",routeKey)
+                NavigationInitialRouteEventManager.emit("didFindInitialRoute",routeKey)
             }
             this.preloadNecessaryRouterDependencies();
         }
@@ -238,7 +238,7 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
     setCommonNavigationLocationPopStateListener() {
         window.addEventListener('popstate', () => {
             console.log("Location Changed");
-            this.preEmitRequiredPathLocationLabel(window.location.pathname)
+            this.preEmitRequiredPathLocationLabel(window.location.pathname);
             let __requiredRoute__ = window.location.pathname.substring(1)
             NavigationInitialRouteEventManager.emit(NAVIGATION_ROUTE_EVENTS.DID_NAVIGATE,__requiredRoute__)
         });
