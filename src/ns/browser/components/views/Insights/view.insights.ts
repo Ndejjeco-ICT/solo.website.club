@@ -63,11 +63,6 @@ Template_.innerHTML = `
                                     <div class="prob-header-area">
                                         <div class="prop-header-wrapper">
                                             <div class="cp-picture-content-area">
-                                                <div class="picture-wrapper">
-                                                    <figure>
-                                                        <img loading="lazy" src="">
-                                                    </figure>
-                                                </div>
                                                 <div class="writter-content-holder"></div>
                                             </div>
                                             <div class="cp-info-area">

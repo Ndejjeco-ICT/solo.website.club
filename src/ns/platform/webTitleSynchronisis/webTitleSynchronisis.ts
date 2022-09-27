@@ -1,4 +1,6 @@
 import {createInstance} from "ns/base/instanceCreators/instanceCreators"
+import {NavigationInitialRouteEventManager} from "ns/platform/ns-router/ns_router"
+
 
 
 /**
@@ -18,6 +20,12 @@ const RouteTitleLayouts = {
     },
     "Academics-view" : {
         title : "Ndejje Senior Secondary School | Academics",
+    },
+    "Insights-view" : {
+        title : "Ndejje Senior Secondary School | Insights",
+    },
+    "Not_Found" : {
+        title : "Not Found",
     }
 };
 
@@ -32,11 +40,13 @@ export class WebLocator {
 
 
     private _listenForLocationChanges(){
+        NavigationInitialRouteEventManager.emit("didNavigate",this._listenerForRoutes.bind(this))
         // WebMainInstance.FrameRouter.didNavigateToRouteEventManager.subscribe(this._listenerForRoutes.bind(this))
     }
     private _listenerForRoutes(route:string){
+        console.log("listening from the didNavigate",route)
         switch (route) {
-            case "about":
+            case "aboutus":
                 this.__DOM__.title = RouteTitleLayouts["About-view"].title          
             break;
 
@@ -54,6 +64,12 @@ export class WebLocator {
                 this.__DOM__.title = RouteTitleLayouts["blog-view"].title          
                 
             break;
+            case "insights" : 
+                this.__DOM__.title = RouteTitleLayouts["Insights-view"].title;
+            break;
+            case "Not_Found":
+                this.__DOM__.title = RouteTitleLayouts["Not_Found"].title;
+
         }
     }
 }

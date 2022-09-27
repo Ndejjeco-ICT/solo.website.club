@@ -61,8 +61,8 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
      */
     getCurrentLocationPathName() {
         let locationLabel = window.location.pathname;
-        console.log(locationLabel)
         this.initialEnteredLocation = locationLabel;
+        console.log(":::Currently Source Location:::",this.initialEnteredLocation)
     }
     /**
      * Error Handlers;
@@ -167,13 +167,21 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
         }
     }
 
+    _fixEnteredHomePath(){
+        window.location.pathname = "/";
+        this.initialEnteredLocation = "/"
+    }
+
     /**
      * Check Through and display the initial Route according the set location
      */
     sequentiallyAssignRouteElementLocationPath() {
         if (this.initialEnteredLocation.charAt(0)) {
-            if (this.initialEnteredLocation == "/") {
-                let routeKey = this.presentedRoutes.get("/home")!;
+            if (this.initialEnteredLocation == "/" || this.initialEnteredLocation == "/home") {
+                if(this.initialEnteredLocation == "/home"){
+                    this._fixEnteredHomePath()
+                }
+                let routeKey = this.presentedRoutes.get("/")!;
                 let __dueElement = this.getAndSetRouteElementByKeyLabel(routeKey);
                 this.displayOrClearRouteElement(__dueElement!, true)
 
@@ -181,9 +189,17 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
 
                 this.activeKeyElement = __dueElement;
                 this.activePath = this.initialEnteredLocation;
-                NavigationInitialRouteEventManager.emit("didFindInitialRoute",routeKey)
+                NavigationInitialRouteEventManager.emit("didFindInitialRoute",routeKey);
+                NavigationInitialRouteEventManager.emit(NAVIGATION_ROUTE_EVENTS.DID_NAVIGATE,this.dispatchDidNavigateEvevenly(this.initialEnteredLocation))
 
+                
+                
             } else  if (this.presentedRoutes.has(this.initialEnteredLocation)) {
+
+                /**
+                 * Its was not the initial Page.
+                 */
+
                 let routeKey = this.presentedRoutes.get(this.initialEnteredLocation)!;
                 let __dueElement = this.getAndSetRouteElementByKeyLabel(routeKey);
                 this.displayOrClearRouteElement(__dueElement!, true)
@@ -192,11 +208,37 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
 
                 this.activeKeyElement = __dueElement;
                 this.activePath = this.initialEnteredLocation;
+                NavigationInitialRouteEventManager.emit(NAVIGATION_ROUTE_EVENTS.DID_NAVIGATE,this.dispatchDidNavigateEvevenly(this.initialEnteredLocation))
                 NavigationInitialRouteEventManager.emit("didFindInitialRoute",routeKey)
+            }else{
+                /**
+                 * Handle 404 Pages Here
+                 */
+
+                let routeKey = this.presentedRoutes.get("pagenotfound")!;
+                let __dueElement = this.getAndSetRouteElementByKeyLabel(routeKey);
+
+                this.displayOrClearRouteElement(__dueElement!,true);
+
+                NavigationInitialRouteEventManager.emit(NAVIGATION_ROUTE_EVENTS.DID_NAVIGATE,"Not_Found")
+                NavigationInitialRouteEventManager.emit("didFindInitialRoute",routeKey)
+
+                console.log("::PageNotFound::",404)
             }
             this.preloadNecessaryRouterDependencies();
         }
     };
+
+    dispatchDidNavigateEvevenly(_location:string){
+        let _stl = ""
+        if(_location  == "/"){
+            _stl = ""
+            _stl = "home"
+        }else{
+            _stl = _location.substring(1)
+        }
+        return _stl;
+    }
 
     /**
      * Manage to exchange Routes between the active and inactive route
@@ -239,8 +281,9 @@ class NavigationRouter extends HTMLElement implements IWebComponents {
         window.addEventListener('popstate', () => {
             console.log("Location Changed");
             this.preEmitRequiredPathLocationLabel(window.location.pathname);
-            let __requiredRoute__ = window.location.pathname.substring(1)
-            NavigationInitialRouteEventManager.emit(NAVIGATION_ROUTE_EVENTS.DID_NAVIGATE,__requiredRoute__)
+            let __requiredRoute__ = window.location.pathname
+            NavigationInitialRouteEventManager.emit(NAVIGATION_ROUTE_EVENTS.DID_NAVIGATE,this.dispatchDidNavigateEvevenly(__requiredRoute__))
+
         });
     }
 

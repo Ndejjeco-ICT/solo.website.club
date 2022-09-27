@@ -15,7 +15,9 @@ Template_.innerHTML = `
         </div>
     </div>
     <div class="control-button-container">
-        <div class="expl-button-container" title="Explore the Goodness of the School of Joy And Pride">Explore</div>
+    <ns-link href="./insights">
+    <div class="expl-button-container" title="Explore the Goodness of the School of Joy And Pride">Explore</div>
+    </ns-link>
     </div>
     </div>
 </div>
@@ -23,8 +25,8 @@ Template_.innerHTML = `
 `
 
 export class PrideComponent extends HTMLElement implements IWebComponents {
-    private _prideContainer:HTMLDivElement|null
-    private _contentAboutButton:HTMLDivElement|null = null;
+    private _prideContainer: HTMLDivElement | null
+    private _contentAboutButton: HTMLDivElement | null = null;
     constructor() {
         super();
         this._prideContainer = null;
@@ -37,41 +39,33 @@ export class PrideComponent extends HTMLElement implements IWebComponents {
     private initializeComponent() {
         this.__createComponentAttachmnent()
         this.__createAnimationFacilityFunction()
-        this._createEventListenerForContentButton()
     }
 
-    __createComponentAttachmnent(){
+    __createComponentAttachmnent() {
         this._prideContainer = this.querySelector(".pride-x-component .container");
-        this._contentAboutButton  = this.querySelector(".pride-x-component .container .control-button-container")
+        this._contentAboutButton = this.querySelector(".pride-x-component .container .control-button-container")
     }
-    __viewLinkAnimationInset(){
+    __viewLinkAnimationInset() {
         if (this._prideContainer) {
-            this._prideContainer.style.animation  = "__bannerAnimation__  .5s forwards"
+            this._prideContainer.style.animation = "__bannerAnimation__  .5s forwards"
         }
     }
-    __viewLinkAnimationOutset(){
+    __viewLinkAnimationOutset() {
         if (this._prideContainer) {
             this._prideContainer.style.opacity = "0";
             this._prideContainer.style.transform = "translateX(-50px)";
         }
     }
-    _createEventListenerForContentButton(){
-        if(this._contentAboutButton){
-            this._contentAboutButton.addEventListener("click", () => {
-                document.location.href = "/blog"
-            })
-        }
-    }
     __createAnimationFacilityFunction() {
         if (this._prideContainer) {
             createViewLinkerManger({
-                element : this._prideContainer,
-                linkPosition : 0,
-                LinkerCallbacks : {
-                    inset  : ()=>{
+                element: this._prideContainer,
+                linkPosition: 0,
+                LinkerCallbacks: {
+                    inset: () => {
                         this.__viewLinkAnimationInset()
                     },
-                    outset : () =>{
+                    outset: () => {
                         this.__viewLinkAnimationOutset()
                     }
                 }

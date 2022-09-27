@@ -14,11 +14,12 @@
         transform: translateY(-10px);
         opacity: 0;
     }
-    100%{ 
+
+    100% {
         opacity: 1;
         transform: translateY(0px);
     }
-    
+
 }
 
 ns-x-voices {
@@ -94,6 +95,7 @@ ns-x-voices .xb-voices-component {
 
         .xb-title-area-container {
             font-size: 30pt;
+            font-family: V.$ns-common-font;
         }
     }
 
@@ -157,6 +159,11 @@ ns-x-voices .xb-voices-component {
                                     width: inherit;
                                     height: inherit;
                                     background-color: rgba(3, 3, 3, 0.795);
+
+                                    .te-wrapper {
+                                        font-family: V.$ns-common-font;
+
+                                    }
                                 }
                             }
 
@@ -169,6 +176,7 @@ ns-x-voices .xb-voices-component {
                             margin-left: 33px;
                             color: #fff;
                             font-size: 21pt;
+                            font-family: V.$ns-common-font;
                         }
 
                     }
@@ -212,6 +220,10 @@ ns-x-voices .xb-voices-component {
                                     width: inherit;
                                     height: inherit;
                                     background-color: rgba(3, 3, 3, 0.795);
+                                    .te-wrapper {
+                                        font-family: V.$ns-common-font;
+
+                                    }
                                 }
                             }
 
@@ -223,6 +235,7 @@ ns-x-voices .xb-voices-component {
                             margin-left: 33px;
                             color: #fff;
                             font-size: 21pt;
+                            font-family: V.$ns-common-font;
                         }
 
                         display: none;
@@ -236,7 +249,7 @@ ns-x-voices .xb-voices-component {
                         .video-labels {
                             .vid-label-cl {
                                 border: 1px solid #fff;
-                                width:fit-content;
+                                width: fit-content;
                                 padding: 10px 8px 0px 8px;
                                 height: 50px;
                                 transform: translateY(-10px);
@@ -254,6 +267,7 @@ ns-x-voices .xb-voices-component {
                                 opacity: 0;
 
                             }
+
                             .vid-close-cl {
                                 position: absolute;
                                 z-index: 34;
@@ -270,7 +284,9 @@ ns-x-voices .xb-voices-component {
                                 display: none;
                                 transition: all .5s;
                                 cursor: pointer;
-                                &:hover{
+                                font-family: V.$ns-common-font;
+
+                                &:hover {
                                     border-color: #e42929;
                                     color: #e42929;
                                 }
@@ -315,6 +331,7 @@ ns-x-voices .xb-voices-component {
                                 font-size: 40pt;
                                 border-radius: 50%;
                                 background-color: #3b8af3;
+
                                 &:hover {
                                     color: #3b8af3;
                                     background-color: #000;
@@ -326,7 +343,7 @@ ns-x-voices .xb-voices-component {
 
                                 }
 
-                              
+
                             }
 
                             .sm1 {

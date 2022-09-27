@@ -37,5 +37,5 @@
         
        
     },
-    "exclude" : ["./scripts","gulpfile.js","./public","webpack.config.js","./src/ns/*.js","./src/test","./configs"]
+    "exclude" : ["./.devcontainer","./scripts","./cg.dev.js","./cg.prod.js"]
 }

@@ -20,7 +20,8 @@ ns-x-life .xb-component-wrapper {
 
         .xb-title-container {
             font-size: 45pt;
-            font-weight: 300;
+            font-weight: 350;
+            font-family: V.$ns-common-font;
         }
     }
 
@@ -65,13 +66,16 @@ ns-x-life .xb-component-wrapper {
                     align-items: center;
                     justify-content: center;
                     background-repeat: no-repeat;
-                    background-color: #808080;
+                    background-color: #3b8af3;
+
                     transition: all .5s;
 
                     .image-container {
                         width: inherit;
+
                         picture {
                             width: inherit;
+
                             img {
                                 width: 100%;
                             }
@@ -80,8 +84,7 @@ ns-x-life .xb-component-wrapper {
                 }
 
                 .xb-content {
-                    font-weight: bold;
-
+                    font-weight: 350;
                     transition: all .5s;
                     background-color: #e9e8e8;
                     box-shadow: rgb(0 0 0 / 50%) 0px 0px 8px 2px;
@@ -104,9 +107,10 @@ ns-x-life .xb-component-wrapper {
 
                     .split-wrapper {
                         color: #000;
-                        font-size: 20pt;
+                        font-size: 25pt;
                         margin-left: 20px;
                         width: 500px;
+                        font-family: V.$ns-common-font;
                         height: fit-content;
                     }
                 }

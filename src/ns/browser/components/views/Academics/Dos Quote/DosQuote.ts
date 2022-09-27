@@ -6,10 +6,10 @@ Template_.innerHTML = `
     <div class="xb-wrapper">
         <div class="xb-text-1">
             <div class="wrapper">
-                An investment in knowledge pays the best interest.
+            But by the grace of God I am what I am, and his grace to me was not without effect.
             </div>
         </div>
-        <div class="xb-text-2">Director Of Studies</div>
+        <div class="xb-text-2">1 Corinthians 15:10</div>
     </div>
 </div>
 `;

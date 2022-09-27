@@ -1,0 +1,29 @@
+@media (max-width: 800px) {
+    ns-footer .footer-main-outlet {
+        .footer-wrapper  {
+            grid-column-gap: 50px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    ns-footer .footer-main-outlet {
+        .footer-wrapper  {
+            grid-column-gap: 26px;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    ns-footer .footer-main-outlet {
+        .footer-wrapper  {
+            display: block;
+
+            .line-divider {
+                margin: 40px 0 40px 0;
+                height: 2px;
+                width: 100%;
+            }
+        }
+    }
+}

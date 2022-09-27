@@ -1,0 +1,365 @@
+/*
+Website media queries;
+*/
+/*
+    working with desktop first
+*/
+
+// header area And Banner.
+
+@media only screen and (max-width: 1270px) {
+    ns-x-banner {
+        .ponaco-splitview-1 {
+            background-color: #fff;
+        }
+    }
+}
+
+@media (max-width : 1080px) {
+
+    //Header Navigation Area
+    ns-header {
+
+        .wx-component-header-section {
+
+            .wx-header-component-area {
+                .wx-badge-wrapper {
+                    #badge-icon {
+                        width: 35px;
+                        height: 35px;
+                    }
+                    .badge-title {
+                        font-size: 8pt;
+                    }
+                }
+                .wx-navigation-bar-half-area {
+                    .navigation-bar-wrapper {
+                        .main-navigation-bar {
+                            ul.navigation-items {
+                                li {
+                                    font-size: 10pt;
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .accord-options {
+                    .control-options {
+                         > div {
+                            font-size: 12pt;
+                         }
+                    }
+                }
+            }
+        }
+    }
+    ns-x-banner {
+
+        .ponaco-splitview-1 {
+            background-color: #fff;
+            height: 800px;
+            .ponaco-control-wrapper {
+                .wx-component-user-section {
+                    .welcome-note-section {
+    
+                        .note-1{
+                            font-size: 45pt;
+                            width: 600px;
+                        }
+                        
+                        
+    
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+@media (max-width : 958px) {
+
+    //Header Navigation Area
+    ns-header {
+
+        .wx-component-header-section {
+
+            .wx-header-component-area {
+                .wx-badge-wrapper {
+                    grid-template-columns: 70px 400px;
+                    #badge-icon {
+                        width: 30px;
+                        height: 30px;
+                    margin-top: 20px;
+                    }
+                    .badge-title {
+                        font-size: 8pt;
+                    }
+                }
+                .wx-navigation-bar-half-area {
+                    display: none;
+                    .navigation-bar-wrapper {
+                        .main-navigation-bar {
+                            ul.navigation-items {
+                                li {
+                                    font-size: 10pt;
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .accord-options {
+                    display: none;
+                    .control-options {
+                         > div {
+                            font-size: 12pt;
+                         }
+                    }
+                }
+            }
+            .wx-bars{
+                display: block;
+            }
+        }
+    }
+    ns-x-banner {
+
+        .ponaco-splitview-1 {
+            height: 600px;
+            .ponaco-control-wrapper {
+                .wx-component-user-section {
+                    .welcome-note-section {
+    
+                        .note-1{
+                            font-size: 40pt;
+                            width: 500px;
+                        }
+                        
+    
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width:800px){
+    ns-x-banner {
+
+        .ponaco-splitview-1 {
+            height: 300px;
+            .ponaco-control-wrapper {
+                .wx-component-user-section {
+                    .welcome-note-section {
+    
+                        .note-1{
+                            font-size: 40pt;
+                            width: 500px;
+                        }
+                        
+    
+                    }
+                }
+            }
+            
+        }
+    }
+}
+@media (max-width:650px){
+    ns-x-banner {
+
+        .ponaco-splitview-1 {
+            height: 300px;
+            .ponaco-control-wrapper {
+                .wx-component-user-section {
+                    .welcome-note-section {
+                        margin-top: 150px;
+    
+                        .note-1{
+                            font-size: 30pt;
+                            width: 400px;
+                        }
+                        .note-2{
+                            font-size: 14pt;
+                        }
+                        .enroll-ns-button {
+                            width: 120px;
+                            height: 40px;
+                            font-size: 11pt;
+                        }
+    
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width:554px){
+    ns-x-banner {
+
+        .ponaco-splitview-1 {
+            height: 300px;
+            .ponaco-control-wrapper {
+                .wx-component-user-section {
+                    .welcome-note-section {
+                        margin-top: 100px;
+    
+                        .note-1{
+                            font-size: 25pt;
+                            width: 300px;
+                        }
+                        
+    
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+@media (max-width : 460px) {
+
+    //Header Navigation Area
+    ns-header {
+        height: 60px;
+        .wx-component-header-section {
+            height: 60px;
+
+            .wx-header-component-area {
+                .wx-badge-wrapper {
+                    height: 60px;
+                    #badge-icon {
+                        width: 30px;
+                        height: 30px;
+                        display: none;
+                    }
+                    .badge-title {
+                        width: 220px;
+                        font-size: 8pt;
+                        margin-left: 20px;
+                    height: 60px;
+
+                    }
+                }
+                .wx-navigation-bar-half-area {
+                    display: none;
+                    .navigation-bar-wrapper {
+                        .main-navigation-bar {
+                            ul.navigation-items {
+                                li {
+                                    font-size: 10pt;
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .accord-options {
+                    display: none;
+                    .control-options {
+                         > div {
+                            font-size: 12pt;
+                         }
+                    }
+                }
+            }
+            .wx-bars{
+                display: block;
+            }
+        }
+    }
+    ns-x-banner {
+
+        .ponaco-splitview-1 {
+            height: 100px;
+            .ponaco-control-wrapper {
+                .wx-component-user-section {
+                    .welcome-note-section {
+                        margin-top: 100px;
+                        margin-left: 10px;
+                        padding-left: 10px;
+                        .note-1{
+                            font-size: 19pt;
+                            width: 200px;
+                        }
+                        .note-2{
+                            font-size: 12pt;
+                        }
+                        .enroll-ns-button {
+                            width: 119px;
+                            height: 35px;
+                            font-size: 10pt;
+                        }
+                        
+    
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width : 324px) {
+
+    //Header Navigation Area
+    ns-header {
+        height: 50px;
+        .wx-component-header-section {
+            height: 50px;
+
+            .wx-header-component-area {
+                .wx-badge-wrapper {
+                    height: 50px;
+                    #badge-icon {
+                        width: 30px;
+                        height: 30px;
+                        display: none;
+                    }
+                    .badge-title {
+                        display: none;
+                        width: 220px;
+                        font-size: 8pt;
+                        margin-left: 20px;
+                    height: 50px;
+
+                    }
+                }
+                .wx-navigation-bar-half-area {
+                    display: none;
+                    .navigation-bar-wrapper {
+                        .main-navigation-bar {
+                            ul.navigation-items {
+                                li {
+                                    font-size: 10pt;
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .accord-options {
+                    display: none;
+                    .control-options {
+                         > div {
+                            font-size: 12pt;
+                         }
+                    }
+                }
+            }
+            .wx-bars{
+                display: block;
+                top: 0px;
+            }
+        }
+    }
+}

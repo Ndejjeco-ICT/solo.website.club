@@ -6,8 +6,9 @@ import { BlogView } from "ns/browser/components/views/Blog/view.blog";
 import {NavigationInitialRouteEventManager} from "ns/platform/ns-router/ns_router"
 import { dialogHost ,IIDialogHost} from "ns/dialogHostManager";
 import { InsightViewContolComponent } from "ns/browser/components/views/Insights/view.insights";
+import {_404_} from "ns/browser/components/common/404/404"
 
-type Views = "aboutus" | "academics" | "home" | "blog" | "insights"
+type Views = "aboutus" | "academics" | "blog" | "home" | "insights" | "pagenotfound"
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
@@ -16,7 +17,7 @@ Template_.innerHTML = `
         <ns-header></ns-header>
         <div class="ns-page-container">
             <ns-router>
-                <ns-route key="home" path="/home">
+                <ns-route key="home" path="/">
                     <ns-home-view></ns-home-view>
                 </ns-route>
                 <ns-route key="aboutus" path="/aboutus">
@@ -26,11 +27,13 @@ Template_.innerHTML = `
                     <ns-blog-view></ns-blog-view>
                 </ns-route>
                 <ns-route key="academics" path="/academics">
-                    <ns-academics-view>
-                        </ns-academics-view>
+                    <ns-academics-view></ns-academics-view>
                 </ns-route>
                 <ns-route key="insights" path="/insights">
                     <ns-insights-view></ns-insights-view>
+                </ns-route>
+                <ns-route key="pagenotfound" path="_sls_">
+                    <ns-pagenotfound-view></ns-pagenotfound-view>
                 </ns-route>
             </ns-router>
         </div>
@@ -63,7 +66,9 @@ const VIEWS_MANAGER:IViewManager = {
     "ABOUT_VIEW": "OFFLINE",
     "BLOG_VIEW": "OFFLINE",
     "ACADEMICS_VIEW": "OFFLINE",
-    "INSIGHTS_VIEW":"OFFLINE"
+    "INSIGHTS_VIEW":"OFFLINE",
+    "NOTFOUND_VIEW":"OFFLINE"
+
 }
 
 export class DefaultRootControl extends HTMLElement implements IWebComponents {
@@ -73,6 +78,7 @@ export class DefaultRootControl extends HTMLElement implements IWebComponents {
     private _academicsViewkey: string = "ns-academics-view";
     private _blogViewKey: string = "ns-blog-view";
     private _insightsViewKey: string = "ns-insights-view";
+    private _pagenotfoundViewKey: string = "ns-pagenotfound-view";
     private __dialogHost: IIDialogHost | null = null;
 
     constructor() {
@@ -101,10 +107,17 @@ export class DefaultRootControl extends HTMLElement implements IWebComponents {
     }
 
     __CHECKVIEWSTATE(view:Views) {
-        if (view == "home") {
+        if (view ==  "home") {
             if (VIEWS_MANAGER["HOME_VIEW"] == "OFFLINE") {
                 customElements.define(this._homeViewKey, HomeView)
                 VIEWS_MANAGER["HOME_VIEW"] = "ONLINE"
+            }
+        }
+
+        if(view == "pagenotfound"){
+            if(VIEWS_MANAGER["NOTFOUND_VIEW"] == "OFFLINE"){
+                customElements.define(this._pagenotfoundViewKey,_404_);
+                VIEWS_MANAGER["NOTFOUND_VIEW"] = "ONLINE"
             }
         }
 
@@ -154,6 +167,10 @@ export class DefaultRootControl extends HTMLElement implements IWebComponents {
                 break;
             case "insights":
                 this.__CHECKVIEWSTATE("insights")
+                break;
+            case "pagenotfound" : 
+                this.__CHECKVIEWSTATE("pagenotfound");
+            break;
         }
     }
     initializeRuntimeDependencies() {

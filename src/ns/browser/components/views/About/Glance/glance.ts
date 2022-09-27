@@ -105,12 +105,12 @@ class Glance extends HTMLElement implements IWebComponents {
             })
             anime({
                 targets : __numericalConstants,
-                __xr2 : 162,
+                __xr2 : 120,
                 easing : 'linear',
                 round : 1,
                 duration : 2000,
                 update : ()=>{
-                    this._xrNm2!.innerHTML = `${__numericalConstants.__xr2}`
+                    this._xrNm2!.innerHTML = `+${__numericalConstants.__xr2}`
                 }
             })
             anime({
@@ -120,7 +120,7 @@ class Glance extends HTMLElement implements IWebComponents {
                 round : 1,
                 duration : 2000,
                 update : ()=>{
-                    this._xrNm3!.innerHTML = `${__numericalConstants.__xr3}`
+                    this._xrNm3!.innerHTML = `+${__numericalConstants.__xr3}`
                 }
             })
         }

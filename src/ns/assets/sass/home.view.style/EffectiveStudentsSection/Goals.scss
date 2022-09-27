@@ -191,41 +191,42 @@ ns-x-benefits .ponaco-splitview-3 {
                                     font-size: 19pt;
                                 }
 
-                                .cr-xmore {
-                                    ns-link {
-                                        div {
-                                            a {
-                                                margin: 0px;
-                                                padding: 0px;
-                                                text-decoration: none;
-                                                color: #fff;
-                                            }
+                                ns-link {
+                                    a {
+                                        margin: 0px;
+                                        padding: 0px;
+                                        text-decoration: none;
+                                        color: #fff;
+                                    }
+
+                                    .cr-xmore {
+                                        font-family: V.$ns-common-font;
+
+
+                                        margin-top: 20px;
+                                        height: 50px;
+                                        width: 160px;
+                                        cursor: pointer;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: 2px solid #000000;
+                                        color: #fff;
+                                        transition: all .5s;
+                                        background-color: #2179ec;
+                                        font-family: V.$ns-common-font;
+
+                                        &:hover {
+                                            background-color: #2c2c2c;
+                                            cursor: pointer;
                                         }
 
-                                    }
-
-                                    margin-top: 20px;
-                                    height: 50px;
-                                    width: 160px;
-                                    cursor: pointer;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    border: 2px solid #000000;
-                                    color: #fff;
-                                    transition: all .5s;
-                                    background-color: #2179ec;
-                                    font-family: V.$ns-common-font;
-
-                                    &:hover {
-                                        background-color: #2c2c2c;
-                                        cursor: pointer;
-                                    }
-
-                                    &:active {
-                                        transform: scale(0.8);
+                                        &:active {
+                                            transform: scale(0.8);
+                                        }
                                     }
                                 }
+
 
                             }
 

@@ -1,0 +1,26 @@
+@use "../../Variables/Variables.scss" as V;
+
+@media (max-width: 1170px) {
+    .review-main-component {
+        .main-review-container {
+            .split-layout-containers  {
+                display: contents;
+
+                .split-container-2 {
+                    h2 {
+                        text-align: center !important;
+                        padding-top: 30px;
+                    }
+
+                    .student-quote {
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

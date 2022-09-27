@@ -1,0 +1,93 @@
+@use "../../Variables/Variables.scss" as V;
+
+//for laptop
+@media only screen and (max-width: 1300px) {
+    ns-x-benefits {
+        margin-bottom: 300px;
+
+        .ctr-component-wrapper {
+            margin: auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 1fr !important;
+            grid-template-rows: 1fr 1fr !important;
+
+            .conic-section-1 {
+                .ctx-pictures-wrapper {
+                    width: 900px !important;
+                }
+            }
+
+            .conic-section-2 {
+                .content-wrapper {
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+//for 1000px and below
+@media  (max-width: 1000px) {
+    ns-x-benefits {
+        .ctr-component-wrapper {
+            .conic-section-1 {
+                .ctx-pictures-wrapper {
+                    width: 700px !important;
+                }
+            }
+
+            .conic-section-2 {
+                .content-wrapper {
+                    .cr-title {
+                        font-size: 35pt !important;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+//for below laptops
+@media (max-width: 768px) {
+    ns-x-benefits {
+        .ctr-component-wrapper {
+            .conic-section-1 {
+                .ctx-pictures-wrapper {
+                    width: 600px !important;
+                }
+            }
+
+            .conic-section-2 {
+                .content-wrapper {
+                    .cr-title {
+                        font-size: 30pt !important;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 658px) {
+    ns-x-benefits {
+        .ctr-component-wrapper {
+            .conic-section-1 {
+                .ctx-pictures-wrapper {
+                    width: 500px !important;
+                }
+            }
+
+            .conic-section-2 {
+                .content-wrapper {
+                    .cr-title {
+                        font-size: 26pt !important;
+                    }
+                }
+            }
+        }
+
+    }
+}

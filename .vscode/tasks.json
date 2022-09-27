@@ -3,17 +3,18 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "dev",
+			"script": "build",
+			"group": "build",
 			"problemMatcher": [],
-			"label": "Serve ::WEBPACK-FILES::",
-			"detail": "webpack serve"
+			"label": "YARN _BUILD_",
+			"detail": "webpack --config ./cg.prod.js "
 		},
 		{
 			"type": "npm",
-			"script": "webpack-server",
+			"script": "dev",
 			"problemMatcher": [],
-			"label": "Launch ::WEBPACK-SERVER::",
-			"detail": "webpack-dev-server --config webpack.config.js"
+			"label": "YARN _DEV_",
+			"detail": "webpack serve --open --config ./cg.dev.js"
 		}
 	]
 }

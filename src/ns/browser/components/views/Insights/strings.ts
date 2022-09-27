@@ -10,7 +10,7 @@ export const ejsStrings = {
                 "cl2" : "One may ask, WHAT IS INTERACT? It’s really simple. Interact is meeting amazing people. Interact is wealth. Interact is wealth. Interact is family make a difference with both local and global initiatives. Being under rotary we have a great national impact not forgetting being a no limit. Organization having a diverse base of people providing further services.",
                 "cl3" : "Serving other s beyond self, from an idea introduced during a fellowship, ideas exchanged and ideas turned to reality.",
                 "cl4" : "In a nutshell, am grateful to the Interact President 2019-2020.Mr.Musoke Paul and his Interact Board Of Officials who made it vital to place their blessings on me and my board Of Officials and our abilities. Its then after that we have truly learnt the bricks of Interact and now having a block to rest on",
-                "writer" : "President -BBUMBA PAUL WONDERFUL",
+                "writer" : "Bbumba Paul Wonderful",
                 "links-sources" : [
                     {
                         "label" : "Bumba",
@@ -25,7 +25,7 @@ export const ejsStrings = {
                 "moto" : "Developing business skills in young people",
                 "cl1" : "Junior Achievement Club is a worldwide club with 103 years of achievement in the world. With the coming of the pandemic, we greatly thank the Lord who helped us to overcome it. The Pandemic forced us to go dynamic by going virtual competitions and virtual classes which today we gladly added into all activities of Junior Achievement.",
                 "cl2" : "Developing business skills in young people and strengthening the existing and coming generation through making job creators and not seekers and today having sweet Aroma Restaurants, Native Kampala. Afro Style to mention but a few so when you hear the Junior Achievement, it’s us  who speak the language of business and Financial literacy with our theme being “Fueling change maker”. Thank you",
-                "writer" : "President -Bryan lee Kiregya",
+                "writer" : "Bryan lee Kiregya",
                 "links-sources" : [
                     {
                         "label" : "Tuhe Mark.c",
@@ -37,7 +37,7 @@ export const ejsStrings = {
         {
             "key" : "students-council",
             "data" : {
-                "writer" : "President -Mutesi Priscilla",
+                "writer" : "Mutesi Priscilla",
                 "moto" : "The struggle for liberation",
                 "cl6" : "Well, one of the most beautiful things the world the world could ever have are leaders who could ever have are leaders who do their work to their best. It’s a world full of earning. Thank you for reading.",
                 "mission" : "To prepare and produce disciplined, patriotic and self reliant citizens for National Development",
@@ -58,7 +58,8 @@ export const ejsStrings = {
             "key" : "prefecture",
             "data" : {
                 "cl1" : "The Knights Prefecture is the prefectural body sworn in 2021 meant to serve until 2022. Having the unordinary chance to serve in for 3years comes with its disadvantages and advantages.  More blessings than disasters. Our motto is Refine for Excellence, quoted from 1stCorinthians where all works are refined by fire and only those built on Christ as foundation will stand",
-                "moto" : "That is the goal, for the school of the School of Joy and Pride to hove its ways refined.",
+                "moto" : "Ndejje Standards And Ways Refined.",
+                "writer" : "The Prefecture",
                 "links-sources" : [
                     {
                         "label" : "Priscilla",
@@ -70,7 +71,7 @@ export const ejsStrings = {
         {
             "key" : "writers-club",
             "data" : {
-                "writer" : "Muhigira Gakore Orette - Thee Aaron Official",
+                "writer" : "Muhigira Gakore Orette",
                 "moto" : "From Ink Came Power",
                 "cl1" : "",
                 "links-sources" :[
@@ -83,7 +84,7 @@ export const ejsStrings = {
         },{
             "key" : "ict-club",
             "data" : {
-                "writer" : "President Muhigira Gakore Orette",
+                "writer" : "Mulungi Jeremiah",
                 "cl1" : "Through each line of code to the transpiring and ever evolving technologies today, ICT club Ndejje has grown to be centre of intellectual challenge that brings to life every students imagination on a keyboard or even a handheld smart device. ",
                 "cl2" : "The advancements are endless ranging from robotics to programming, video and photo editing, photography, pc and console gaming and to basic computer integration. All this surmounting to the club being ranked Number 1 in the school in the year 2022.",
                 "cl3" : " Inspiring the next generation of IT literates who will dominate the world of Ict has increasingly become a challenge that ICT takes down each day as our slogan goes, “We code the future”.",

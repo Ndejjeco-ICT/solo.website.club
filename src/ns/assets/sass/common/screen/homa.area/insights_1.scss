@@ -1,0 +1,68 @@
+@use "../../Variables/Variables.scss" as V;
+
+@media only screen and (max-width: 1300px) {
+    ns-x-insights .ponaco-splitview-5 {
+        .wx-insights-component {
+            .main-wrapper {
+                .cards-container {
+                    .card-wrapper-2 {
+                        display: block;
+
+                        .card-x-component {
+                            .card-content {
+                                .card-content-wrapper {
+                                    width: 800px;
+                                    height: 615px;
+                                    margin-top: 40px;
+
+                                    .card-content-image {
+                                        picture {
+                                            img {
+                                                width: 800px;
+                                                height: 615px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//for tablets
+@media (max-width: 875px) {
+    ns-x-insights .ponaco-splitview-5 {
+        .wx-insights-component {
+            .main-wrapper {
+                .cards-container {
+                    .card-wrapper-2 {
+                        display: block;
+                    }
+
+                    .card-x-component {
+                        .card-content {
+                            .card-content-wrapper {
+                                width: 600px !important;
+                                height: 480px !important;
+
+                                .card-content-image  {
+                                    picture {
+                                        img {
+                                            width: 600px !important;
+                                            height: 480px !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

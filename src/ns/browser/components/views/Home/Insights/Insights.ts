@@ -18,9 +18,11 @@ Template_.innerHTML = `
                 <div class="content-title-wrapper">
                     Uniqueness of Ndejje S.S.S
                 </div>
-                <div class="content-sub-title-wrapper">
-                    Get to Know About the good things about Ndejje.
-                </div>
+                <ns-link href="./insights">
+                    <div class="content-sub-title-wrapper">
+                        Get to Know About the good things about Ndejje.
+                    </div>
+                </ns-link>
             </div>
             <div class="cards-container">
                 <div class="card-wrapper-1">

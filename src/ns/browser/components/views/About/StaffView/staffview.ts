@@ -1,6 +1,7 @@
 import { dialogHostEventManager } from "ns/dialogHostManager";
 import { createViewLinkerManger } from "ns/platform/positionRenderer/view_linker";
 import { IWebComponents } from "ns/typings/schw";
+import { _T_ } from "./staff.strings";
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
@@ -30,14 +31,7 @@ Template_.innerHTML = `
                         <div class="tr-content">
                             <div class="tr-content-wrapper">
                                 <div class="tr-members-wrapper">
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -52,11 +46,25 @@ Template_.innerHTML = `
 </div>
 `;
 
+export interface IIStaffView1 {
+
+    name :string,
+    link : string,
+    imageSource : string,
+    number : string
+    post:string
+}
+
+type IIStaffviewStructure  = {
+    "staff-view-data-1" : IIStaffView1[]
+}
+
 class StaffView extends HTMLElement implements IWebComponents {
 
     private _xrt1:HTMLDivElement|null = null;
     private _xrt2:NodeListOf<HTMLDivElement>|null = null;
     private _xrtControlBtn:HTMLDivElement|null = null;
+    private _staffContentWrapper:HTMLDivElement|null = null;
     constructor(){
         super();
         this.appendChild(Template_.content.cloneNode(true))
@@ -69,8 +77,10 @@ class StaffView extends HTMLElement implements IWebComponents {
         this._createComponentAttachment();
         this._createAnimationFacility1()
         this._applyGeneralEventListeners()
+        this.preloadStaffElements()
     }
     private _createComponentAttachment(){
+        this._staffContentWrapper = this.querySelector(".xb-staffview .xb-wrapper .tr-view-2 .tr-members-wrapper")
         this._xrt1 = this.querySelector(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-1 .cl-view-2");
         this._xrt2 = this.querySelectorAll(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-2 .tr-view-2-wrapper .tr-content .tr-members-wrapper ns-x-member");
         this._xrtControlBtn = this.querySelector(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-2 .tr-view-2-wrapper .tr-content-2  .selective-btn")
@@ -82,6 +92,23 @@ class StaffView extends HTMLElement implements IWebComponents {
                 dialogHostEventManager.emit("invoke-dialog","staff-view")
             })
         }
+    }
+    async preloadStaffElements(){
+        return new Promise<void>((c)=>{
+            const _data  = JSON.parse(JSON.stringify(_T_))! as IIStaffviewStructure;
+            const _templateContents:string[] = []
+            _data["staff-view-data-1"].forEach((e)=>{
+                const _generalTemplate = `
+                <ns-x-member id-name=${e.name} id-post=${e.post} id-number=${e.number} id-image-source=${e.imageSource}></ns-x-member>
+                `;
+                _templateContents.push(_generalTemplate);
+            })
+            _templateContents.forEach((_e)=>{
+                this._staffContentWrapper!.insertAdjacentHTML("afterbegin",_e);
+            })
+            c()
+        })
+     
     }
 
     private __viewAnimationInset1(){

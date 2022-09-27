@@ -24,7 +24,7 @@ Template_.innerHTML = `
                 <div class="main-navigation-bar">
                     <ul class="navigation-items">
                         <li id="Home-nav-control">
-                            <ns-link className="active-link" href="./home">
+                            <ns-link className="active-link" href="./">
                                 Home
                             </ns-link>
                         </li>
@@ -44,11 +44,6 @@ Template_.innerHTML = `
                             <ns-link href="./academics" className="inactive-link">
                                 Academics
                             </ns-link>
-                            <li id="about-nav-control">
-                                <ns-link href="./insights" className="inactive-link">
-                                    Insights
-                                </ns-link>
-                            </li>
                         </li>
                     </ul>
                 </div>
@@ -157,6 +152,7 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
    
 
     _listenerForNavigationRouteChange(route: string) {
+        console.log(route)
         this._removeAndReplaceActivityState(route)
     }
 
@@ -179,16 +175,19 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
             case "blog":
                 this._blogNavControl!.querySelector("a")!.classList.add("active-link");
                 break;
-
-            case "insights":
-                break;
         }
     }
     _removeAndReplaceActivityState(newRoute: string) {
-        const __activeRouteLink = this.querySelector(".active-link");
-        __activeRouteLink!.classList.remove("active-link");
-
-        this._setActive(newRoute)
+        if(newRoute == "Not_Found"){
+            const __activeRouteLink = this.querySelector(".active-link");
+            __activeRouteLink!.classList.remove("active-link");
+        }else{
+            const __activeRouteLink = this.querySelector(".active-link");
+            __activeRouteLink!.classList.remove("active-link");
+    
+            this._setActive(newRoute)
+        }
+        
 
     }
 

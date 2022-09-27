@@ -6,6 +6,10 @@ export interface ICommonEvents<T> {
     addListener(event: string, callbackFunction: ICommonEventsCallback): void;
     removeListener(event: string, callbackFunction: ICommonEventsCallback): void;
     emit(event: string, ...args:T[]): void;
+    subscribers():{
+        keys : Array<any>,
+        values : Array<any>
+    }
 }
 
 /**
@@ -32,6 +36,12 @@ export class commonEvents<K> implements ICommonEvents<K> {
     emit(event: string, ...args: K[]): void {
         if (this._EventStorage.has(event)) {
             this._EventStorage.get(event)!.apply(null,args)
+        }
+    }
+    subscribers(): { keys: any[]; values: any[]; } {
+        return {
+            keys : Array.from(this._EventStorage.keys()),
+            values : Array.from(this._EventStorage.values())
         }
     }
 };

@@ -62,7 +62,6 @@ Template_.innerHTML = `
                                             <img loading="lazy" src/>
                                         </picture>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

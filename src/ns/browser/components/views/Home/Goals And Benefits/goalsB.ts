@@ -73,9 +73,11 @@ Template_.innerHTML = `
                                     Our faculty lead students to reach further, to achieve their goals and to effect
                                     change in the professions and passions they pursue.
                                 </div>
-                                <div class="cr-xmore" title="Read More Ndejje">
-                                    <ns-link href="./insights" classname="cr-rd">Read More</ns-link>
-                                </div>
+                                <ns-link href="./aboutus" classname="cr-rd">
+                                    <div class="cr-xmore" title="Read More Ndejje">
+                                        Read More
+                                    </div>
+                                </ns-link>
                             </div>
                         </div>
                     </div>

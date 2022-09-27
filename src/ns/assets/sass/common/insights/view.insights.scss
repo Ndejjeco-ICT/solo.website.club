@@ -307,30 +307,7 @@ ns-insights-view .insights-view-container {
                                                 display: flex;
                                                 align-items: center;
 
-                                                .picture-wrapper {
-                                                    border: 1px solid green;
-                                                    width: 60px;
-                                                    height: 60px;
-                                                    border-radius: 50%;
-
-                                                    picture {
-                                                        transition: all .5s;
-                                                        border-radius: 50%;
-
-                                                        width: inherit;
-                                                        height: inherit;
-
-                                                        img {
-                                                            border-radius: 50%;
-
-                                                            transition: all .5s;
-                                                            display: block;
-                                                            width: 100%;
-                                                            height: 100%;
-                                                        }
-
-                                                    }
-                                                }
+                    
 
                                                 .writter-content-holder {
                                                     margin-left: 8px;

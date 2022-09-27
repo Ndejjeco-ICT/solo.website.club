@@ -12,7 +12,7 @@ const __dataContainer = [
     },
     {
         icon : "medal",
-        data : "Ndejje Had the Best student in Essay Writing in Africa"
+        data : "Amupaire Terisah Hannah emerged the Best student in Essay Writing in Nation Wide."
     }
 ]
 

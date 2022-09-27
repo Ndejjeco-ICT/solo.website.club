@@ -1,9 +1,9 @@
 //insghts main page images
 
 // @ts-ignore
-import prefectorialBody from "ns/assets/site_images/home_view/cr_insights/becky.jpg";
+import prefectorialBody from "ns/assets/site_images/home_view/cr_insights/prefects.jpg";
 // @ts-ignore
-import clubforum from "ns/assets/site_images/home_view/cr_insights/clubforum100.jpg";
+import ict from "ns/assets/site_images/home_view/cr_insights/club.ict/clv.jpg";
 // @ts-ignore
 import interactclub from "ns/assets/site_images/home_view/cr_insights/interactclub.jpg";
 // @ts-ignore
@@ -11,12 +11,12 @@ import juniorarchiever from "ns/assets/site_images/home_view/cr_insights/juniora
 // @ts-ignore
 import studentscouncil from "ns/assets/site_images/home_view/cr_insights/studentscouncil.jpg";
 // @ts-ignore
-import writers from "ns/assets/site_images/home_view/cr_insights/redcross.jpg";
+import writers from "ns/assets/site_images/home_view/cr_insights/writers.jpg";
 // @ts-ignore
 
 
 
-const ImageSocketBreaker = [studentscouncil,prefectorialBody,interactclub,writers,juniorarchiever,clubforum]
+const ImageSocketBreaker = [studentscouncil,prefectorialBody,interactclub,writers,juniorarchiever,ict]
 
 export interface IInsightsString {
     title: string,
@@ -42,7 +42,7 @@ export const InsightsStrings: IInsightsString[] = [
         title: "The Prefectorial Body 2021-2022",
         mainDescription: "Refined by fire and only those built on Christ as foundation will stand",
         shortDescription: "Refine for Excellence",
-        query: "prefectorial-body",
+        query: "prefecture",
         key: "cg-6"
     },
     {
@@ -69,10 +69,10 @@ export const InsightsStrings: IInsightsString[] = [
     },
 
     {
-        title: "Clubs Forum 2021-2022",
-        mainDescription: "",
-        shortDescription: "With Great Power Comes Great Responsiblity.",
-        query: "clubs-forum",
+        title: "ICT Club 2021-2022",
+        mainDescription: "Through each line of code to the transpiring and ever evolving technologies today.",
+        shortDescription: "We Code The Future.",
+        query: "ict-club",
         key: "cg-5"
     }
 ]

@@ -51,12 +51,22 @@ ns-x-insights .ponaco-splitview-5 {
           margin-left: 42px;
           color: #000;
         }
-
-        .content-sub-title-wrapper {
-          margin-top: 10px;
-          color: #0000009f;
-          margin-left: 42px;
-          font-size: 20pt;
+        ns-link{
+          a { 
+            text-decoration: none;
+          }
+          .content-sub-title-wrapper {
+            margin-top: 10px;
+            color: #0000009f;
+            margin-left: 42px;
+            font-size: 20pt;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+        }
+        
+          
         }
 
         margin-bottom: 20px;
