@@ -39,10 +39,10 @@ Template_.innerHTML = `
                 <div class="main-area-wrapper">
                     <div class="content-wrapper">
                         <div class="navigaton-area">
-                            <div class="back-navigation-btn">
-                                <i class="fa fa-back"></i>
+                            <div class="back-navigation-btn" title="Go Back To Insights">
+                                <i class="fas fa-arrow-left"></i>
                             </div>
-                            <div class="title-area">#Insights...</div>
+                            <div class="title-area">Insights</div>
                         </div>
                         <div class="main-content-section">
                             <div class="cover-mask-content-area">

@@ -6,19 +6,22 @@ ns-footer {
 
 
 ns-footer .footer-main-outlet {
+    background-color: #000;
     height: fit-content;
-    display: flex;
-    align-items: center;
+    height: 350px;
     flex-direction: column;
-    margin-top: 100px;
-
+    margin-top: 0px;
+    width: 100%;
     .footer-wrapper {
+        padding-top: 30px;
+        width: 100%;
+        height: inherit;
         display: grid;
         grid-template-columns: 1fr 2px 1fr;
         grid-column-gap: 100px;
-
         .section-1 {
             .text-container {
+                color: #fff;
 
                 .cl-1 {
                     font-size: 50pt;
@@ -29,10 +32,12 @@ ns-footer .footer-main-outlet {
                     font-size: 15pt;
                     margin: 10px 0px 10px 35px;
                 }
+
                 margin-bottom: 20px;
 
-                
+
             }
+
             .tr-enroll-container {
                 margin-top: 50px;
                 width: 100%;
@@ -64,9 +69,9 @@ ns-footer .footer-main-outlet {
         }
 
         .line-divider {
-            width: 2px;
+            width: 1px;
             height: 100%;
-            background-color: #000;
+            background-color: rgb(160, 160, 160);
         }
 
 
@@ -74,66 +79,130 @@ ns-footer .footer-main-outlet {
             .main-wrappper {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+
                 .slw {
-                     > div {
+                    >div {
                         margin-left: 30px;
-                     }
-                     .title {
+                    }
+
+                    .title {
+                        font-family: V.$ns-common-font;
                         font-size: 14pt;
                         margin-bottom: 7px;
-                        font-weight: bold;
-                     }
-                     .lm-content {
-                         > div {
+                        font-weight: 500;
+                        color: #ffffffce;
+                    }
+
+                    .lm-content {
+                        color: #ffffffce;
+                        >div {
+                        font-family: V.$ns-common-font;
+                            font-weight: 300;
                             font-size: 11pt;
                             margin-top: 4px;
                             margin-bottom: 4px;
-                         }
-                     }
+                        }
+                    }
                 }
-                .social-media {
-                    
-                .control-options {
-                    display: flex;
-
-                    >:nth-child(1) {
-                        color: #1DA1F2;
+                .sl-1 {
+                    .lm-content {
+                        .lse {
+                            &:hover {
+                                cursor: pointer;
+                                color: #2179ec;
+                            }
+                        }
                     }
-
-                    >:nth-child(2) {
-                        color: #1DA1F2;
+                }
+                .sl-2 {
+                    position: relative;
+                    .lm-content {
+                        a {
+                            color: red;
+                        }
+                        .lse {
+                            display: grid;
+                            grid-template-columns: 30px auto;
+                            margin: 8px 0px 8px 0px;
+                            transition: all .5s;
+                            cursor: pointer;
+                            &:hover {
+                                color: #2179ec;
+                            }
+                        }
                     }
-
-                    >:nth-child(3) {
-                        color: #1DA1F2;
-                    }
-
-                    >div {
+                    .ipl-lift {
+                        transition: all .5s;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        font-size: 14pt;
-                        width: 50px;
+                        margin-top: 30px;
+                        border: 2px solid #2179ec;                        width: 50px;
                         height: 50px;
-                        cursor: pointer;
-                        transition: all .5s;
-
+                        border-radius: 50%;
+                        color: #fff;
+                        font-size: 20pt;
                         &:hover {
-                            color: V.$ns-layout-color;
+                            cursor: pointer;
+                            background-color: #fff;
+                            color: #000;
+                        }
+                        &:active {
+                            border-color: #fff;
+                            color: #1DA1F2;
+                            background-color: unset;
                         }
                     }
-
-                 
                 }
+
+                .social-media {
+
+                    .control-options {
+                        display: flex;
+
+                        >:nth-child(1) {
+                            color: #1DA1F2;
+                        }
+
+                        >:nth-child(2) {
+                            color: #1DA1F2;
+                        }
+
+                        >:nth-child(3) {
+                            color: #1DA1F2;
+                        }
+
+                        >div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 14pt;
+                            width: 50px;
+                            height: 50px;
+                            cursor: pointer;
+                            transition: all .5s;
+
+                            &:hover {
+                                color: V.$ns-layout-color;
+                            }
+                        }
+
+
+                    }
                 }
             }
         }
     }
+
     .copyright-label {
+        font-family: V.$ns-common-font;
         margin-top: 40px;
-        border: 2px solid #000;
+        color: #000;
+        background-color: #cecece;
         width: 100%;
         padding: 10px;
+        font-weight: 500;
+        height: 50px;
     }
 
 }

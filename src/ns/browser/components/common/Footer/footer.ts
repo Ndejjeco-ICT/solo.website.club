@@ -25,7 +25,7 @@ Template_.innerHTML = `
 
         <div class="line-divider"></div>
 
-        
+
         <div class="section-2">
             <div class="main-wrappper">
                 <div class="sl-1 slw">
@@ -42,11 +42,11 @@ Template_.innerHTML = `
                             <div class="facebook-link" title="Join us On Facebook">
                                 <i class="fa-brands fa-facebook"></i>
                             </div>
-            
+
                             <div class="instagram-link" title="Follow us on Instagram">
                                 <i class="fa-brands fa-instagram"></i>
                             </div>
-            
+
                             <div class="twitter-link" title="Follow us on Twitter">
                                 <i class="fa-brands fa-twitter"></i>
                             </div>
@@ -56,10 +56,29 @@ Template_.innerHTML = `
                 <div class="sl-2 slw">
                     <div class="title">Support</div>
                     <div class="lm-content">
-                        <div class="lse" title="+25772410852">Contact</div>
-                        <div class="lse" title="ndejjes@gmail.com">Email</div>
+                        <a style="color: #fff; text-decoration:none" href="tel: +256 772681780">
+                            <div class="lse number-fu">
+                                <div class="icon-container">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="content">
+                                    +256 772681780
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="lse email-fu">
+                            <div class="icon-container">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="content">
+                                ndejjessshm@yahoo.com
+                            </div>
+                        </div>
                     </div>
-                    <div class="ipl-lift"></div>
+                    <div class="ipl-lift">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -76,6 +95,12 @@ export class FooterComponent extends HTMLElement implements IWebComponents {
     private facebookSourceLinkBtn: HTMLDivElement | null = null;
     private instagramSourceLinkBtn: HTMLDivElement | null = null;
     private twitterSourceLinkBtn: HTMLDivElement | null = null;
+    private upLiftFunction:HTMLDivElement|null = null;
+    private _numberComponentFunction:HTMLDivElement|null = null;
+    private _emailComponentFunction:HTMLDivElement|null = null;
+
+
+
 
     constructor() {
         super();
@@ -90,6 +115,7 @@ export class FooterComponent extends HTMLElement implements IWebComponents {
     initializeComponent(){
         this.attachComponentDOMELements();
         this.addDisposableEventListenerMechanismToIcons()
+        this._attachCommonEventBaseManagers()
 
         /**
          * The Lifecyle Line.. The Principle Line. for the footer.
@@ -104,6 +130,29 @@ export class FooterComponent extends HTMLElement implements IWebComponents {
         this.facebookSourceLinkBtn = this.querySelector(".facebook-link");
         this.instagramSourceLinkBtn = this.querySelector(".instagram-link");
         this.twitterSourceLinkBtn = this.querySelector(".twitter-link");
+        this.upLiftFunction = this.querySelector(".ipl-lift");
+        this._numberComponentFunction = this.querySelector(".number-fu")
+        this._emailComponentFunction = this.querySelector(".email-fu")
+
+    }
+    _attachCommonEventBaseManagers(){
+        this.createUpLiftFunction();
+        this._createNumberFunctionAbility()
+
+    }
+    createUpLiftFunction(){
+        if(this.upLiftFunction){
+            this.upLiftFunction.addEventListener("click",()=>{
+                window.scrollTo({top : 0,behavior : "smooth"})
+            })
+        }
+    }
+    _createNumberFunctionAbility(){
+        if(this._numberComponentFunction){
+            // this._numberComponentFunction.addEventListener("click",()=>{
+            //     window.open("tel: +256 772681780"," "," ")
+            // })
+        }
     }
     addDisposableEventListenerMechanismToIcons() {
         if (this.facebookSourceLinkBtn && this.instagramSourceLinkBtn && this.twitterSourceLinkBtn) {

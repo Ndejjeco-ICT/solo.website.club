@@ -9,6 +9,7 @@ const sassFilesInOrderOfPriority = [
      "./src/ns/assets/sass/common/Enrollbtn/Enrollbtn.scss",
      "./src/ns/assets/sass/common/screen/Animations.scss",
      "./src/ns/assets/sass/common/dialogHost/dialogHost.scss",
+     "./src/ns/assets/sass/common/enrollDialog/enrollDialog.scss",
      "./src/ns/assets/sass/common/Variables/Global.scss",
      "./src/ns/assets/sass/home.view.style/BannerSection/Banner.scss",
      "./src/ns/assets/sass/home.view.style/Pains&GainsSection/Pride.scss",
@@ -30,20 +31,18 @@ const sassFilesInOrderOfPriority = [
      "./src/ns/assets/sass/aboutus.view.style/HistorySection/history.scss",
      "./src/ns/assets/sass/academics.view.style/WelcomeNoteSection/WelcomeBanner.scss",
      "./src/ns/assets/sass/academics.view.style/StudentLifeSection/studentslife.scss",
-     "./src/ns/assets/sass/academics.view.style/Life&CultureSection/life&Culture.scss",
      "./src/ns/assets/sass/academics.view.style/AwardsSection/AwardsSection.scss",
      "./src/ns/assets/sass/academics.view.style/CommunitySection/academicsCommunity.scss",
      "./src/ns/assets/sass/academics.view.style/VideoVoicesSection/voices.scss",
      "./src/ns/assets/sass/academics.view.style/UniformDesignSection/uniformDesign.scss",
-     "./src/ns/assets/sass/academics.view.style/NewsItemSection/academicsNews.scss",
-     "./src/ns/assets/sass/academics.view.style/NewsItemSection/academicsNewsItem.scss",
      "./src/ns/assets/sass/academics.view.style/DOSQuoteSection/academicsDosQuote.scss",
-     "./src/ns/assets/sass/blog.view.style/titleHolderSection/titleholder.scss",
-     "./src/ns/assets/sass/blog.view.style/blogtrends/blogtrends.scss",
-     "./src/ns/assets/sass/blog.view.style/articleSection/articlesection.scss",
-     "./src/ns/assets/sass/blog.view.style/blogSections/blogsection3.scss",
-     "./src/ns/assets/sass/blog.view.style/carosell slider/carosellslider.scss",
-     "./src/ns/assets/sass/blog.view.style/blogSections/blogsection2.scss",
+    //  "./src/ns/assets/sass/blog.view.style/titleHolderSection/titleholder.scss",
+    //  "./src/ns/assets/sass/blog.view.style/blogtrends/blogtrends.scss",
+    // //  "./src/ns/assets/sass/blog.view.style/articleSection/articlesection.scss",
+    // //  "./src/ns/assets/sass/blog.view.style/blogSections/blogsection3.scss",
+    //  "./src/ns/assets/sass/blog.view.style/carosell slider/carosellslider.scss",
+    //  "./src/ns/assets/sass/blog.view.style/blogSections/blogsection2.scss",
+     "./src/ns/assets/sass/common/screen/mediaqueries.scss",
 ]
 
 
@@ -56,7 +55,7 @@ function compileSassFiles(){
     return gulp.src(sassFilesInOrderOfPriority)
         .pipe(gulp_sourcemaps.init())
         .pipe(gulp_sass().on('error', __errorHandler))
-        .pipe(gulp_concat("ns.main.css", { newLine: "LF" }))
+        .pipe(gulp_concat("ns.main.css"))
         .pipe(gulp_sourcemaps.write("./temp/css"))
         .pipe(gulp.dest("./public/ns-design"))
     

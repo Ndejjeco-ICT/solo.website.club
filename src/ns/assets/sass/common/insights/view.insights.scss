@@ -184,21 +184,40 @@ ns-insights-view .insights-view-container {
                         width: 100%;
 
                         .navigaton-area {
-                            background-color: #c9c9c9;
+                            border-top: 2px solid #146bee;
+                            border-right:2px solid #fff ;
+                            background-color: #000000de;
                             height: 50px;
                             width: 100%;
                             display: flex;
                             justify-content: space-between;
-
+                            align-items: center;
 
                             .back-navigation-btn {
-                                width: 50px;
-                                height: 50px;
-                                border: 1px solid #000;
+                                width: 40px;
+                                height: 40px;
                                 margin-left: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 2px solid #fff;
+                                color: #fff;
+                                font-size: 18pt;
+                                border-radius: 50%;
+                                &:hover {
+                                    cursor: pointer;
+                                    background-color: #fff;
+                                    color: #000;
+                                }
+                                &:active {
+                                    border-color: #fff;
+                                    color: #1DA1F2;
+                                    background-color: unset;
+                                }
                             }
 
                             .title-area {
+                                color: #fff;
                                 margin-right: 20px;
                                 height: 50px;
                                 display: flex;
@@ -251,10 +270,13 @@ ns-insights-view .insights-view-container {
                                         .bm {
                                             height: 950px;
                                             background-color: #146bee;
+                                         
                                             z-index: -1;
 
                                         }
                                         .cm {
+                                            border-top: 2px solid #fff;
+                                            border-left: 2px solid #fff;
                                             height: 850px;
                                             background-color: #000000;
 

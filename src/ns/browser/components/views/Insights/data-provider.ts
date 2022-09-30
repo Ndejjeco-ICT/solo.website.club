@@ -11,7 +11,7 @@ import studentscouncil from "ns/assets/site_images/home_view/cr_insights/student
 // @ts-ignore
 import writers from "ns/assets/site_images/home_view/cr_insights/writers.jpg";
 // @ts-ignore
-import ictclub from "ns/assets/site_images/home_view/cr_insights/club.ict/clv.jpg";
+import ictclub from "ns/assets/site_images/home_view/cr_insights/club.ict/ict.png";
 
 import {readerViewEventManager} from "ns/browser/components/views/Insights/readerViewManager"
 

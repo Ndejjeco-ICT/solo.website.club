@@ -3,7 +3,7 @@
 // @ts-ignore
 import prefectorialBody from "ns/assets/site_images/home_view/cr_insights/prefects.jpg";
 // @ts-ignore
-import ict from "ns/assets/site_images/home_view/cr_insights/club.ict/clv.jpg";
+import ict from "ns/assets/site_images/home_view/cr_insights/club.ict/ict.png";
 // @ts-ignore
 import interactclub from "ns/assets/site_images/home_view/cr_insights/interactclub.jpg";
 // @ts-ignore

@@ -37,5 +37,5 @@
         
        
     },
-    "exclude" : ["./.devcontainer","./scripts","./cg.dev.js","./cg.prod.js"]
+    "exclude" : ["**/*.js" ]
 }
