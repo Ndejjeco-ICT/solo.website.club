@@ -15,7 +15,9 @@ Template_.innerHTML = `
             <div class="xb-content-wrapper">
                 <div class="xb-ct-1 xb-name xb-text"></div>
                 <div class="xb-ct-2 xb-post xb-text"></div>
-                <div class="xb-ct-3 xb-link xb-text"></div>
+                <a style="color: #fff; text-decoration:none" href="" class="phone-center">
+                    <div class="xb-ct-3 xb-link xb-text"></div>
+                </a>
             </div>
         </div>
     </div>
@@ -28,6 +30,7 @@ class MemberElement extends HTMLElement implements IWebComponents {
     private resourceLabelPost:HTMLDivElement|null = null;
     private resourceLabelLinkProvider: HTMLDivElement | null = null;
     private resourceImageHost: HTMLImageElement | null = null;
+    private phoneCenter:HTMLAnchorElement|null = null;
 
     constructor(){
         super();
@@ -44,7 +47,8 @@ class MemberElement extends HTMLElement implements IWebComponents {
         this.resourceLabelName = this.querySelector(".xb-name");
         this.resourceLabelPost = this.querySelector(".xb-post");
         this.resourceLabelLinkProvider = this.querySelector(".xb-link");
-        this.resourceImageHost = this.querySelector(".cl-image-host")
+        this.resourceImageHost = this.querySelector(".cl-image-host");
+        this.phoneCenter = this.querySelector(".phone-center")
     }
     connectDataEvenly(name:string,post:string,imageSource:string,_number:string){
         if(this.resourceLabelName && this.resourceLabelPost && this.resourceLabelLinkProvider && this.resourceImageHost){
@@ -54,6 +58,11 @@ class MemberElement extends HTMLElement implements IWebComponents {
             this.resourceImageHost.src = imageSource;
         }
     }
+    attachPhoneCenterAbility(_phoneNumber:string){
+        if(this.phoneCenter){
+            this.phoneCenter.href = `tel: ${_phoneNumber}`
+        }
+    }
     readAndAnalyzeDataAttributes() {
         const labelName = this.getAttribute("id-name")!;
         const labelPost = this.getAttribute("id-post")!;
@@ -61,7 +70,8 @@ class MemberElement extends HTMLElement implements IWebComponents {
         const labelImageSource = this.getAttribute("id-image-source")!;
 
         if(labelName && labelPost) {
-            this.connectDataEvenly(labelName,labelPost,labelImageSource,labelNumber ?? "")
+            this.connectDataEvenly(labelName,labelPost,labelImageSource,labelNumber ?? "");
+            this.attachPhoneCenterAbility(labelNumber)
         }
 
     }

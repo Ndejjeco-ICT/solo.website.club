@@ -1,0 +1,17 @@
+// @use "../common/Variables/Variables.scss" as V;
+
+ns-blog-view {
+    display: block;
+    width: 100%;
+
+     > div {
+        // font-family: V.$ns-common-font;
+
+        width: 100%;
+        height: 800px;
+        font-size: 40pt;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+}

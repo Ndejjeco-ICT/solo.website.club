@@ -31,14 +31,6 @@ Template_.innerHTML = `
                         <div class="tr-content">
                             <div class="tr-content-wrapper">
                                 <div class="tr-members-wrapper">
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
-                                    <ns-x-member></ns-x-member>
                                 </div>
                             </div>
                         </div>
@@ -83,8 +75,9 @@ class StaffView extends HTMLElement implements IWebComponents {
     private _initializeComponent(){
         this._createComponentAttachment();
         this._createAnimationFacility1()
-        this._applyGeneralEventListeners()
+        this._applyGeneralEventListeners();
         this.preloadStaffElements()
+
     }
     private _createComponentAttachment(){
         this._staffContentWrapper = this.querySelector(".xb-staffview .xb-wrapper .tr-view-2 .tr-members-wrapper")
@@ -100,22 +93,18 @@ class StaffView extends HTMLElement implements IWebComponents {
             })
         }
     }
-    async preloadStaffElements(){
-        return new Promise<void>((c)=>{
+    preloadStaffElements(){
             const _data  = JSON.parse(JSON.stringify(_T_))! as IIStaffviewStructure;
             const _templateContents:string[] = []
-            console.log(_data)
             _data["staff-view-data-1"].forEach((e)=>{
-                const _generalTemplate = `<ns-x-member id-name=${e.name} id-post=${e.post} id-number=${e.number} id-image-source=${e.imageSource}></ns-x-member>`;
+                const _generalTemplate = `<ns-x-member id-name="${e.name}" id-post="${e.post}" id-number="${e.number}" id-image-source="${e.imageSource}"></ns-x-member>`;
                 _templateContents.push(_generalTemplate);
             })
-            // console.log(_templateContents)
-            // _templateContents.forEach((_e)=>{
-            //     this._staffContentWrapper!.insertAdjacentHTML("afterbegin",_e);
-            // })
-            c()
-        })
-     
+            console.log(_templateContents);
+            _templateContents.forEach((_elementStructure)=>{
+                this._staffContentWrapper!.insertAdjacentHTML("afterbegin",_elementStructure)
+            })
+                 
     }
 
     private __viewAnimationInset1(){

@@ -121,8 +121,12 @@ ns-x-staffview .xb-staffview {
                     flex-direction: row;
                     align-items: center;
                     justify-content: flex-end;
+                    margin : 50px 0px 20px 0px;
+                    // border: 2px solid red;
+                    // z-index: 3000;
 
                     .selective-btn {
+
                         margin-right: 50px;
                         height: 50px;
                         width: 160px;

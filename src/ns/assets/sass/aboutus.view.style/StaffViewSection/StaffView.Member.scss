@@ -1,6 +1,8 @@
+@use "../../common/Variables/Variables.scss" as V;
+
+
 ns-x-member {
     display: block;
-    opacity: 0;
     transform: translateY(50px);
 }
 
@@ -41,7 +43,7 @@ ns-x-member .xb-cl-memeber {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: grey;
+                background-color: #f0eeee;
 
                 picture {
                     border-radius: 50%;
@@ -50,8 +52,8 @@ ns-x-member .xb-cl-memeber {
 
                     img {
                         border-radius: 50%;
-                        
-                        border: 1px solid #0051ff ;
+
+                        border: 2px solid #000;
                         display: block;
                         width: inherit;
                         height: inherit;
@@ -68,12 +70,18 @@ ns-x-member .xb-cl-memeber {
 
                 .xb-text {
                     margin-left: 20px;
+
+                    &:hover {
+                        color: #6491f3;
+                    }
                 }
 
                 .xb-ct-1 {
                     margin-top: 10px;
                     font-size: 14pt;
                     font-weight: bold;
+                    font-family: V.$ns-common-font;
+
                 }
 
                 .xb-ct-2 {
@@ -82,6 +90,8 @@ ns-x-member .xb-cl-memeber {
                     line-height: 1;
                     color: #0000009a;
                     font-size: 13pt;
+                    font-family: V.$ns-common-font;
+
                 }
 
                 .xb-ct-3 {
@@ -89,6 +99,8 @@ ns-x-member .xb-cl-memeber {
                     margin-top: 3px;
                     font-size: 11pt;
                     font-weight: bold;
+                    font-family: V.$ns-common-font;
+
 
                     &:hover {
                         cursor: pointer;

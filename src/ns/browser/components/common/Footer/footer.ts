@@ -31,11 +31,22 @@ Template_.innerHTML = `
                 <div class="sl-1 slw">
                     <div class="title">Menu</div>
                     <div class="lm-content">
-                        <div class="lse">Home</div>
-                        <div class="lse">About us</div>
-                        <div class="lse">Academics</div>
-                        <div class="lse">Insights</div>
-                        <div class="lse">Blog</div>
+
+                        <a href="./">
+                            <div class="lse">Home</div>
+                        </a>
+                        <a href="./aboutus">
+                            <div class="lse">About us</div>
+                        </a>
+                        <a href="./academics">
+                            <div class="lse">Academics</div>
+                        </a>
+                        <a href="./insights">
+                            <div class="lse">Insights</div>
+                        </a>
+                        <a href="./blog">
+                            <div class="lse">Blog</div>
+                        </a>
                     </div>
                     <div class="social-media">
                         <div class="control-options">
@@ -76,7 +87,7 @@ Template_.innerHTML = `
                             </div>
                         </div>
                     </div>
-                    <div class="ipl-lift">
+                    <div class="ipl-lift" title="Let's Go back Up">
                         <i class="fas fa-arrow-up"></i>
                     </div>
                 </div>

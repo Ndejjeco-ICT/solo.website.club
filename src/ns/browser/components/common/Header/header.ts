@@ -12,11 +12,14 @@ Template_.innerHTML = `
 <div class="wx-component-header-section">
     <div class="wx-header-component-area">
         <div class="wx-badge-wrapper">
-            <div id="badge-icon">
-                <picture>
-                    <img loading="lazy" src="${Logo}"/>
-                </picture>
-            </div>
+            <a href="./">
+                <div id="badge-icon">
+                    <picture>
+                        <img loading="lazy" src="${Logo}"/>
+                    </picture>
+                </div>
+            </a>
+            
             <div class="badge-title">Ndejje Senior Secondary School</div>
         </div>
         <div class="wx-navigation-bar-half-area">

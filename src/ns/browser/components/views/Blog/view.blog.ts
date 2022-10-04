@@ -1,12 +1,16 @@
 import { IWebComponents } from "ns/typings/schw";
+
+/**
+ * <ns-x-blogcover></ns-x-blogcover>
+    // <ns-x-blogtrends></ns-x-blogtrends>
+    // <ns-x-articles></ns-x-articles>
+    // <ns-x-primearticle></ns-x-primearticle>
+    // <ns-x-caroselslider></ns-x-caroselslider>
+    // <ns-x-motto></ns-x-motto>
+ */
 const Template_ = document.createElement("template");
 Template_.innerHTML =  `
-    <ns-x-blogcover></ns-x-blogcover>
-    <ns-x-blogtrends></ns-x-blogtrends>
-    <ns-x-articles></ns-x-articles>
-    <ns-x-primearticle></ns-x-primearticle>
-    <ns-x-caroselslider></ns-x-caroselslider>
-    <ns-x-motto></ns-x-motto>
+    <div>Sorry. Still In Development</div>
 `
 
 export class BlogView extends HTMLElement implements IWebComponents {

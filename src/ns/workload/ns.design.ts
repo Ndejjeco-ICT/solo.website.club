@@ -65,5 +65,7 @@ import "@design_Blog/blogSections/primearticle.scss";
 import "@design_Blog/carosell slider/carosellslider.scss";
 import "@design_Blog/blogSections/motto.scss";
 
+import "@design_Blog/_dev.blog.scss"
 
-import "@design_Common/screen/mediaqueries.scss";
+
+// import "@design_Common/screen/mediaqueries.scss";

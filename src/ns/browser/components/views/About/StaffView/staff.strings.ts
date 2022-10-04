@@ -1,52 +1,55 @@
+//@ts-ignore
+import ImageSource from "ns/assets/site_images/aboutsus_view/cr-staffview/userimage.png"
+
 export const _T_  = {
     "staff-view-data-1" : [
         {
             "name" : "Mr. Lubowa Bob",
             "post" : "Head Of ICT Department",
             "number" : "0772007340",
-            "imageSource" : ""
+            "imageSource" : ImageSource
         },
         {
             "name" : "Mr. Ssenteza John",
             "post" : "Head Of Chemistry Department",
             "number" : "0772860437",
-            "imageSource" : ""
+            "imageSource" : ImageSource
         },
         {
             "name" : "Mr. Ssesanga Medi",
             "post" : "Head Of Mathematics Department",
             "number" : "0772830636",
-            "imageSource" : ""
+            "imageSource" : ImageSource
         },
         {
             "name" : "Mr. Andama Wilbert",
             "post" : "Head Of Physics Department",
             "number" : "0787486219",
-            "imageSource" : ""
+            "imageSource" : ImageSource
         },
         {
             "name" : "Mr. Kiguwa Antony",
             "post" : "Head Of Biology Department",
             "number" : "0772584978",
-            "imageSource" : ""
+            "imageSource" : ImageSource
         },
         {
             "name" : "Mr. Laban Behakahira",
             "post" : "Head Of Kiswahili Department",
             "number" : "0773884190",
-            "imageSource" : ""
+            "imageSource" : ImageSource
         },
         {
             "name" : "Mr. Olebo Calvin",
             "post" : "Head Of French Department",
             "number" : "0777877802",
-            "imageSource" : ""
+            "imageSource" : ImageSource
         },
         {
             "name" : "Mr. Bwire Wilberforce",
             "post" : "Head Of Geography Department",
             "number" : "0782903285",
-            "imageSource" : ""
+            "imageSource" : ImageSource
         },
        
     ],

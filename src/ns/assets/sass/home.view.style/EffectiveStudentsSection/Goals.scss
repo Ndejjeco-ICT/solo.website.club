@@ -19,9 +19,12 @@ ns-x-benefits {
     display: block;
     --ns-x-height: 800px;
     font-family: V.$ns-common-font;
+    margin-top: 30px;
 }
 
 ns-x-benefits .ponaco-splitview-3 {
+    margin-top: 200px;
+    // border: 3px solid red;
     height: var(--ns-x-height);
     width: 100%;
 
@@ -42,8 +45,11 @@ ns-x-benefits .ponaco-splitview-3 {
                     width: 100%;
                     height: inherit;
                     display: grid;
-                    grid-template-columns: 3fr 2fr;
+                    grid-template-columns: 2fr 2fr;
 
+                    //  > div {
+                    //     border: 1px solid red;
+                    //  }
 
 
 
@@ -57,7 +63,7 @@ ns-x-benefits .ponaco-splitview-3 {
                         .ctx-pictures-wrapper {
 
 
-                            width: 700px;
+                            width: 550px;
 
 
                             display: grid;
@@ -175,7 +181,7 @@ ns-x-benefits .ponaco-splitview-3 {
 
                                 .cr-title {
                                     color: #000;
-                                    font-size: 45pt;
+                                    font-size: 35pt;
                                     font-family: V.$ns-common-font;
 
 

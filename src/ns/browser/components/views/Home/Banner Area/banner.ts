@@ -9,9 +9,9 @@ template_.innerHTML = `
 <div class="ponaco-splitview-1">
     <div class="ponaco-control-wrapper">
         <div class="banner-image-container">
-            <picture draggable="false" class="cn-picture-container">
+            <figure draggable="false" class="cn-picture-container">
                 <img class="banner-image-host" alt="" loading="lazy">
-            </picture>
+            </figure>
         </div>
         <div class="wx-component-user-section">
             <div class="welcome-note-section">

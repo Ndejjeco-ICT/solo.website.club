@@ -51,6 +51,7 @@ module.exports = {
             filename: "index.html",
             inject: "body",
             scriptLoading: "defer",
+            favicon : "./public/dependencies/screen/favicon.png",
             template: _path.resolve(__dirname, "../src/ns/bootstrap.template.ejs"),
         }),
         new MiniCssExtractPlugin()

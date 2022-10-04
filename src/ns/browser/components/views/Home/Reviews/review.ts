@@ -22,7 +22,7 @@ export class ReviewSection extends HTMLElement implements IWebComponents {
     
                         <div class="student-quote">
                             <p>
-                            Silence and Smile are two powerfull tools. Simile is the best wat to solve many probles and Silence is the best way to Avoid many problems".
+                            Silence and Smile are two powerfull tools. Smile is the best wat to solve many probles and Silence is the best way to Avoid many problems".
                             </p>
                         </div>
     
