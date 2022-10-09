@@ -63,7 +63,7 @@
         <div class="ns-cl-wrapper">
         <div class="splash-image-resizable" style="margin-bottom:40px;">
             <picture class="image-content-control">
-                <img src="../workbench/parts/splash.png" preload="true">
+                <img src="../workbench/parts/selon/splash.png" preload="true">
             </picture>
         </div>
         <div class="splash-image-minner-loader" style="display: flex;align-items: center;justify-content: center;">

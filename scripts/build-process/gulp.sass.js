@@ -51,9 +51,8 @@ function __errorHandler(e) {
 }
 
 function compileSassFiles(){
-
+    console.log("--BUILDING-SASS-BUNDLE--")
     return gulp.src(sassFilesInOrderOfPriority)
-        .pipe(gulp_sourcemaps.init())
         .pipe(gulp_sass().on('error', __errorHandler))
         .pipe(gulp_minify())
         .pipe(gulp_concat("workbench.main.css"))

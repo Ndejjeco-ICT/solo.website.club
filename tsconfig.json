@@ -1,4 +1,3 @@
-//Typescript Configuration Used for Development Purposes By Webpack ts-loader
 
 {
     "compilerOptions"  : {

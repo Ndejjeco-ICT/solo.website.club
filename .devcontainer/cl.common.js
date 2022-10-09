@@ -1,6 +1,4 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const _path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 
 module.exports = {
@@ -18,48 +16,11 @@ module.exports = {
 
         }
     },
-    module: {
-        rules: [
-            {
-                test: /\.ts/,
-                loader: "ts-loader"
-            },
-            {
 
-                test: /\.s[ac]ss$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
-            },
-            {
-                test: /\.css$/i,
-
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
-
-            },
-            {
-                test: /\.(svg|ico|png|jpg|gif|jpeg|woff|tff|json)/,
-                type: "asset/resource",
-            }
-        ],
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: "Ndejje SSS",
-            filename: "index.html",
-            inject: "body",
-            scriptLoading: "defer",
-            favicon : "./public/dependencies/screen/favicon.png",
-            template: _path.resolve(__dirname, "../src/ns/bootstrap.template.ejs"),
-        }),
-        new MiniCssExtractPlugin()
-    ],
     output: {
         filename: "ns.[contenthash].js",
         path: _path.resolve(__dirname, "../public"),
-        publicPath: "/"
+        publicPath: "."
     },
 
 }
