@@ -9,7 +9,7 @@ function _initializeMainBundleProcess() {
     return gulp.src("./src/ns/workload/ns.components.ts")
         .pipe(webpack_stream(_gulpClConfig))
         // .pipe(gulp_bom())
-        .pipe(gulp_rename({basename : "workbench.main",extname : "js"}))
+        .pipe(gulp_rename({basename : "workbench.main",extname : ".js"}))
         .pipe(gulp.dest("./out/ns/workbench"))
 
 

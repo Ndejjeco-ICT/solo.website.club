@@ -20,6 +20,10 @@ const _gulpClConfig = {
                 test: /\.ts/,
                 loader: "ts-loader"
             },
+            {
+                test: /\.(svg|ico|png|jpg|gif|jpeg|woff|tff|json)/,
+                type: "asset/resource",
+            }
         ]
     },
     output: {

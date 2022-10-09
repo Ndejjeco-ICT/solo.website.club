@@ -1,7 +1,7 @@
 import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/platform/positionRenderer/view_linker";
 //@ts-ignore
-import bannerImageElement from "@image/home_view/cr_banner/banner001.jpg";
+import bannerImageElement from "ns/assets/site_images/home_view/cr_banner/banner001.jpg";
 
 const template_ = document.createElement("template");
 
