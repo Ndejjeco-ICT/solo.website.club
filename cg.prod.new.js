@@ -1,3 +1,6 @@
+/**
+ * New production configuration
+ */
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const _path = require("path");
