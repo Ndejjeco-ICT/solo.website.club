@@ -1,5 +1,5 @@
 /**
- * New production configuration
+ * New production configuration 
  */
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
