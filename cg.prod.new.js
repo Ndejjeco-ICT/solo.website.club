@@ -4,17 +4,17 @@ const _path = require("path");
 
 
 const productionConfig = {
-    entry: _path.resolve(__dirname, "../src/ns/workload/ns.main.ts"),
+    entry: _path.resolve(__dirname, "./src/ns/workload/ns.main.ts"),
     resolve: {
         extensions: [".ts", ".js"],
         alias: {
-            ns: _path.resolve(__dirname, "../src/ns"),
-            "@image": _path.resolve(__dirname, "../src/ns/assets/site_images"),
-            "@design_Home": _path.resolve(__dirname, "../src/ns/assets/sass/home.view.style"),
-            "@design_About": _path.resolve(__dirname, "../src/ns/assets/sass/aboutus.view.style"),
-            "@design_Common": _path.resolve(__dirname, "../src/ns/assets/sass/common"),
-            "@design_Blog": _path.resolve(__dirname, "../src/ns/assets/sass/blog.view.style"),
-            "@design_Academics": _path.resolve(__dirname, "../src/ns/assets/sass/academics.view.style")
+            ns: _path.resolve(__dirname, "./src/ns"),
+            "@image": _path.resolve(__dirname, "./src/ns/assets/site_images"),
+            "@design_Home": _path.resolve(__dirname, "./src/ns/assets/sass/home.view.style"),
+            "@design_About": _path.resolve(__dirname, "./src/ns/assets/sass/aboutus.view.style"),
+            "@design_Common": _path.resolve(__dirname, "./src/ns/assets/sass/common"),
+            "@design_Blog": _path.resolve(__dirname, "./src/ns/assets/sass/blog.view.style"),
+            "@design_Academics": _path.resolve(__dirname, "./src/ns/assets/sass/academics.view.style")
 
         }
     },
@@ -31,7 +31,7 @@ const productionConfig = {
             filename: "index.html",
             inject: "body",
             scriptLoading: "defer",
-            favicon : "./favicon.png",
+            favicon : _path.resolve(__dirname,"./out/resources/xtr.png"),
             minify : false,
             template: _path.resolve(__dirname, "./src/ns/bootstrap.template.ejs"),
         }),

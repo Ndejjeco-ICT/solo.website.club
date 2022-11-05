@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack serve --open --config ./cg.dev.js",
-    "build": "webpack --config ./cg.prod.js "
+    "build": "webpack --config ./cg.prod.new.js "
   },
   "devDependencies": {
     "@types/animejs": "^3.1.4",
