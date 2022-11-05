@@ -9,7 +9,7 @@ import "@design_Common/Variables/Global.scss";
 //Common Components
 import "@design_Common/Header/Header.scss";
 import "@design_Common/Footer/Footer.scss";
-import "@design_Common/Enrollbtn/Enrollbtn.scss";
+import "@design_Common/EnrollBtn/Enrollbtn.scss";
 import "@design_Common/screen/Animations.scss";
 import "@design_Common/dialogHost/dialogHost.scss";
 import "@design_Common/insights/view.insights.scss";
