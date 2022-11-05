@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "webpack serve --open --config ./cg.dev.js",
-    "build": "webpack --config ./cg.prod.new.js "
+    "dev": "webpack serve --open --config ./webpack.dev.js",
+    "build": "webpack  --open  --config./webpack.prod.js "
   },
   "devDependencies": {
     "@types/animejs": "^3.1.4",
