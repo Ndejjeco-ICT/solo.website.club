@@ -13,7 +13,7 @@ module.exports = merge(__ClCommon, {
             filename: "index.html",
             inject: "body",
             scriptLoading: "defer",
-            favicon : "./favicon.png",
+            favicon : _path.resolve(__dirname,"./public/ns-images/ctx.png"),
             template: _path.resolve(__dirname, "./src/ns/bootstrap.template.ejs"),
         }),
         new MiniCssExtractPlugin({filename : "[name].[contenthash].css"})

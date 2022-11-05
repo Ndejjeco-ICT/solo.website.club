@@ -20,7 +20,7 @@ module.exports = {
     output: {
         filename: "ns.[contenthash].js",
         path: _path.resolve(__dirname, "../public"),
-        publicPath: "."
+        publicPath: "/"
     },
 
 }

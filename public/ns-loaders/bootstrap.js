@@ -63,7 +63,7 @@
         <div class="ns-cl-wrapper">
         <div class="splash-image-resizable" style="margin-bottom:40px;">
             <picture class="image-content-control">
-                <img src="./splash/splash.png" preload="true">
+                <img src="./ns-images/ctx.png" preload="true">
             </picture>
         </div>
         <div class="splash-image-minner-loader" style="display: flex;align-items: center;justify-content: center;">

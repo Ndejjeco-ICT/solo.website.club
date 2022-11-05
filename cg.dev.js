@@ -46,7 +46,7 @@ module.exports = merge(__ClCommon,{
             filename: "index.html",
             inject: "body",
             scriptLoading: "defer",
-            favicon : "./public/dependencies/screen/favicon.png",
+            favicon : _path.resolve(__dirname,"./public/ns-images/ctx.png"),
             template: _path.resolve(__dirname, "./src/ns/bootstrap.template.ejs"),
         }),
     ],
