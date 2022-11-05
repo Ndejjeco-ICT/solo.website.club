@@ -25,7 +25,7 @@ const productionConfig = {
     output: {
         filename: "ns.[contenthash].js",
         path: _path.resolve(__dirname, "./out"),
-        publicPath: "."
+        publicPath: "./out"
     },
     mode: "production",
     plugins: [
