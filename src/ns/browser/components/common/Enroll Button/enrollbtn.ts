@@ -1,6 +1,6 @@
 import { IWebComponents } from "ns/typings/schw"; 
 import { addDisposableEventListener } from "ns/browser/common/domListener";
-import { dialogHostEventManager } from "ns/dialogHostManager";
+import { LinksManagerSystem } from "ns/platform/subTabOpener/linksManager";
 
 export class EnrollButtonComponent extends HTMLElement implements IWebComponents {
 
@@ -23,13 +23,14 @@ export class EnrollButtonComponent extends HTMLElement implements IWebComponents
         this.atttachEventListenerToButton()
     }
     atttachEventListenerToButton() {
-        addDisposableEventListener(this._enrollBtn, "click", this.invokeEnrollDialog.bind(this));
+        addDisposableEventListener(this._enrollBtn, "click", this.switchViewToRegistrationForm.bind(this));
     }
+    switchViewToRegistrationForm(){
+       LinksManagerSystem.LinkToRegistration()
 
-    invokeEnrollDialog() {
-        //invoke dialog;
-        dialogHostEventManager.emit("invoke-dialog","enroll")
     }
+    
+    
 
 };
 customElements.define("ns-enroll-button", EnrollButtonComponent);

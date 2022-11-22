@@ -6,6 +6,7 @@ export interface ILinkMnanager {
     LinkToFaceBook():void;
     LinkToInstagram():void;
     LinkToTwitter():void;
+    LinkToRegistration():void
 }
 
 /**
@@ -37,6 +38,10 @@ export class LinkManager implements ILinkMnanager {
      */
     LinkToTwitter(): void {
         window.open("https://twitter.com/ndejjess","","");
+    }
+    LinkToRegistration():void{
+        window.open("https://form.jotform.com/223255021331541","","");
+
     }
 
 }
