@@ -5,6 +5,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin")
 
 
 module.exports = {
@@ -43,6 +44,23 @@ module.exports = {
                     "sass-loader"
                 ]
             },
+        ]
+    },
+    optimization : {
+        minimizer : [
+            "...",
+            new ImageMinimizerPlugin({
+                minimizer : {
+                    implementation : ImageMinimizerPlugin.imageminMinify,
+                    options : {
+                        plugins : [
+                            ["gifsicle", { interlaced: true }],
+                            ["jpegtran", { progressive: true }],
+                            ["optipng", { optimizationLevel: 5 }],
+                        ]
+                    }
+                }
+            })
         ]
     },
     plugins: [
